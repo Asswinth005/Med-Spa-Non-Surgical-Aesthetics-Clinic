@@ -201,8 +201,17 @@
         .stat-card:hover { transform: translateY(-3px); border-color: var(--color-primary); }
 
         .status-badge {
-            display: inline-flex; align-items: center; padding: 0.25rem 0.75rem;
-            border-radius: 40px 8px 40px 8px; font-size: 0.7rem; font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            white-space: nowrap;
+            flex-shrink: 0;
+            line-height: 1;
+            text-align: center;
         }
         .status-confirmed { background: #F2E8E2; color: #6E4F42; }
         .status-scheduled { background: #EDE4DC; color: #8B6F5C; }

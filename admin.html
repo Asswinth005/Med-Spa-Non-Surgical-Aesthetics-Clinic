@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth" data-theme="rose-gold">
 <head>
     <meta charset="UTF-8" />
@@ -203,8 +203,17 @@
         .stat-card:hover { transform: translateY(-3px); border-color: var(--color-primary); }
 
         .status-badge {
-            display: inline-flex; align-items: center; padding: 0.25rem 0.75rem;
-            border-radius: 40px 8px 40px 8px; font-size: 0.7rem; font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            white-space: nowrap;
+            flex-shrink: 0;
+            line-height: 1;
+            text-align: center;
         }
         .status-confirmed { background: #F2E8E2; color: #6E4F42; }
         .status-scheduled { background: #EDE4DC; color: #8B6F5C; }
@@ -453,7 +462,6 @@
             <div class="card-design p-6">
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="font-display font-bold text-2xl">All Appointments</h3>
-                    <button class="btn-primary-design px-4 py-1.5 text-sm"><i class="fas fa-plus"></i> New Appointment</button>
                 </div>
                 <p class="text-sm text-charcoal/60 dark:text-gray-400 mb-6">Manage all client bookings across providers and treatment rooms.</p>
                 <div class="space-y-4">
@@ -547,7 +555,7 @@
                         <div class="flex items-center gap-4 flex-nowrap">
                             <span class="status-badge status-active">Active</span>
                             <span class="text-sm text-charcoal/60">$4,820</span>
-                            <button class="text-sm font-semibold text-rose-gold hover:text-rose-gold-dark">View A†’</button>
+                            <button class="text-sm font-semibold text-rose-gold hover:text-rose-gold-dark">View </button>
                         </div>
                     </div>
                     <div class="client-card card-design p-4 flex flex-wrap items-center justify-between gap-3">
@@ -561,7 +569,7 @@
                         <div class="flex items-center gap-4 flex-nowrap">
                             <span class="status-badge status-pending">Pending</span>
                             <span class="text-sm text-charcoal/60">$2,340</span>
-                            <button class="text-sm font-semibold text-rose-gold hover:text-rose-gold-dark">View A†’</button>
+                            <button class="text-sm font-semibold text-rose-gold hover:text-rose-gold-dark">View </button>
                         </div>
                     </div>
                     <div class="client-card card-design p-4 flex flex-wrap items-center justify-between gap-3">
@@ -575,7 +583,7 @@
                         <div class="flex items-center gap-4 flex-nowrap">
                             <span class="status-badge status-active">Active</span>
                             <span class="text-sm text-charcoal/60">$11,200</span>
-                            <button class="text-sm font-semibold text-rose-gold hover:text-rose-gold-dark">View A†’</button>
+                            <button class="text-sm font-semibold text-rose-gold hover:text-rose-gold-dark">View </button>
                         </div>
                     </div>
                     <div class="client-card card-design p-4 flex flex-wrap items-center justify-between gap-3">
@@ -589,7 +597,7 @@
                         <div class="flex items-center gap-4 flex-nowrap">
                             <span class="status-badge status-completed">New</span>
                             <span class="text-sm text-charcoal/60">$890</span>
-                            <button class="text-sm font-semibold text-rose-gold hover:text-rose-gold-dark">View A†’</button>
+                            <button class="text-sm font-semibold text-rose-gold hover:text-rose-gold-dark">View </button>
                         </div>
                     </div>
                 </div>
