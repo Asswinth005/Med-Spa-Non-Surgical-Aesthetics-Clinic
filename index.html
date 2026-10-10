@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMEA · Med Spa & Non-Surgical Aesthetics Clinic</title>
+
+    <!-- Favicon suite for all browsers, file:// mode & web servers -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABWUlEQVR4nMXX53KCQBQF4PuwqZYkqCigmJ6Y5kuYqqb37ptdZ3fZhBAHtsmemfP7Ow7LDgKk5PsoxK/DFu3nQZP2Yz+gfd/zad86Hr7ukjbwZYe0js/bpC4+bbn4uFnDNONfRt02jrohmsJJHzaqtPfrlfQx08ZJ79acySPywklvVxMj8sZv2iu0sQH549fh8u8AG/jPAF2cRAW/ai3Rgi7Oo4JfNstsgC7OI4sPgzKCKZxHBh8GJTbAFM4jig/8EoJpnEcEH/hFNkDmVTOJ970igsp7bgrvewU2QOWSMYFfNAoIOjecLn5eX0TQvV518GiAubtdFj9zFxBkn7kIzpOFRwPEfnnyeWfhbEA6flqbR1A5cCRZOEkWHg2QO3Dx6OIn1TkE2QMnElGcDlA57abw48os+yqa9quWivMBeeM9JzbABt5zZv7+N7CK81jFeaziyRg/7RMyBtT2SSfuKxWUAAAAAElFTkSuQmCC" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABWUlEQVR4nMXX53KCQBQF4PuwqZYkqCigmJ6Y5kuYqqb37ptdZ3fZhBAHtsmemfP7Ow7LDgKk5PsoxK/DFu3nQZP2Yz+gfd/zad86Hr7ukjbwZYe0js/bpC4+bbn4uFnDNONfRt02jrohmsJJHzaqtPfrlfQx08ZJ79acySPywklvVxMj8sZv2iu0sQH549fh8u8AG/jPAF2cRAW/ai3Rgi7Oo4JfNstsgC7OI4sPgzKCKZxHBh8GJTbAFM4jig/8EoJpnEcEH/hFNkDmVTOJ970igsp7bgrvewU2QOWSMYFfNAoIOjecLn5eX0TQvV518GiAubtdFj9zFxBkn7kIzpOFRwPEfnnyeWfhbEA6flqbR1A5cCRZOEkWHg2QO3Dx6OIn1TkE2QMnElGcDlA57abw48os+yqa9quWivMBeeM9JzbABt5zZv7+N7CK81jFeaziyRg/7RMyBtT2SSfuKxWUAAAAAElFTkSuQmCC" />
+<!-- Tailwind CSS with Local & CDN Fallback -->
+  <script src="tailwind.js"></script>
+  <script>
+    if (typeof tailwind === 'undefined') {
+      document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+    }
+  </script>
+
+  <!-- Prevent theme flash on page load -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    window.tailwind = window.tailwind || {};
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            porcelain: '#F9F6F3',
+            champagne: '#EDE4DC',
+            nude: '#DCC9BC',
+            rosegold: '#B88A78',
+            deeptaupe: '#6E4F42',
+            charcoal: '#2C2826',
+            ivory: '#FFFCF9',
+            sage: '#B8C5B2',
+            blush: '#F2E8E2',
+            gold: '#C6A78C',
+            cream: '#FCF7F2',
+            creamlight: '#FCF7F2',
+          },
+          fontFamily: {
+            'display': ['"Cormorant Garamond"', 'serif'],
+            'body': ['"Inter"', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'float-slow': 'floatSlow 7s ease-in-out infinite',
+            'pulse-soft': 'pulseSoft 4s ease-in-out infinite',
+            'fade-up': 'fadeUp 0.8s ease-out',
+            'shimmer': 'shimmer 2.8s infinite',
+          },
+          keyframes: {
+            floatSlow: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } },
+            pulseSoft: { '0%, 100%': { opacity: '0.8' }, '50%': { opacity: '1' } },
+            fadeUp: { '0%': { transform: 'translateY(28px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+            shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+          },
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <style>
+    body {
+      background-color: #F9F6F3;
+      color: #2C2826;
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+    .dark body {
+      background-color: #1C1817;
+      color: #F9F6F3;
+    }
+
+    /* Elegant scrollbar */
+    body::-webkit-scrollbar { width: 5px; }
+    body::-webkit-scrollbar-track { background: #F9F6F3; }
+    body::-webkit-scrollbar-thumb { background: #B88A78; border-radius: 20px; }
+
+    /* ===== UNIQUE HERO LAYOUT — SPLIT ASYMMETRIC ===== */
+    .hero-split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      min-height: 100vh;
+      position: relative;
+      background: #1C1817;
+    }
+    @media (max-width: 1024px) {
+      .hero-split {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+    }
+
+    .hero-panel-left {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 4rem 4rem 6rem;
+      z-index: 2;
+      background: linear-gradient(145deg, #1C1817 0%, #2C2826 100%);
+    }
+    @media (max-width: 1024px) {
+      .hero-panel-left { padding: 7rem 2rem 3rem 2rem; }
+    }
+
+    .hero-panel-right {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-panel-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.75) saturate(0.9);
+    }
+    .hero-panel-right::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, #1C1817 0%, transparent 40%);
+    }
+    @media (max-width: 1024px) {
+      .hero-panel-right { height: 420px; }
+      .hero-panel-right::after { background: linear-gradient(to top, #1C1817 0%, transparent 60%); }
+    }
+
+    /* ===== UNIQUE CARD STYLES ===== */
+    .treatment-card {
+      background: #FFFCF9;
+      border-radius: 4px 32px 4px 32px;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      border: 1px solid rgba(184, 138, 120, 0.12);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+      position: relative;
+      overflow: hidden;
+    }
+    .dark .treatment-card {
+      background: #2C2826;
+      border-color: rgba(184, 138, 120, 0.15);
+    }
+    .treatment-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #B88A78, #DCC9BC, #B88A78);
+      background-size: 200% 100%;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .treatment-card:hover::before { opacity: 1; animation: shimmer 2s infinite; }
+    .treatment-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 48px -16px rgba(184, 138, 120, 0.3);
+      border-color: rgba(184, 138, 120, 0.4);
+    }
+
+    /* ===== PROVIDER CARD — DIFFERENT SHAPE ===== */
+    .provider-card {
+      background: #FFFCF9;
+      border-radius: 0 40px 0 40px;
+      border: 1px solid rgba(184, 138, 120, 0.12);
+      transition: all 0.4s;
+      overflow: hidden;
+    }
+    .dark .provider-card { background: #2C2826; border-color: rgba(184, 138, 120, 0.2); }
+    .provider-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px -12px rgba(184, 138, 120, 0.25);
+    }
+
+    /* ===== THE PATIENT JOURNEY CARDS ===== */
+    .journey-card {
+      background: #FFFFFF;
+      border-radius: 24px;
+      border: 1px solid rgba(184, 138, 120, 0.2);
+      box-shadow: 0 10px 30px -8px rgba(184, 138, 120, 0.12), 0 2px 8px rgba(0, 0, 0, 0.02);
+      transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+    }
+    .dark .journey-card {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.25);
+      box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.5);
+    }
+    .journey-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 50px -12px rgba(184, 138, 120, 0.3);
+      border-color: #B88A78;
+    }
+
+    /* ===== PORTAL / FAQ ACCORDION CARDS ===== */
+    .portal-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      border: 1px solid rgba(184, 138, 120, 0.2);
+      box-shadow: 0 8px 24px -6px rgba(184, 138, 120, 0.08);
+      transition: all 0.3s ease;
+    }
+    .dark .portal-card {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.25);
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
+    }
+    .portal-card:hover {
+      border-color: rgba(184, 138, 120, 0.4);
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn-rose {
+      background: #B88A78;
+      color: #FFFCF9;
+      font-weight: 600;
+      border-radius: 4px 20px 4px 20px;
+      transition: all 0.35s;
+      box-shadow: 0 4px 14px rgba(184, 138, 120, 0.25);
+      letter-spacing: 0.3px;
+    }
+    .btn-rose:hover {
+      background: #A67A68;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(184, 138, 120, 0.4);
+      border-radius: 20px 4px 20px 4px;
+    }
+    .btn-ghost {
+      border: 1.5px solid rgba(184, 138, 120, 0.5);
+      color: #B88A78;
+      background: transparent;
+      border-radius: 4px 20px 4px 20px;
+      font-weight: 500;
+      transition: all 0.35s;
+    }
+    .btn-ghost:hover {
+      background: #B88A78;
+      color: #FFFCF9;
+      border-color: #B88A78;
+      border-radius: 20px 4px 20px 4px;
+    }
+    .dark .btn-ghost:hover { background: #B88A78; color: #FFFCF9; }
+
+    /* ===== NAV ===== */
+    .nav-link {
+      position: relative;
+      font-weight: 500;
+      transition: color 0.25s;
+      text-decoration: none !important;
+    }
+    .nav-link.active {
+      color: #B88A78 !important;
+      font-weight: 600;
+    }
+
+    .dropdown-clinic-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      background: #FFFCF9;
+      border-radius: 8px 24px 8px 24px;
+      padding: 0.5rem 0;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.07);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.25s;
+      z-index: 1000;
+      border: 1px solid rgba(184, 138, 120, 0.15);
+    }
+    .dropdown-clinic-menu::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      right: 0;
+      height: 12px;
+    }
+    .dark .dropdown-clinic-menu { background: #2C2826; border-color: rgba(184, 138, 120, 0.25); }
+    .dropdown-clinic:hover .dropdown-clinic-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 0.6rem 1.4rem;
+      transition: all 0.2s;
+      color: #2C2826;
+      font-size: 0.95rem;
+      border-radius: 4px 16px 4px 16px;
+      margin: 0 0.3rem;
+    }
+    .dark .dropdown-item { color: #F9F6F3; }
+    .dropdown-item:hover { background: #F2E8E2; color: #2C2826; padding-left: 1.7rem; }
+    .dark .dropdown-item:hover { background: #3D3431; color: #F9F6F3; }
+    .dropdown-item i { margin-right: 0.75rem; width: 18px; color: #B88A78; }
+
+    /* ===== MOBILE MENU ===== */
+    .mobile-menu-clinic {
+      background: #FFFCF9;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .dark .mobile-menu-clinic { background: #2C2826; }
+    .mobile-menu-clinic.open { max-height: 80vh; overflow-y: auto; }
+
+    /* ===== STATS ===== */
+    .stat-item {
+      background: transparent;
+      padding: 1.5rem 0.5rem;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
+      text-align: center;
+    }
+    .stat-item:hover {
+      border-bottom-color: #B88A78;
+      transform: translateY(-3px);
+    }
+
+    /* ===== TESTIMONIAL ===== */
+    .testimonial-card {
+      background: #FFFCF9;
+      border-radius: 32px 4px 32px 4px;
+      padding: 2.25rem 2rem;
+      border: 1px solid rgba(184, 138, 120, 0.18);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      transition: all 0.4s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .dark .testimonial-card { background: #2C2826; border-color: rgba(184, 138, 120, 0.22); }
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 44px -8px rgba(184, 138, 120, 0.22);
+      border-color: rgba(184, 138, 120, 0.4);
+    }
+    .testimonial-card::after {
+      content: '”';
+      position: absolute;
+      top: 0.5rem;
+      right: 1.5rem;
+      font-size: 5rem;
+      font-family: 'Cormorant Garamond', serif;
+      color: rgba(184, 138, 120, 0.12);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    /* ===== SOCIAL ===== */
+    .social-icon-clinic {
+      width: 40px; height: 40px;
+      border-radius: 8px 16px 8px 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #F2E8E2;
+      color: #2C2826;
+      transition: all 0.3s;
+    }
+    .social-icon-clinic:hover {
+      background: #B88A78;
+      color: #FFFCF9;
+      transform: translateY(-3px) rotate(3deg);
+    }
+    .dark .social-icon-clinic { background: #3D3431; color: #F9F6F3; }
+    .dark .social-icon-clinic:hover { background: #B88A78; color: #FFFCF9; }
+
+    /* RTL adjustments */
+    [dir="rtl"] .ml-auto { margin-left: 0 !important; margin-right: auto !important; }
+    [dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+    [dir="rtl"] .dropdown-clinic-menu { left: auto; right: 0; }
+    [dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.75rem; }
+    [dir="rtl"] .testimonial-card::after { right: auto; left: 1.5rem; }
+
+    .gold-accent { color: #C6A78C; }
+    .text-balance { text-wrap: balance; }
+  </style>
+</head>
+<body>
+
+<!-- ======== NAVIGATION (clean, floating, clinical) ======== -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-porcelain/90 dark:bg-[#1C1817]/90 backdrop-blur-lg border-b border-rosegold/10 dark:border-rosegold/15 shadow-sm">
+  <div class="container mx-auto px-6">
+    <div class="flex items-center justify-between h-20 md:h-24 relative">
+
+      <!-- Logo with geometric mark -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+        <div class="w-10 h-10 bg-rosegold rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition duration-300 rotate-3 group-hover:rotate-0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-6 h-6" fill="none">
+            <path d="M18 6 L28 14 L18 26 L8 14 Z" fill="white" opacity="0.95"/>
+            <circle cx="18" cy="16" r="3.5" fill="white" opacity="0.7"/>
+            <path d="M10 28 L18 22 L26 28" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+          </svg>
+        </div>
+        <span class="flex flex-col items-start leading-tight">
+            <span class="text-lg md:text-2xl font-display font-extrabold tracking-tight text-[#2C2826] dark:text-porcelain">LUMEA</span>
+            <span class="text-rosegold text-[9px] md:text-[11px] font-semibold tracking-[0.2em] uppercase -mt-0.5">MED SPA &amp; AESTHETICS</span>
+          </span>
+        </a>
+
+      <!-- Desktop Nav — centered but airy -->
+      <div class="hidden xl:flex items-center gap-5 xl:gap-6 absolute left-1/2 -translate-x-1/2">
+        <div class="dropdown-clinic relative">
+          <a href="index.html" class="nav-link active font-medium flex items-center gap-1 py-2 whitespace-nowrap text-[15px]">
+            Home <i class="fas fa-chevron-down text-[10px] ms-1 opacity-60"></i>
+          </a>
+          <div class="dropdown-clinic-menu">
+            <a class="dropdown-item text-rosegold font-semibold bg-rosegold/10" href="index.html">Home 1</a>
+            <a class="dropdown-item" href="home2.html">Home 2</a>
+          </div>
+        </div>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="about.html">About</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="treatments.html">Treatments</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="providers.html">Providers</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="membership.html">Membership</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="contact.html">Contact</a>
+
+        <!-- Dashboard Dropdown -->
+        <div class="dropdown-clinic relative">
+          <button class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold font-medium flex items-center gap-1 py-2 whitespace-nowrap text-[15px]">
+            Dashboard <i class="fas fa-chevron-down text-[10px] ms-1 opacity-60"></i>
+          </button>
+          <div class="dropdown-clinic-menu">
+            <a class="dropdown-item" href="client.html">Client</a>
+            <a class="dropdown-item" href="admin.html">Admin</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right actions -->
+      <div class="flex items-center gap-2 xl:gap-3 ms-auto">
+        <a href="login.html" class="hidden xl:inline-flex btn-rose py-2 px-5 text-sm items-center gap-2">
+          <i class="fas fa-user-circle"></i> Client Login
+        </a>
+        <button id="theme-toggle" class="hidden xl:flex w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition items-center justify-center">
+          <i class="fas fa-moon dark:hidden text-sm"></i>
+          <i class="fas fa-sun hidden dark:inline text-sm"></i>
+        </button>
+        <button id="rtl-toggle" class="hidden xl:flex w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition items-center justify-center font-bold text-sm">
+          ⇄
+        </button>
+        <button id="mobile-toggle" class="xl:hidden w-10 h-10 rounded-lg bg-rosegold text-ivory flex items-center justify-center shadow-md">
+          <i class="fas fa-bars text-sm"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-clinic xl:hidden rounded-b-3xl">
+      <div class="py-4 px-3 space-y-1">
+        <div class="py-1">
+          <button onclick="document.getElementById('home-mobile-drop').classList.toggle('hidden'); document.getElementById('home-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-rosegold border-l-4 border-rosegold bg-rosegold/5 rounded-lg transition cursor-pointer">
+            <span>Home</span>
+            <i id="home-mobile-icon" class="fas fa-chevron-down text-xs opacity-60 transition-transform duration-300 rotate-180"></i>
+          </button>
+          <div id="home-mobile-drop" class=" pl-2 space-y-1 mt-1 mb-2">
+            <a class="block py-2.5 px-4 font-medium text-rosegold bg-rosegold/10 border-l-4 border-rosegold rounded-lg transition" href="index.html">Home 1</a>
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="home2.html">Home 2</a>
+          </div>
+        </div>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="about.html">About</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="treatments.html">Treatments</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="providers.html">Providers</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="membership.html">Membership</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="contact.html">Contact</a>
+
+        <!-- Dashboard Dropdown (Mobile) -->
+        <div class="py-1">
+          <button onclick="document.getElementById('dashboard-mobile-drop').classList.toggle('hidden'); document.getElementById('dashboard-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition cursor-pointer">
+            <span>Dashboard</span>
+            <i id="dashboard-mobile-icon" class="fas fa-chevron-down text-xs opacity-60 transition-transform duration-300"></i>
+          </button>
+          <div id="dashboard-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="client.html">Client</a>
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="admin.html">Admin</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 pt-5 mt-3 border-t border-blush/60 dark:border-cream/10">
+          <a class="text-center btn-rose py-2.5 font-medium flex items-center justify-center gap-2" href="login.html">
+            <i class="fas fa-user-circle"></i> Client Login
+          </a>
+          <div class="flex gap-3">
+            <button id="mobile-theme-toggle" class="flex-1 py-2 rounded-lg bg-rosegold/10 text-rosegold text-sm font-medium flex items-center gap-2 justify-center">
+              <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i> Theme
+            </button>
+            <button id="mobile-rtl-toggle" class="flex-1 py-2 rounded-lg bg-rosegold/10 text-rosegold text-sm font-medium flex items-center gap-2 justify-center">
+              ⇄ RTL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ======== HERO — SPLIT ASYMMETRIC ======== -->
+<section class="hero-split">
+  <!-- LEFT: Content -->
+  <div class="hero-panel-left">
+    <div class="max-w-xl animate-fade-up">
+      <span class="inline-flex items-center gap-2 bg-rosegold/15 text-rosegold px-4 py-1.5 rounded-lg text-xs font-bold tracking-widest uppercase mb-6 border border-rosegold/20">
+        <i class="fas fa-wand-magic-sparkles text-rosegold"></i> medical-grade aesthetics
+      </span>
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-extrabold leading-[1.1] mb-6 text-ivory">
+        Radiance,<br/>
+        <span class="text-rosegold">redefined</span><br/>
+        <span class="text-4xl md:text-5xl font-bold text-ivory/80">non-surgical artistry</span>
+      </h1>
+      <p class="text-lg md:text-xl text-ivory/90 font-light mb-10 max-w-lg leading-relaxed">
+        Botox, dermal fillers, laser resurfacing & advanced skin rejuvenation. 
+        Delivered with clinical precision and a gentle touch.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="treatments.html" class="btn-rose px-8 py-3.5 text-base inline-flex items-center gap-2 shadow-xl">
+          <i class="fas fa-syringe"></i> Explore Treatments
+        </a>
+        <a href="contact.html" class="btn-ghost px-8 py-3.5 text-base inline-flex items-center gap-2 border-ivory/30 text-ivory/90 hover:bg-rosegold hover:text-ivory hover:border-rosegold">
+          <i class="fas fa-calendar-check"></i> Book Consultation
+        </a>
+      </div>
+
+      <!-- Quick trust indicators -->
+      <div class="flex items-center gap-6 mt-12 pt-8 border-t border-ivory/10">
+        <div class="flex items-center gap-2">
+          <i class="fas fa-star text-rosegold text-sm"></i>
+          <span class="text-ivory/80 text-sm">4.9 · 2k+ reviews</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-shield-halved text-rosegold text-sm"></i>
+          <span class="text-ivory/80 text-sm">FDA-approved</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-user-md text-rosegold text-sm"></i>
+          <span class="text-ivory/80 text-sm">Board-certified</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Image -->
+  <div class="hero-panel-right">
+    <img src="assets/medspa-hero.jpg" alt="Luxurious Med Spa Interior" />
+  </div>
+</section>
+
+<!-- ======== STATS — minimal line ======== -->
+<section class="py-14 bg-rosegold dark:bg-[#181413]">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+      <div class="stat-item">
+        <div class="text-3xl md:text-4xl font-display font-bold text-ivory mb-1">15+</div>
+        <div class="text-xs uppercase tracking-widest text-ivory/90">Years expertise</div>
+      </div>
+      <div class="stat-item">
+        <div class="text-3xl md:text-4xl font-display font-bold text-ivory mb-1">8k+</div>
+        <div class="text-xs uppercase tracking-widest text-ivory/90">Happy clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="text-3xl md:text-4xl font-display font-bold text-ivory mb-1">4.9★</div>
+        <div class="text-xs uppercase tracking-widest text-ivory/90">Patient rating</div>
+      </div>
+      <div class="stat-item">
+        <div class="text-3xl md:text-4xl font-display font-bold text-ivory mb-1">25+</div>
+        <div class="text-xs uppercase tracking-widest text-ivory/90">Treatments</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== SIGNATURE TREATMENTS — asymmetric card layout ======== -->
+<section class="py-24 bg-porcelain dark:bg-[#1C1817] relative overflow-hidden">
+  <!-- subtle pattern -->
+  <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]" style="background-image: radial-gradient(circle at 20% 30%, #B88A78 0.5px, transparent 0.5px); background-size: 24px 24px;"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+      <div class="animate-fade-up">
+        <span class="inline-flex items-center gap-2 text-rosegold px-0 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-4">
+          <span class="w-8 h-px bg-rosegold"></span> Signature Treatments
+        </span>
+        <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+          Clinical <span class="text-rosegold">artistry</span>
+        </h2>
+        <p class="text-[#2C2826]/85 dark:text-porcelain/85 mt-3 text-base max-w-md">Advanced, results-driven treatments tailored to you.</p>
+      </div>
+      <a href="treatments.html" class="shrink-0 inline-flex items-center gap-2 border border-rosegold/40 text-rosegold hover:bg-rosegold hover:text-white px-6 py-2.5 rounded-lg text-sm font-semibold transition duration-300">
+        View All <i class="fas fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 items-stretch">
+      <!-- Card 1 -->
+      <div class="treatment-card group animate-fade-up h-full flex flex-col" style="animation-delay: 0.1s;">
+        <div class="relative overflow-hidden h-56 shrink-0">
+          <img src="assets/treatment-botox.jpg" alt="Botox & Fillers" class="w-full h-full object-cover group-hover:scale-105 transition duration-700"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-rosegold text-ivory text-[10px] font-bold px-3 py-1 rounded-md tracking-wider uppercase shadow">Most Popular</span>
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <div class="flex items-center gap-1 mb-3">
+            <i class="fas fa-star text-amber-400 text-[10px]"></i><i class="fas fa-star text-amber-400 text-[10px]"></i><i class="fas fa-star text-amber-400 text-[10px]"></i><i class="fas fa-star text-amber-400 text-[10px]"></i><i class="fas fa-star-half-stroke text-amber-400 text-[10px]"></i>
+            <span class="text-[#2C2826]/80 dark:text-porcelain/85 text-[11px] ml-1.5">(4.9) · 280</span>
+          </div>
+          <h3 class="text-xl font-display font-bold text-[#2C2826] dark:text-porcelain mb-2">Botox &amp; Dermal Fillers</h3>
+          <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-sm leading-relaxed mb-5 flex-1">Smooth fine lines, restore volume, and refine contours with precision injectables.</p>
+          <div class="flex items-center justify-between pt-5 border-t border-rosegold/10 mt-auto">
+            <span class="text-rosegold font-display font-extrabold text-2xl">$299</span>
+            <a href="treatments.html" class="text-rosegold text-xs font-bold tracking-wide uppercase hover:underline flex items-center gap-1.5">
+              Learn <i class="fas fa-arrow-right text-[9px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="treatment-card group animate-fade-up h-full flex flex-col" style="animation-delay: 0.2s;">
+        <div class="relative overflow-hidden h-56 shrink-0">
+          <img src="assets/treatment-laser.jpg" alt="Laser Resurfacing" class="w-full h-full object-cover group-hover:scale-105 transition duration-700"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-[#2C2826] text-porcelain text-[10px] font-bold px-3 py-1 rounded-md tracking-wider uppercase shadow">Advanced</span>
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <div class="flex items-center gap-1 mb-3">
+            <i class="fas fa-star text-amber-400 text-[10px]"></i><i class="fas fa-star text-amber-400 text-[10px]"></i><i class="fas fa-star text-amber-400 text-[10px]"></i><i class="fas fa-star text-amber-400 text-[10px]"></i><i class="fas fa-star text-amber-400 text-[10px]"></i>
+            <span class="text-[#2C2826]/80 dark:text-porcelain/85 text-[11px] ml-1.5">(5.0) · 195</span>
+          </div>
+          <h3 class="text-xl font-display font-bold text-[#2C2826] dark:text-porcelain mb-2">Laser Resurfacing</h3>
+          <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-sm leading-relaxed mb-5 flex-1">Fractional laser for texture, pigmentation, and collagen remodeling.</p>
+          <div class="flex items-center justify-between pt-5 border-t border-rosegold/10 mt-auto">
+            <span class="text-rosegold font-display font-extrabold text-2xl">$499</span>
+            <a href="treatments.html" class="text-rosegold text-xs font-bold tracking-wide uppercase hover:underline flex items-center gap-1.5">
+              Learn <i class="fas fa-arrow-right text-[9px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="treatment-card group animate-fade-up h-full flex flex-col" style="animation-delay: 0.3s;">
+        <div class="relative overflow-hidden h-56 shrink-0">
+          <img src="assets/treatment-skin.jpg" alt="Skin Rejuvenation" class="w-full h-full object-cover group-hover:scale-105 transition duration-700"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-sage text-white text-[10px] font-bold px-3 py-1 rounded-md tracking-wider uppercase shadow">Glow</span>
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <div class="flex items-center gap-1 mb-3">
+            <i class="fas fa-star text-amber-400 text-[10px]"></i><i class="fas fa-star text-amber-400 text-[10px]"></i><i class="fas fa-star text-amber-400 text-[10px]"></i><i class="fas fa-star text-amber-400 text-[10px]"></i><i class="fas fa-star text-amber-400 text-[10px]"></i>
+            <span class="text-[#2C2826]/80 dark:text-porcelain/85 text-[11px] ml-1.5">(4.8) · 210</span>
+          </div>
+          <h3 class="text-xl font-display font-bold text-[#2C2826] dark:text-porcelain mb-2">Skin Rejuvenation</h3>
+          <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-sm leading-relaxed mb-5 flex-1">Medical-grade facials, microneedling &amp; PRP for luminous skin.</p>
+          <div class="flex items-center justify-between pt-5 border-t border-rosegold/10 mt-auto">
+            <span class="text-rosegold font-display font-extrabold text-2xl">$199</span>
+            <a href="treatments.html" class="text-rosegold text-xs font-bold tracking-wide uppercase hover:underline flex items-center gap-1.5">
+              Learn <i class="fas fa-arrow-right text-[9px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== THE CLINICAL JOURNEY — 4-STEP PROTOCOL ======== -->
+<section class="py-24 bg-[#F4EDE7] dark:bg-[#1A1615] relative overflow-hidden border-y border-rosegold/10">
+  <div class="absolute -top-32 -left-32 w-80 h-80 bg-rosegold/8 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-32 -right-32 w-80 h-80 bg-rosegold/8 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+      <div class="animate-fade-up">
+        <span class="inline-flex items-center gap-2 text-rosegold px-0 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-4">
+          <span class="w-8 h-px bg-rosegold"></span> The Patient Journey
+        </span>
+        <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+          Your path to <span class="text-rosegold">natural radiance</span>
+        </h2>
+        <p class="text-[#2C2826]/85 dark:text-porcelain/85 mt-3 text-base max-w-xl">
+          Every face is unique. We combine advanced diagnostic imaging with refined anatomical artistry to craft your bespoke transformation.
+        </p>
+      </div>
+      <div class="shrink-0 animate-fade-up">
+        <a href="contact.html" class="btn-rose px-7 py-3 text-sm inline-flex items-center gap-2 shadow-md">
+          <i class="fas fa-calendar-check"></i> Book Consultation
+        </a>
+      </div>
+    </div>
+
+    <!-- 4 Journey Steps Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Step 1 -->
+      <div class="journey-card p-8 flex flex-col justify-between group">
+        <div class="h-1.5 w-full bg-gradient-to-r from-rosegold/30 via-rosegold to-rosegold/30 absolute top-0 left-0"></div>
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="font-display text-4xl md:text-5xl font-extrabold text-rosegold/35 group-hover:text-rosegold transition-colors duration-300">01</span>
+            <div class="w-12 h-12 rounded-2xl bg-rosegold/10 text-rosegold flex items-center justify-center text-lg group-hover:bg-rosegold group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm">
+              <i class="fas fa-camera-retro"></i>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-2xl text-[#2C2826] dark:text-porcelain mb-3 group-hover:text-rosegold transition-colors">
+            3D Skin Mapping
+          </h3>
+          <p class="text-sm text-[#2C2826]/85 dark:text-porcelain/85 leading-relaxed mb-6">
+            High-definition digital analysis evaluates dermal depth, UV pigmentation, vascularity, and symmetry at the cellular level.
+          </p>
+        </div>
+        <div class="pt-5 border-t border-rosegold/15 mt-auto">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rosegold/10 text-rosegold text-xs font-semibold tracking-wide">
+            <i class="fas fa-check-circle text-[11px]"></i> Diagnostic Mapping
+          </span>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="journey-card p-8 flex flex-col justify-between group">
+        <div class="h-1.5 w-full bg-gradient-to-r from-rosegold/30 via-rosegold to-rosegold/30 absolute top-0 left-0"></div>
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="font-display text-4xl md:text-5xl font-extrabold text-rosegold/35 group-hover:text-rosegold transition-colors duration-300">02</span>
+            <div class="w-12 h-12 rounded-2xl bg-rosegold/10 text-rosegold flex items-center justify-center text-lg group-hover:bg-rosegold group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm">
+              <i class="fas fa-compass-drafting"></i>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-2xl text-[#2C2826] dark:text-porcelain mb-3 group-hover:text-rosegold transition-colors">
+            Aesthetic Blueprint
+          </h3>
+          <p class="text-sm text-[#2C2826]/85 dark:text-porcelain/85 leading-relaxed mb-6">
+            Collaborative planning with your board-certified physician to establish subtle, natural proportions with zero pressure.
+          </p>
+        </div>
+        <div class="pt-5 border-t border-rosegold/15 mt-auto">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rosegold/10 text-rosegold text-xs font-semibold tracking-wide">
+            <i class="fas fa-check-circle text-[11px]"></i> Physician-Led Plan
+          </span>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="journey-card p-8 flex flex-col justify-between group">
+        <div class="h-1.5 w-full bg-gradient-to-r from-rosegold/30 via-rosegold to-rosegold/30 absolute top-0 left-0"></div>
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="font-display text-4xl md:text-5xl font-extrabold text-rosegold/35 group-hover:text-rosegold transition-colors duration-300">03</span>
+            <div class="w-12 h-12 rounded-2xl bg-rosegold/10 text-rosegold flex items-center justify-center text-lg group-hover:bg-rosegold group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm">
+              <i class="fas fa-hand-sparkles"></i>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-2xl text-[#2C2826] dark:text-porcelain mb-3 group-hover:text-rosegold transition-colors">
+            Precision Treatment
+          </h3>
+          <p class="text-sm text-[#2C2826]/85 dark:text-porcelain/85 leading-relaxed mb-6">
+            Performed using micro-cannula techniques and FDA-cleared energy devices for minimal discomfort and rapid recovery.
+          </p>
+        </div>
+        <div class="pt-5 border-t border-rosegold/15 mt-auto">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rosegold/10 text-rosegold text-xs font-semibold tracking-wide">
+            <i class="fas fa-check-circle text-[11px]"></i> Gentle Micro-Artistry
+          </span>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="journey-card p-8 flex flex-col justify-between group">
+        <div class="h-1.5 w-full bg-gradient-to-r from-rosegold/30 via-rosegold to-rosegold/30 absolute top-0 left-0"></div>
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="font-display text-4xl md:text-5xl font-extrabold text-rosegold/35 group-hover:text-rosegold transition-colors duration-300">04</span>
+            <div class="w-12 h-12 rounded-2xl bg-rosegold/10 text-rosegold flex items-center justify-center text-lg group-hover:bg-rosegold group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm">
+              <i class="fas fa-shield-heart"></i>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-2xl text-[#2C2826] dark:text-porcelain mb-3 group-hover:text-rosegold transition-colors">
+            Aftercare &amp; Glow Review
+          </h3>
+          <p class="text-sm text-[#2C2826]/85 dark:text-porcelain/85 leading-relaxed mb-6">
+            Structured post-treatment check-ins, medical-grade barrier serums, and long-term glow maintenance strategies.
+          </p>
+        </div>
+        <div class="pt-5 border-t border-rosegold/15 mt-auto">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rosegold/10 text-rosegold text-xs font-semibold tracking-wide">
+            <i class="fas fa-check-circle text-[11px]"></i> Guaranteed Support
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== PROVIDERS — grid of 4 distinct cards ======== -->
+<section class="py-24 bg-[#EDE4DC] dark:bg-[#181413] relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-rosegold/5 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold px-0 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Our Providers
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        Experts in <span class="text-rosegold">aesthetic medicine</span>
+      </h2>
+      <p class="text-[#2C2826]/85 dark:text-porcelain/85 mt-4 max-w-xl mx-auto text-lg">
+        Board-certified physicians, nurse injectors &amp; laser specialists dedicated to natural-looking results.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Provider 1 -->
+      <div class="provider-card group animate-fade-up" style="animation-delay: 0.1s;">
+        <div class="h-56 overflow-hidden">
+          <img src="assets/provider-1.jpg" alt="Dr. Elara Voss" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700"/>
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Dr. Elara Voss</h3>
+          <p class="text-rosegold text-xs font-semibold tracking-wider uppercase mt-1">Medical Director</p>
+          <p class="text-[#2C2826]/80 dark:text-porcelain/85 text-xs mt-2">MD, FAAD · 15+ years</p>
+        </div>
+      </div>
+      <!-- Provider 2 -->
+      <div class="provider-card group animate-fade-up" style="animation-delay: 0.2s;">
+        <div class="h-56 overflow-hidden">
+          <img src="assets/provider-2.jpg" alt="Nurse injector" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700"/>
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Nadia Chen</h3>
+          <p class="text-rosegold text-xs font-semibold tracking-wider uppercase mt-1">Lead Injector</p>
+          <p class="text-[#2C2826]/80 dark:text-porcelain/85 text-xs mt-2">RN, BSN · 8+ years</p>
+        </div>
+      </div>
+      <!-- Provider 3 -->
+      <div class="provider-card group animate-fade-up" style="animation-delay: 0.3s;">
+        <div class="h-56 overflow-hidden">
+          <img src="assets/provider-3.jpg" alt="Laser specialist" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700"/>
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Dr. Marcus Hale</h3>
+          <p class="text-rosegold text-xs font-semibold tracking-wider uppercase mt-1">Laser Specialist</p>
+          <p class="text-[#2C2826]/80 dark:text-porcelain/85 text-xs mt-2">MD · 12+ years</p>
+        </div>
+      </div>
+      <!-- Provider 4 -->
+      <div class="provider-card group animate-fade-up" style="animation-delay: 0.4s;">
+        <div class="h-56 overflow-hidden">
+          <img src="assets/provider-4.jpg" alt="Aesthetician" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700"/>
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Sofia Laurent</h3>
+          <p class="text-rosegold text-xs font-semibold tracking-wider uppercase mt-1">Lead Aesthetician</p>
+          <p class="text-[#2C2826]/80 dark:text-porcelain/85 text-xs mt-2">LE, CLT · 10+ years</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="providers.html" class="btn-ghost px-8 py-3 text-sm inline-flex items-center gap-2">
+        Meet the Full Team <i class="fas fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======== TESTIMONIALS — stacked/offset layout ======== -->
+<section class="py-24 bg-porcelain dark:bg-[#1C1817]">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="inline-flex items-center gap-2 text-rosegold px-0 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Client Stories
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        Real <span class="text-rosegold">results</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 items-stretch">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card h-full flex flex-col justify-between animate-fade-up" style="animation-delay: 0.1s;">
+        <div>
+          <div class="flex gap-1 mb-4">
+            <i class="fas fa-star text-rosegold text-xs"></i><i class="fas fa-star text-rosegold text-xs"></i><i class="fas fa-star text-rosegold text-xs"></i><i class="fas fa-star text-rosegold text-xs"></i><i class="fas fa-star text-rosegold text-xs"></i>
+          </div>
+          <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-sm leading-relaxed mb-6 italic font-display text-lg">"Dr. Voss is a true artist. My Botox looks incredibly natural — I just look refreshed, not frozen."</p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-rosegold/10 mt-auto">
+          <img src="assets/review-isabella.jpg" alt="Isabella R." class="w-10 h-10 rounded-lg object-cover border border-rosegold/20"/>
+          <div>
+            <strong class="text-[#2C2826] dark:text-porcelain text-sm block">Isabella R.</strong>
+            <span class="text-rosegold text-[11px] font-medium">Botox &amp; Filler Client</span>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card h-full flex flex-col justify-between animate-fade-up" style="animation-delay: 0.2s;">
+        <div>
+          <div class="flex gap-1 mb-4">
+            <i class="fas fa-star text-rosegold text-xs"></i><i class="fas fa-star text-rosegold text-xs"></i><i class="fas fa-star text-rosegold text-xs"></i><i class="fas fa-star text-rosegold text-xs"></i><i class="fas fa-star text-rosegold text-xs"></i>
+          </div>
+          <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-sm leading-relaxed mb-6 italic font-display text-lg">"The laser resurfacing transformed my skin. Sun damage gone, texture improved — worth every penny."</p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-rosegold/10 mt-auto">
+          <img src="assets/review-olivia.jpg" alt="Olivia M." class="w-10 h-10 rounded-lg object-cover border border-rosegold/20"/>
+          <div>
+            <strong class="text-[#2C2826] dark:text-porcelain text-sm block">Olivia M.</strong>
+            <span class="text-rosegold text-[11px] font-medium">Laser Resurfacing Client</span>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card h-full flex flex-col justify-between animate-fade-up" style="animation-delay: 0.3s;">
+        <div>
+          <div class="flex gap-1 mb-4">
+            <i class="fas fa-star text-rosegold text-xs"></i><i class="fas fa-star text-rosegold text-xs"></i><i class="fas fa-star text-rosegold text-xs"></i><i class="fas fa-star text-rosegold text-xs"></i><i class="fas fa-star text-rosegold text-xs"></i>
+          </div>
+          <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-sm leading-relaxed mb-6 italic font-display text-lg">"The membership is incredible value. Monthly facials and priority booking keep my skin glowing year-round."</p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-rosegold/10 mt-auto">
+          <img src="assets/review-sophia.jpg" alt="Sophia K." class="w-10 h-10 rounded-lg object-cover border border-rosegold/20"/>
+          <div>
+            <strong class="text-[#2C2826] dark:text-porcelain text-sm block">Sophia K.</strong>
+            <span class="text-rosegold text-[11px] font-medium">Glow Membership Member</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== CLINICAL FAQ & PATIENT SAFETY ======== -->
+<section class="py-24 bg-porcelain dark:bg-[#1C1817] relative overflow-hidden">
+  <div class="container mx-auto px-6 relative z-10 max-w-5xl">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold px-0 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Clinical Transparency
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        Frequently asked <span class="text-rosegold">questions</span>
+      </h2>
+      <p class="text-[#2C2826]/85 dark:text-porcelain/85 mt-3 text-base max-w-xl mx-auto">
+        Everything you need to know about our safety standards, downtime, and physician-led aesthetic treatments.
+      </p>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="space-y-4" id="clinic-faq-accordion">
+      <!-- Item 1 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>How soon will I see results, and is there any downtime?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Results depend on the procedure. Dermal fillers provide immediate volume and contour improvement that settles smoothly within 7 to 10 days. Neurotoxins (Botox) typically begin showing results within 3 to 5 days, reaching peak efficacy at day 14. For fractional laser resurfacing, mild redness resembling a light sunburn lasts 24 to 48 hours, with progressive collagen remodeling visible over the next 6 to 12 weeks. Most clients resume everyday social activities immediately or the following day.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Will my results look natural, or is there a risk of looking "frozen"?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            At Lumineau Aesthetics, natural, undetectable refinement is our core medical philosophy. We strictly practice micro-dosing and respect native facial anatomy to preserve your full range of emotional expression. Our goal is for people to notice your vibrant, refreshed glow—never that you have had aesthetic work done.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Who performs treatments at Lumineau Aesthetics?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            All medical injectables and advanced laser procedures are administered exclusively by board-certified dermatologists and licensed, master-trained registered nurse injectors with thousands of documented procedures. We never delegate clinical injections to unsupervised assistants or technicians.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Are treatments painful, and what comfort options do you provide?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Patient comfort is paramount. We formulate medical-grade prescription topical numbing creams applied prior to procedure. Our dermal fillers contain integrated lidocaine, and our laser platforms feature continuous chilled-air skin cooling technology. Most patients describe treatments as a minor pinch or gentle warmth.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>How should I prepare for my first aesthetic appointment?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            To minimize bruising, we advise avoiding alcohol, ibuprofen, aspirin, and fish oil supplements for 48 hours prior to your visit. Arrive well-hydrated and without makeup if possible. During your consultation, we review your full health profile and discuss any current skincare products you are using.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== CTA — full width, minimal ======== -->
+<section class="py-24 bg-rosegold dark:bg-[#181413]">
+  <div class="container mx-auto px-6 text-center">
+    <div class="max-w-3xl mx-auto animate-fade-up">
+      <div class="inline-block mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="60" height="60" fill="none">
+          <path d="M32 12 Q22 4 20 16 Q18 28 30 30 Q32 32 34 30 Q46 28 44 16 Q42 4 32 12Z" fill="white" opacity="0.9"/>
+          <ellipse cx="32" cy="26" rx="14" ry="4" fill="white" opacity="0.45"/>
+          <circle cx="32" cy="20" r="3" fill="white" opacity="0.8"/>
+          <path d="M18 32 Q12 24 18 18" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M46 32 Q52 24 46 18" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M24 38 Q32 46 40 38" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+        </svg>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-display font-bold text-ivory mb-5">Begin Your <span class="text-ivory/90">Glow Journey</span></h2>
+      <p class="text-ivory/80 text-lg mb-10 max-w-xl mx-auto">Book a private consultation with one of our aesthetic specialists today.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contact.html" class="bg-ivory text-rosegold px-8 py-3.5 rounded-lg font-bold shadow-lg hover:scale-105 transition inline-flex items-center gap-2 text-sm">
+          <i class="fas fa-calendar-check"></i> Book Consultation
+        </a>
+        <a href="membership.html" class="border-2 border-ivory/60 text-ivory px-8 py-3.5 rounded-lg font-semibold hover:bg-ivory hover:text-rosegold transition inline-flex items-center gap-2 text-sm">
+          <i class="fas fa-crown"></i> Explore Membership
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FOOTER ======== -->
+<footer class="bg-porcelain dark:bg-[#1C1817] text-[#2C2826] dark:text-porcelain pt-16 pb-8 border-t border-rosegold/10">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="text-center md:text-start">
+        <a href="index.html" class="inline-flex items-center justify-center md:justify-start gap-3 mb-6 group hover:opacity-90 transition">
+          <div class="w-10 h-10 bg-rosegold rounded-lg flex items-center justify-center shadow-lg overflow-hidden group-hover:scale-105 transition duration-300 rotate-3 group-hover:rotate-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-6 h-6" fill="none">
+              <path d="M18 6 L28 14 L18 26 L8 14 Z" fill="white" opacity="0.95"/>
+              <circle cx="18" cy="16" r="3.5" fill="white" opacity="0.7"/>
+              <path d="M10 28 L18 22 L26 28" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+            </svg>
+          </div>
+          <span class="flex flex-col items-start leading-tight">
+            <span class="text-lg md:text-2xl font-display font-extrabold tracking-tight text-[#2C2826] dark:text-porcelain">LUMEA</span>
+            <span class="text-rosegold text-[9px] md:text-[11px] font-semibold tracking-[0.2em] uppercase -mt-0.5">MED SPA &amp; AESTHETICS</span>
+          </span>
+        </a>
+        <p class="mb-5 text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Advanced non-surgical aesthetics. Clinical precision, natural radiance.</p>
+        <div class="flex justify-center md:justify-start gap-3">
+          <a href="#" class="social-icon-clinic" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon-clinic" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon-clinic" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Treatments</h4>
+        <ul class="space-y-2.5">
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Botox &amp; Fillers</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Laser Resurfacing</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Skin Rejuvenation</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Body Contouring</a></li>
+        </ul>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Clinic</h4>
+        <ul class="space-y-2.5">
+          <li><a href="about.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">About</a></li>
+          <li><a href="providers.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Providers</a></li>
+          <li><a href="membership.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Membership</a></li>
+          <li></li>
+          <li><a href="client.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Client Portal</a></li>
+          <li><a href="admin.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Admin Portal</a></li>
+        </ul>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Visit</h4>
+        <ul class="space-y-3">
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-map-marker-alt text-rosegold mt-0.5"></i><span>1200 Glow Blvd, Aesthetic District</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-phone text-rosegold"></i><span>(555) 727-4SPA</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-envelope text-rosegold"></i><span>hello@lumineau.com</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-clock text-rosegold"></i><span>Mon–Fri 9am – 7pm · Sat 10am – 4pm</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-rosegold/10 text-center text-xs text-[#2C2826]/80 dark:text-porcelain/85">
+      <p>&copy; 2026 MED SPA &amp; AESTHETICS. <i class="fas fa-heart text-rosegold mx-1"></i> Glow with confidence.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ======== SCRIPTS ======== -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Theme toggle
+    const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
+    themeBtns.forEach(btn => {
+      btn?.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      });
+    });
+    if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+    // RTL
+    function setRTL(isRTL) {
+      const html = document.documentElement;
+      if (isRTL === 'rtl' || isRTL === true) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); } 
+      else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+    }
+    const savedDir = localStorage.getItem('dir');
+    if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+    else document.documentElement.setAttribute('dir', 'ltr');
+
+    const rtlBtn = document.getElementById('rtl-toggle');
+    if (rtlBtn) {
+      rtlBtn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir');
+        setRTL(currentDir === 'rtl' ? 'ltr' : 'rtl');
+      });
+    }
+    const mobileRtlBtn = document.getElementById('mobile-rtl-toggle');
+    if (mobileRtlBtn) {
+      mobileRtlBtn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir');
+        setRTL(currentDir === 'rtl' ? 'ltr' : 'rtl');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileToggle = document.getElementById('mobile-toggle');
+        if (mobileMenu && mobileMenu.classList.contains('open')) {
+          mobileMenu.classList.remove('open');
+          if (mobileToggle && mobileToggle.querySelector('i')) {
+            mobileToggle.querySelector('i').classList.remove('fa-times');
+            mobileToggle.querySelector('i').classList.add('fa-bars');
+          }
+        }
+      });
+    }
+
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+        const icon = mobileToggle.querySelector('i');
+        if (mobileMenu.classList.contains('open')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+      mobileMenu.querySelectorAll('a:not(#mobile-rtl-toggle)').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          if (mobileToggle.querySelector('i')) {
+            mobileToggle.querySelector('i').classList.remove('fa-times');
+            mobileToggle.querySelector('i').classList.add('fa-bars');
+          }
+        });
+      });
+    }
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const toggle = item.querySelector('.faq-toggle');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon i');
+      toggle?.addEventListener('click', () => {
+        const isOpen = !content.classList.contains('hidden');
+        faqItems.forEach(other => {
+          other.querySelector('.faq-content')?.classList.add('hidden');
+          const otherIcon = other.querySelector('.faq-icon i');
+          if (otherIcon) {
+            otherIcon.classList.remove('fa-minus');
+            otherIcon.classList.add('fa-plus');
+          }
+        });
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          if (icon) {
+            icon.classList.remove('fa-plus');
+            icon.classList.add('fa-minus');
+          }
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

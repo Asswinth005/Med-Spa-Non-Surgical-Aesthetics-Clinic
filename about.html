@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About LUMEA · Med Spa & Aesthetics</title>
+
+    <!-- Favicon suite for all browsers, file:// mode & web servers -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABWUlEQVR4nMXX53KCQBQF4PuwqZYkqCigmJ6Y5kuYqqb37ptdZ3fZhBAHtsmemfP7Ow7LDgKk5PsoxK/DFu3nQZP2Yz+gfd/zad86Hr7ukjbwZYe0js/bpC4+bbn4uFnDNONfRt02jrohmsJJHzaqtPfrlfQx08ZJ79acySPywklvVxMj8sZv2iu0sQH549fh8u8AG/jPAF2cRAW/ai3Rgi7Oo4JfNstsgC7OI4sPgzKCKZxHBh8GJTbAFM4jig/8EoJpnEcEH/hFNkDmVTOJ970igsp7bgrvewU2QOWSMYFfNAoIOjecLn5eX0TQvV518GiAubtdFj9zFxBkn7kIzpOFRwPEfnnyeWfhbEA6flqbR1A5cCRZOEkWHg2QO3Dx6OIn1TkE2QMnElGcDlA57abw48os+yqa9quWivMBeeM9JzbABt5zZv7+N7CK81jFeaziyRg/7RMyBtT2SSfuKxWUAAAAAElFTkSuQmCC" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABWUlEQVR4nMXX53KCQBQF4PuwqZYkqCigmJ6Y5kuYqqb37ptdZ3fZhBAHtsmemfP7Ow7LDgKk5PsoxK/DFu3nQZP2Yz+gfd/zad86Hr7ukjbwZYe0js/bpC4+bbn4uFnDNONfRt02jrohmsJJHzaqtPfrlfQx08ZJ79acySPywklvVxMj8sZv2iu0sQH549fh8u8AG/jPAF2cRAW/ai3Rgi7Oo4JfNstsgC7OI4sPgzKCKZxHBh8GJTbAFM4jig/8EoJpnEcEH/hFNkDmVTOJ970igsp7bgrvewU2QOWSMYFfNAoIOjecLn5eX0TQvV518GiAubtdFj9zFxBkn7kIzpOFRwPEfnnyeWfhbEA6flqbR1A5cCRZOEkWHg2QO3Dx6OIn1TkE2QMnElGcDlA57abw48os+yqa9quWivMBeeM9JzbABt5zZv7+N7CK81jFeaziyRg/7RMyBtT2SSfuKxWUAAAAAElFTkSuQmCC" />
+<!-- Tailwind CSS with Local & CDN Fallback -->
+  <script src="tailwind.js"></script>
+  <script>
+    if (typeof tailwind === 'undefined') {
+      document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+    }
+  </script>
+
+  <!-- Prevent theme flash on page load -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    window.tailwind = window.tailwind || {};
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            porcelain: '#F9F6F3',
+            champagne: '#EDE4DC',
+            nude: '#DCC9BC',
+            rosegold: '#B88A78',
+            deeptaupe: '#6E4F42',
+            charcoal: '#2C2826',
+            ivory: '#FFFCF9',
+            sage: '#B8C5B2',
+            blush: '#F2E8E2',
+            gold: '#C6A78C',
+            cream: '#FCF7F2',
+            creamlight: '#FCF7F2',
+          },
+          fontFamily: {
+            'display': ['"Cormorant Garamond"', 'serif'],
+            'body': ['"Inter"', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'float-slow': 'floatSlow 7s ease-in-out infinite',
+            'pulse-soft': 'pulseSoft 4s ease-in-out infinite',
+            'fade-up': 'fadeUp 0.8s ease-out',
+            'shimmer': 'shimmer 2.8s infinite',
+          },
+          keyframes: {
+            floatSlow: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } },
+            pulseSoft: { '0%, 100%': { opacity: '0.8' }, '50%': { opacity: '1' } },
+            fadeUp: { '0%': { transform: 'translateY(28px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+            shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+          },
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <style>
+    body {
+      background-color: #F9F6F3;
+      color: #2C2826;
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+    .dark body {
+      background-color: #1C1817;
+      color: #F9F6F3;
+    }
+
+    /* Elegant scrollbar */
+    body::-webkit-scrollbar { width: 5px; }
+    body::-webkit-scrollbar-track { background: #F9F6F3; }
+    body::-webkit-scrollbar-thumb { background: #B88A78; border-radius: 20px; }
+
+    /* ===== ABOUT PAGE UNIQUE STYLES ===== */
+
+    /* --- About Hero — minimal, typographic with luxury background --- */
+    .about-hero {
+      background: #1C1817;
+      position: relative;
+      padding: 12rem 0 6rem 0;
+      overflow: hidden;
+    }
+    .about-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.35) saturate(0.85);
+      z-index: 1;
+    }
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(184,138,120,0.15) 0%, transparent 55%);
+      pointer-events: none;
+      z-index: 3;
+    }
+    .about-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(28,24,23,0.85) 0%, rgba(28,24,23,0.68) 50%, rgba(28,24,23,0.95) 100%);
+      z-index: 2;
+    }
+
+    /* --- Timeline --- */
+    .timeline-item {
+      position: relative;
+      padding-left: 3rem;
+      padding-bottom: 3rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 8px;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, rgba(184,138,120,0.4), rgba(184,138,120,0.05));
+    }
+    .timeline-item:last-child::before { display: none; }
+    .timeline-dot {
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      border: 2px solid #B88A78;
+      background: #1C1817;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .timeline-dot::after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #B88A78;
+      transition: transform 0.3s;
+    }
+    .timeline-item:hover .timeline-dot::after { transform: scale(1.4); }
+
+    /* --- Value cards --- */
+    .value-card {
+      background: #FFFFFF;
+      border-radius: 4px 28px 4px 28px;
+      border: 1px solid rgba(184, 138, 120, 0.12);
+      padding: 2rem;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+    }
+    .dark .value-card {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.2);
+    }
+    .value-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background: linear-gradient(to bottom, #B88A78, #DCC9BC);
+      transition: height 0.4s ease;
+    }
+    .value-card:hover::after { height: 100%; }
+    .value-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px -12px rgba(184, 138, 120, 0.22);
+      border-color: rgba(184, 138, 120, 0.35);
+    }
+
+    /* --- Stat ribbon --- */
+    .stat-ribbon {
+      background: #EDE4DC;
+      border-radius: 0 40px 0 40px;
+      padding: 2.5rem 2rem;
+      transition: all 0.3s;
+    }
+    .dark .stat-ribbon { background: #25201E; }
+    .stat-ribbon:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 32px -8px rgba(184, 138, 120, 0.25);
+    }
+
+    /* --- Team spotlight --- */
+    .team-spotlight {
+      position: relative;
+      border-radius: 24px 4px 24px 4px;
+      overflow: hidden;
+      transition: all 0.4s;
+    }
+    .team-spotlight img {
+      transition: transform 0.7s ease;
+      filter: grayscale(0.15) brightness(0.95);
+    }
+    .team-spotlight:hover img {
+      transform: scale(1.05);
+      filter: grayscale(0) brightness(1);
+    }
+    .team-spotlight-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(28,24,23,0.85) 0%, transparent 55%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.75rem;
+      transition: all 0.4s;
+    }
+
+    /* --- Accordion (same as home) --- */
+    .portal-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      border: 1px solid rgba(184, 138, 120, 0.2);
+      box-shadow: 0 8px 24px -6px rgba(184, 138, 120, 0.08);
+      transition: all 0.3s ease;
+    }
+    .dark .portal-card {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.25);
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
+    }
+    .portal-card:hover {
+      border-color: rgba(184, 138, 120, 0.4);
+    }
+
+    /* --- Buttons (consistent) --- */
+    .btn-rose {
+      background: #B88A78;
+      color: #FFFCF9;
+      font-weight: 600;
+      border-radius: 4px 20px 4px 20px;
+      transition: all 0.35s;
+      box-shadow: 0 4px 14px rgba(184, 138, 120, 0.25);
+      letter-spacing: 0.3px;
+    }
+    .btn-rose:hover {
+      background: #A67A68;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(184, 138, 120, 0.4);
+      border-radius: 20px 4px 20px 4px;
+    }
+    .btn-ghost {
+      border: 1.5px solid rgba(184, 138, 120, 0.5);
+      color: #B88A78;
+      background: transparent;
+      border-radius: 4px 20px 4px 20px;
+      font-weight: 500;
+      transition: all 0.35s;
+    }
+    .btn-ghost:hover {
+      background: #B88A78;
+      color: #FFFCF9;
+      border-color: #B88A78;
+      border-radius: 20px 4px 20px 4px;
+    }
+    .dark .btn-ghost:hover { background: #B88A78; color: #FFFCF9; }
+
+    /* --- Nav (same) --- */
+    .nav-link {
+      position: relative;
+      font-weight: 500;
+      transition: color 0.25s;
+      text-decoration: none !important;
+    }
+    .nav-link.active {
+      color: #B88A78 !important;
+      font-weight: 600;
+    }
+
+    .dropdown-clinic-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      background: #FFFCF9;
+      border-radius: 8px 24px 8px 24px;
+      padding: 0.5rem 0;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.07);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.25s;
+      z-index: 1000;
+      border: 1px solid rgba(184, 138, 120, 0.15);
+    }
+    .dropdown-clinic-menu::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      right: 0;
+      height: 12px;
+    }
+    .dark .dropdown-clinic-menu { background: #2C2826; border-color: rgba(184, 138, 120, 0.25); }
+    .dropdown-clinic:hover .dropdown-clinic-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 0.6rem 1.4rem;
+      transition: all 0.2s;
+      color: #2C2826;
+      font-size: 0.95rem;
+      border-radius: 4px 16px 4px 16px;
+      margin: 0 0.3rem;
+    }
+    .dark .dropdown-item { color: #F9F6F3; }
+    .dropdown-item:hover { background: #F2E8E2; color: #2C2826; padding-left: 1.7rem; }
+    .dark .dropdown-item:hover { background: #3D3431; color: #F9F6F3; }
+    .dropdown-item i { margin-right: 0.75rem; width: 18px; color: #B88A78; }
+
+    /* Mobile menu */
+    .mobile-menu-clinic {
+      background: #FFFCF9;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .dark .mobile-menu-clinic { background: #2C2826; }
+    .mobile-menu-clinic.open { max-height: 80vh; overflow-y: auto; }
+
+    /* Social */
+    .social-icon-clinic {
+      width: 40px; height: 40px;
+      border-radius: 8px 16px 8px 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #F2E8E2;
+      color: #2C2826;
+      transition: all 0.3s;
+    }
+    .social-icon-clinic:hover {
+      background: #B88A78;
+      color: #FFFCF9;
+      transform: translateY(-3px) rotate(3deg);
+    }
+    .dark .social-icon-clinic { background: #3D3431; color: #F9F6F3; }
+    .dark .social-icon-clinic:hover { background: #B88A78; color: #FFFCF9; }
+
+    /* RTL adjustments */
+    [dir="rtl"] .ml-auto { margin-left: 0 !important; margin-right: auto !important; }
+    [dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+    [dir="rtl"] .dropdown-clinic-menu { left: auto; right: 0; }
+    [dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.75rem; }
+    [dir="rtl"] .timeline-item { padding-left: 0; padding-right: 3rem; }
+    [dir="rtl"] .timeline-item::before { left: auto; right: 10px; }
+    [dir="rtl"] .timeline-dot { left: auto; right: 0; }
+
+    .gold-accent { color: #C6A78C; }
+    .text-balance { text-wrap: balance; }
+  </style>
+</head>
+<body>
+
+<!-- ======== NAVIGATION (copied exactly from Home) ======== -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-porcelain/90 dark:bg-[#1C1817]/90 backdrop-blur-lg border-b border-rosegold/10 dark:border-rosegold/15 shadow-sm">
+  <div class="container mx-auto px-6">
+    <div class="flex items-center justify-between h-20 md:h-24 relative">
+
+      <!-- Logo with geometric mark -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+        <div class="w-10 h-10 bg-rosegold rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition duration-300 rotate-3 group-hover:rotate-0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-6 h-6" fill="none">
+            <path d="M18 6 L28 14 L18 26 L8 14 Z" fill="white" opacity="0.95"/>
+            <circle cx="18" cy="16" r="3.5" fill="white" opacity="0.7"/>
+            <path d="M10 28 L18 22 L26 28" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+          </svg>
+        </div>
+        <span class="flex flex-col items-start leading-tight">
+          <span class="text-lg md:text-2xl font-display font-extrabold tracking-tight text-[#2C2826] dark:text-porcelain">LUMEA</span>
+          <span class="text-rosegold text-[9px] md:text-[11px] font-semibold tracking-[0.2em] uppercase -mt-0.5">MED SPA &amp; AESTHETICS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav — centered but airy -->
+      <div class="hidden xl:flex items-center gap-5 xl:gap-6 absolute left-1/2 -translate-x-1/2">
+        <div class="dropdown-clinic relative">
+          <a href="index.html" class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold font-medium flex items-center gap-1 py-2 whitespace-nowrap text-[15px]">
+            Home <i class="fas fa-chevron-down text-[10px] ms-1 opacity-60"></i>
+          </a>
+          <div class="dropdown-clinic-menu">
+            <a class="dropdown-item" href="index.html">Home 1</a>
+            <a class="dropdown-item" href="home2.html">Home 2</a>
+          </div>
+        </div>
+        <a class="nav-link active font-medium text-[15px]" href="about.html">About</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="treatments.html">Treatments</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="providers.html">Providers</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="membership.html">Membership</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="contact.html">Contact</a>
+
+        <!-- Dashboard Dropdown -->
+        <div class="dropdown-clinic relative">
+          <button class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold font-medium flex items-center gap-1 py-2 whitespace-nowrap text-[15px]">
+            Dashboard <i class="fas fa-chevron-down text-[10px] ms-1 opacity-60"></i>
+          </button>
+          <div class="dropdown-clinic-menu">
+            <a class="dropdown-item" href="client.html">Client</a>
+            <a class="dropdown-item" href="admin.html">Admin</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right actions -->
+      <div class="flex items-center gap-2 xl:gap-3 ms-auto">
+        <a href="login.html" class="hidden xl:inline-flex btn-rose py-2 px-5 text-sm items-center gap-2">
+          <i class="fas fa-user-circle"></i> Client Login
+        </a>
+        <button id="theme-toggle" class="hidden xl:flex w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition items-center justify-center">
+          <i class="fas fa-moon dark:hidden text-sm"></i>
+          <i class="fas fa-sun hidden dark:inline text-sm"></i>
+        </button>
+        <button id="rtl-toggle" class="hidden xl:flex w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition items-center justify-center font-bold text-sm">
+          ⇄
+        </button>
+        <button id="mobile-toggle" class="xl:hidden w-10 h-10 rounded-lg bg-rosegold text-ivory flex items-center justify-center shadow-md">
+          <i class="fas fa-bars text-sm"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-clinic xl:hidden rounded-b-3xl">
+      <div class="py-4 px-3 space-y-1">
+        <div class="py-1">
+          <button onclick="document.getElementById('home-mobile-drop').classList.toggle('hidden'); document.getElementById('home-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition cursor-pointer">
+            <span>Home</span>
+            <i id="home-mobile-icon" class="fas fa-chevron-down text-xs opacity-60 transition-transform duration-300 "></i>
+          </button>
+          <div id="home-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="index.html">Home 1</a>
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="home2.html">Home 2</a>
+          </div>
+        </div>
+        <a class="block py-3 px-4 font-medium text-rosegold border-l-4 border-rosegold bg-rosegold/5 rounded-lg transition" href="about.html">About</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="treatments.html">Treatments</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="providers.html">Providers</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="membership.html">Membership</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="contact.html">Contact</a>
+
+        <!-- Dashboard Dropdown (Mobile) -->
+        <div class="py-1">
+          <button onclick="document.getElementById('dashboard-mobile-drop').classList.toggle('hidden'); document.getElementById('dashboard-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition cursor-pointer">
+            <span>Dashboard</span>
+            <i id="dashboard-mobile-icon" class="fas fa-chevron-down text-xs opacity-60 transition-transform duration-300"></i>
+          </button>
+          <div id="dashboard-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="client.html">Client</a>
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="admin.html">Admin</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 pt-5 mt-3 border-t border-blush/60 dark:border-cream/10">
+          <a class="text-center btn-rose py-2.5 font-medium flex items-center justify-center gap-2" href="login.html">
+            <i class="fas fa-user-circle"></i> Client Login
+          </a>
+          <div class="flex gap-3">
+            <button id="mobile-theme-toggle" class="flex-1 py-2 rounded-lg bg-rosegold/10 text-rosegold text-sm font-medium flex items-center gap-2 justify-center">
+              <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i> Theme
+            </button>
+            <button id="mobile-rtl-toggle" class="flex-1 py-2 rounded-lg bg-rosegold/10 text-rosegold text-sm font-medium flex items-center gap-2 justify-center">
+              ⇄ RTL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ======== ABOUT HERO — TYPOGRAPHIC WITH BG IMAGE ======== -->
+<section class="about-hero">
+  <img src="assets/t1.jpg" alt="LUMEA Aesthetic Philosophy" class="about-hero-img" />
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-3xl mx-auto text-center animate-fade-up">
+      <span class="inline-flex items-center gap-2 bg-rosegold/15 text-rosegold px-4 py-1.5 rounded-lg text-xs font-bold tracking-widest uppercase mb-8 border border-rosegold/20">
+        <i class="fas fa-book-open"></i> our story
+      </span>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold leading-[1.05] text-ivory mb-6">
+        The art of<br/>
+        <span class="text-rosegold">subtle</span> change
+      </h1>
+      <p class="text-lg md:text-xl text-ivory/75 font-light max-w-xl mx-auto leading-relaxed">
+        Founded on the belief that aesthetic medicine should enhance, never erase — we've spent over a decade perfecting the balance between science and artistry.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======== STAT RIBBON ======== -->
+<section class="py-14 bg-porcelain dark:bg-[#1C1817]">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div class="stat-ribbon text-center">
+        <div class="text-3xl md:text-4xl font-display font-bold text-rosegold mb-1">15+</div>
+        <div class="text-xs uppercase tracking-widest text-[#2C2826]/70 dark:text-porcelain/70">Years of care</div>
+      </div>
+      <div class="stat-ribbon text-center">
+        <div class="text-3xl md:text-4xl font-display font-bold text-rosegold mb-1">8k+</div>
+        <div class="text-xs uppercase tracking-widest text-[#2C2826]/70 dark:text-porcelain/70">Happy clients</div>
+      </div>
+      <div class="stat-ribbon text-center">
+        <div class="text-3xl md:text-4xl font-display font-bold text-rosegold mb-1">4.9★</div>
+        <div class="text-xs uppercase tracking-widest text-[#2C2826]/70 dark:text-porcelain/70">Patient rating</div>
+      </div>
+      <div class="stat-ribbon text-center">
+        <div class="text-3xl md:text-4xl font-display font-bold text-rosegold mb-1">25+</div>
+        <div class="text-xs uppercase tracking-widest text-[#2C2826]/70 dark:text-porcelain/70">Treatments</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== MISSION — SPLIT WITH TIMELINE ======== -->
+<section class="py-24 bg-[#F4EDE7] dark:bg-[#1A1615] border-y border-rosegold/10">
+  <div class="container mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      <!-- Left: Mission text -->
+      <div class="animate-fade-up">
+        <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+          <span class="w-8 h-px bg-rosegold"></span> Our Mission
+        </span>
+        <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight mb-6">
+          Redefining<br/><span class="text-rosegold">natural beauty</span>
+        </h2>
+        <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-base leading-relaxed mb-6">
+          Lumineau Aesthetics was born from a simple frustration: too many clinics were chasing trends instead of honoring individual beauty. We set out to create a different kind of med spa — one where clinical excellence meets genuine warmth, and where every treatment plan begins with listening.
+        </p>
+        <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-base leading-relaxed mb-8">
+          Today, our team of board-certified physicians, nurse injectors, and laser specialists work together under one roof, combining decades of experience with a shared philosophy: less is more, and natural always wins.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="providers.html" class="btn-rose px-7 py-3 text-sm inline-flex items-center gap-2">
+            <i class="fas fa-user-md"></i> Meet Our Team
+          </a>
+          <a href="contact.html" class="btn-ghost px-7 py-3 text-sm inline-flex items-center gap-2">
+            <i class="fas fa-calendar-check"></i> Visit Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Timeline -->
+      <div class="animate-fade-up" style="animation-delay: 0.2s;">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="text-rosegold font-display font-bold text-2xl">2011</span>
+          <h4 class="font-display font-bold text-xl text-[#2C2826] dark:text-porcelain mt-1 mb-2">The Beginning</h4>
+          <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-sm leading-relaxed">Dr. Elara Voss opens a small two-room clinic with a radical idea: aesthetic medicine should be gentle, transparent, and patient-led.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="text-rosegold font-display font-bold text-2xl">2015</span>
+          <h4 class="font-display font-bold text-xl text-[#2C2826] dark:text-porcelain mt-1 mb-2">Growing Together</h4>
+          <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-sm leading-relaxed">The team expands to include laser specialists and aestheticians. The first 1,000 clients walk through our doors.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="text-rosegold font-display font-bold text-2xl">2019</span>
+          <h4 class="font-display font-bold text-xl text-[#2C2826] dark:text-porcelain mt-1 mb-2">A New Home</h4>
+          <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-sm leading-relaxed">We move into our current purpose-built clinic in the Aesthetic District, designed around calm and comfort.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="text-rosegold font-display font-bold text-2xl">2024</span>
+          <h4 class="font-display font-bold text-xl text-[#2C2826] dark:text-porcelain mt-1 mb-2">8,000 Stories</h4>
+          <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-sm leading-relaxed">We celebrate 8,000+ happy clients and a 4.9-star rating — a testament to our unwavering commitment to natural results.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== VALUES — 4 CARD GRID ======== -->
+<section class="py-24 bg-porcelain dark:bg-[#1C1817] relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-rosegold/5 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> What guides us
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        Our core <span class="text-rosegold">values</span>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Value 1 -->
+      <div class="value-card animate-fade-up" style="animation-delay: 0.1s;">
+        <div class="w-12 h-12 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mb-5">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl text-[#2C2826] dark:text-porcelain mb-3">Patient First</h3>
+        <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-sm leading-relaxed">Unhurried consultations, honest recommendations, and zero pressure. Your comfort is our priority.</p>
+      </div>
+      <!-- Value 2 -->
+      <div class="value-card animate-fade-up" style="animation-delay: 0.2s;">
+        <div class="w-12 h-12 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mb-5">
+          <i class="fas fa-microscope"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl text-[#2C2826] dark:text-porcelain mb-3">Clinical Rigor</h3>
+        <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-sm leading-relaxed">Evidence-based protocols, FDA-approved technology, and continuous training keep us at the forefront.</p>
+      </div>
+      <!-- Value 3 -->
+      <div class="value-card animate-fade-up" style="animation-delay: 0.3s;">
+        <div class="w-12 h-12 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mb-5">
+          <i class="fas fa-feather"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl text-[#2C2826] dark:text-porcelain mb-3">Natural Results</h3>
+        <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-sm leading-relaxed">We enhance what's already beautiful. Subtlety is our signature, and your secret is safe with us.</p>
+      </div>
+      <!-- Value 4 -->
+      <div class="value-card animate-fade-up" style="animation-delay: 0.4s;">
+        <div class="w-12 h-12 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mb-5">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl text-[#2C2826] dark:text-porcelain mb-3">Lasting Care</h3>
+        <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-sm leading-relaxed">From consultation to aftercare, we're with you for the long haul — not just the appointment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== TEAM SPOTLIGHT ======== -->
+<section class="py-24 bg-[#EDE4DC] dark:bg-[#181413]">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+      <div class="animate-fade-up">
+        <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+          <span class="w-8 h-px bg-rosegold"></span> The People
+        </span>
+        <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+          Faces behind <span class="text-rosegold">the glow</span>
+        </h2>
+      </div>
+      <a href="providers.html" class="shrink-0 btn-ghost px-6 py-2.5 text-sm inline-flex items-center gap-2">
+        View Full Team <i class="fas fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Team 1 -->
+      <div class="team-spotlight animate-fade-up" style="animation-delay: 0.1s;">
+        <img src="assets/provider-1.jpg" alt="Dr. Elara Voss" class="w-full h-80 object-cover object-top" />
+        <div class="team-spotlight-overlay">
+          <h3 class="font-display font-bold text-xl text-ivory">Dr. Elara Voss</h3>
+          <p class="text-rosegold text-xs font-semibold tracking-wider uppercase mt-1">Medical Director</p>
+          <p class="text-ivory/70 text-xs mt-2">MD, FAAD · 15+ years</p>
+        </div>
+      </div>
+      <!-- Team 2 -->
+      <div class="team-spotlight animate-fade-up" style="animation-delay: 0.2s;">
+        <img src="assets/provider-2.jpg" alt="Nadia Chen" class="w-full h-80 object-cover object-top" />
+        <div class="team-spotlight-overlay">
+          <h3 class="font-display font-bold text-xl text-ivory">Nadia Chen</h3>
+          <p class="text-rosegold text-xs font-semibold tracking-wider uppercase mt-1">Lead Injector</p>
+          <p class="text-ivory/70 text-xs mt-2">RN, BSN · 8+ years</p>
+        </div>
+      </div>
+      <!-- Team 3 -->
+      <div class="team-spotlight animate-fade-up" style="animation-delay: 0.3s;">
+        <img src="assets/provider-3.jpg" alt="Dr. Marcus Hale" class="w-full h-80 object-cover object-top" />
+        <div class="team-spotlight-overlay">
+          <h3 class="font-display font-bold text-xl text-ivory">Dr. Marcus Hale</h3>
+          <p class="text-rosegold text-xs font-semibold tracking-wider uppercase mt-1">Laser Specialist</p>
+          <p class="text-ivory/70 text-xs mt-2">MD · 12+ years</p>
+        </div>
+      </div>
+      <!-- Team 4 -->
+      <div class="team-spotlight animate-fade-up" style="animation-delay: 0.4s;">
+        <img src="assets/provider-4.jpg" alt="Sofia Laurent" class="w-full h-80 object-cover object-top" />
+        <div class="team-spotlight-overlay">
+          <h3 class="font-display font-bold text-xl text-ivory">Sofia Laurent</h3>
+          <p class="text-rosegold text-xs font-semibold tracking-wider uppercase mt-1">Lead Aesthetician</p>
+          <p class="text-ivory/70 text-xs mt-2">LE, CLT · 10+ years</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FAQ (same structure, different questions focused on About) ======== -->
+<section class="py-24 bg-porcelain dark:bg-[#1C1817] relative overflow-hidden">
+  <div class="container mx-auto px-6 relative z-10 max-w-5xl">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold px-0 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Common Questions
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        About <span class="text-rosegold">Lumineau</span>
+      </h2>
+      <p class="text-[#2C2826]/85 dark:text-porcelain/85 mt-3 text-base max-w-xl mx-auto">
+        Get to know our clinic, our philosophy, and what makes us different.
+      </p>
+    </div>
+
+    <div class="space-y-4" id="clinic-faq-accordion">
+      <!-- Item 1 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>What makes Lumineau Aesthetics different from other med spas?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            We combine physician-led medical expertise with a genuinely warm, unhurried approach. Every treatment plan is built around your unique anatomy and goals — never a one-size-fits-all protocol. We also believe in full transparency: you'll always know exactly what we recommend and why.
+          </p>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Are all your providers board-certified?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Yes. Our medical director and physicians are board-certified dermatologists. Our nurse injectors are licensed RNs with advanced training and thousands of documented procedures. Every provider at Lumineau participates in ongoing education to stay current with the latest techniques and safety standards.
+          </p>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>What is your approach to natural-looking results?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            We practice conservative dosing and micro-artistry. Our goal is never to change your face, but to refine and refresh it. We study your natural expressions, proportions, and movement patterns so that results look like you — just more rested and radiant.
+          </p>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Do you offer virtual consultations?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Yes, for select services and follow-up appointments. However, we recommend an in-person consultation for first-time injectable and laser treatments so we can assess your skin in person and answer all your questions thoroughly.
+          </p>
+        </div>
+      </div>
+      <!-- Item 5 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>How do I know which treatment is right for me?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            That's what our consultations are for. We'll listen to your concerns, assess your skin and facial anatomy, and recommend a personalized plan. There's never any pressure to commit — we want you to feel completely confident before deciding on any treatment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== CTA ======== -->
+<section class="py-24 bg-rosegold dark:bg-[#181413]">
+  <div class="container mx-auto px-6 text-center">
+    <div class="max-w-3xl mx-auto animate-fade-up">
+      <div class="inline-block mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="60" height="60" fill="none">
+          <path d="M32 12 Q22 4 20 16 Q18 28 30 30 Q32 32 34 30 Q46 28 44 16 Q42 4 32 12Z" fill="white" opacity="0.9"/>
+          <ellipse cx="32" cy="26" rx="14" ry="4" fill="white" opacity="0.45"/>
+          <circle cx="32" cy="20" r="3" fill="white" opacity="0.8"/>
+          <path d="M18 32 Q12 24 18 18" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M46 32 Q52 24 46 18" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M24 38 Q32 46 40 38" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+        </svg>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-display font-bold text-ivory mb-5">Come See Us <span class="text-ivory/90">in Person</span></h2>
+      <p class="text-ivory/80 text-lg mb-10 max-w-xl mx-auto">Book a private consultation and experience the Lumineau difference for yourself.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contact.html" class="bg-ivory text-rosegold px-8 py-3.5 rounded-lg font-bold shadow-lg hover:scale-105 transition inline-flex items-center gap-2 text-sm">
+          <i class="fas fa-calendar-check"></i> Book Consultation
+        </a>
+        <a href="membership.html" class="border-2 border-ivory/60 text-ivory px-8 py-3.5 rounded-lg font-semibold hover:bg-ivory hover:text-rosegold transition inline-flex items-center gap-2 text-sm">
+          <i class="fas fa-crown"></i> Explore Membership
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FOOTER (copied exactly from Home) ======== -->
+<footer class="bg-porcelain dark:bg-[#1C1817] text-[#2C2826] dark:text-porcelain pt-16 pb-8 border-t border-rosegold/10">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="text-center md:text-start">
+        <a href="index.html" class="inline-flex items-center justify-center md:justify-start gap-3 mb-6 group hover:opacity-90 transition">
+          <div class="w-10 h-10 bg-rosegold rounded-lg flex items-center justify-center shadow-lg overflow-hidden group-hover:scale-105 transition duration-300 rotate-3 group-hover:rotate-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-6 h-6" fill="none">
+              <path d="M18 6 L28 14 L18 26 L8 14 Z" fill="white" opacity="0.95"/>
+              <circle cx="18" cy="16" r="3.5" fill="white" opacity="0.7"/>
+              <path d="M10 28 L18 22 L26 28" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+            </svg>
+          </div>
+          <span class="flex flex-col items-start leading-tight">
+            <span class="text-lg md:text-2xl font-display font-extrabold tracking-tight text-[#2C2826] dark:text-porcelain">LUMEA</span>
+            <span class="text-rosegold text-[9px] md:text-[11px] font-semibold tracking-[0.2em] uppercase -mt-0.5">MED SPA &amp; AESTHETICS</span>
+          </span>
+        </a>
+        <p class="mb-5 text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Advanced non-surgical aesthetics. Clinical precision, natural radiance.</p>
+        <div class="flex justify-center md:justify-start gap-3">
+          <a href="#" class="social-icon-clinic" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon-clinic" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon-clinic" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Treatments</h4>
+        <ul class="space-y-2.5">
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Botox &amp; Fillers</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Laser Resurfacing</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Skin Rejuvenation</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Body Contouring</a></li>
+        </ul>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Clinic</h4>
+        <ul class="space-y-2.5">
+          <li><a href="about.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">About</a></li>
+          <li><a href="providers.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Providers</a></li>
+          <li><a href="membership.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Membership</a></li>
+          <li></li>
+          <li><a href="client.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Client Portal</a></li>
+          <li><a href="admin.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Admin Portal</a></li>
+        </ul>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Visit</h4>
+        <ul class="space-y-3">
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-map-marker-alt text-rosegold mt-0.5"></i><span>1200 Glow Blvd, Aesthetic District</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-phone text-rosegold"></i><span>(555) 727-4SPA</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-envelope text-rosegold"></i><span>hello@lumineau.com</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-clock text-rosegold"></i><span>Mon–Fri 9am – 7pm · Sat 10am – 4pm</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-rosegold/10 text-center text-xs text-[#2C2826]/80 dark:text-porcelain/85">
+      <p>&copy; 2026 MED SPA &amp; AESTHETICS. <i class="fas fa-heart text-rosegold mx-1"></i> Glow with confidence.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ======== SCRIPTS (copied from Home) ======== -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Theme toggle
+    const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
+    themeBtns.forEach(btn => {
+      btn?.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      });
+    });
+    if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+    // RTL
+    function setRTL(isRTL) {
+      const html = document.documentElement;
+      if (isRTL === 'rtl' || isRTL === true) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); } 
+      else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+    }
+    const savedDir = localStorage.getItem('dir');
+    if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+    else document.documentElement.setAttribute('dir', 'ltr');
+
+    const rtlBtn = document.getElementById('rtl-toggle');
+    if (rtlBtn) {
+      rtlBtn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir');
+        setRTL(currentDir === 'rtl' ? 'ltr' : 'rtl');
+      });
+    }
+    const mobileRtlBtn = document.getElementById('mobile-rtl-toggle');
+    if (mobileRtlBtn) {
+      mobileRtlBtn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir');
+        setRTL(currentDir === 'rtl' ? 'ltr' : 'rtl');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileToggle = document.getElementById('mobile-toggle');
+        if (mobileMenu && mobileMenu.classList.contains('open')) {
+          mobileMenu.classList.remove('open');
+          if (mobileToggle && mobileToggle.querySelector('i')) {
+            mobileToggle.querySelector('i').classList.remove('fa-times');
+            mobileToggle.querySelector('i').classList.add('fa-bars');
+          }
+        }
+      });
+    }
+
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+        const icon = mobileToggle.querySelector('i');
+        if (mobileMenu.classList.contains('open')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+      mobileMenu.querySelectorAll('a:not(#mobile-rtl-toggle)').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          if (mobileToggle.querySelector('i')) {
+            mobileToggle.querySelector('i').classList.remove('fa-times');
+            mobileToggle.querySelector('i').classList.add('fa-bars');
+          }
+        });
+      });
+    }
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const toggle = item.querySelector('.faq-toggle');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon i');
+      toggle?.addEventListener('click', () => {
+        const isOpen = !content.classList.contains('hidden');
+        faqItems.forEach(other => {
+          other.querySelector('.faq-content')?.classList.add('hidden');
+          const otherIcon = other.querySelector('.faq-icon i');
+          if (otherIcon) {
+            otherIcon.classList.remove('fa-minus');
+            otherIcon.classList.add('fa-plus');
+          }
+        });
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          if (icon) {
+            icon.classList.remove('fa-plus');
+            icon.classList.add('fa-minus');
+          }
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

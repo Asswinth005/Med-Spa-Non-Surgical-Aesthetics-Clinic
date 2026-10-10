@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-theme="rose-gold">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Portal · LUMEA Aesthetics</title>
+    <!-- Favicon suite for all browsers, file:// mode & web servers -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABWUlEQVR4nMXX53KCQBQF4PuwqZYkqCigmJ6Y5kuYqqb37ptdZ3fZhBAHtsmemfP7Ow7LDgKk5PsoxK/DFu3nQZP2Yz+gfd/zad86Hr7ukjbwZYe0js/bpC4+bbn4uFnDNONfRt02jrohmsJJHzaqtPfrlfQx08ZJ79acySPywklvVxMj8sZv2iu0sQH549fh8u8AG/jPAF2cRAW/ai3Rgi7Oo4JfNstsgC7OI4sPgzKCKZxHBh8GJTbAFM4jig/8EoJpnEcEH/hFNkDmVTOJ970igsp7bgrvewU2QOWSMYFfNAoIOjecLn5eX0TQvV518GiAubtdFj9zFxBkn7kIzpOFRwPEfnnyeWfhbEA6flqbR1A5cCRZOEkWHg2QO3Dx6OIn1TkE2QMnElGcDlA57abw48os+yqa9quWivMBeeM9JzbABt5zZv7+N7CK81jFeaziyRg/7RMyBtT2SSfuKxWUAAAAAElFTkSuQmCC" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABWUlEQVR4nMXX53KCQBQF4PuwqZYkqCigmJ6Y5kuYqqb37ptdZ3fZhBAHtsmemfP7Ow7LDgKk5PsoxK/DFu3nQZP2Yz+gfd/zad86Hr7ukjbwZYe0js/bpC4+bbn4uFnDNONfRt02jrohmsJJHzaqtPfrlfQx08ZJ79acySPywklvVxMj8sZv2iu0sQH549fh8u8AG/jPAF2cRAW/ai3Rgi7Oo4JfNstsgC7OI4sPgzKCKZxHBh8GJTbAFM4jig/8EoJpnEcEH/hFNkDmVTOJ970igsp7bgrvewU2QOWSMYFfNAoIOjecLn5eX0TQvV518GiAubtdFj9zFxBkn7kIzpOFRwPEfnnyeWfhbEA6flqbR1A5cCRZOEkWHg2QO3Dx6OIn1TkE2QMnElGcDlA57abw48os+yqa9quWivMBeeM9JzbABt5zZv7+N7CK81jFeaziyRg/7RMyBtT2SSfuKxWUAAAAAElFTkSuQmCC" />
+<!-- Tailwind CSS -->
+    <script src="tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'rosegold': '#B88A78',
+                        'rose-gold': 'var(--color-primary)',
+                        'porcelain': '#F9F6F3',
+                        'rose-gold-light': 'var(--color-primary-light)',
+                        'rose-gold-dark': 'var(--color-primary-dark)',
+                        'rose-gold-bright': 'var(--color-primary-bright)',
+                        'rose-accent': 'var(--color-accent)',
+                        'bg-porcelain': 'var(--color-bg-warm)',
+                        'charcoal': 'var(--color-text-dark)',
+                        'nude': '#DCC9BC',
+                        'blush': '#F2E8E2',
+                        'champagne': '#EDE4DC',
+                        'dark-bg': '#0F0C0B',
+                        'dark-card': '#1C1817',
+                        'dark-surface': '#25201E',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        'display': ['Cormorant Garamond', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'pulse-glow': 'pulseGlow 3s infinite',
+                        'float-slow': 'floatSlow 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        slideUp: { '0%': { transform: 'translateY(30px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        pulseGlow: { '0%, 100%': { opacity: '0.6' }, '50%': { opacity: '1' } },
+                        floatSlow: { '0%,100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-8px)' } },
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        :root, [data-theme="rose-gold"] {
+            --color-primary: #B88A78;
+            --color-primary-light: #DCC9BC;
+            --color-primary-dark: #9E7565;
+            --color-primary-bright: #D4A995;
+            --color-accent: #C6A78C;
+            --color-bg-warm: #F9F6F3;
+            --color-text-dark: #2C2826;
+            --color-rgb-primary: 184, 138, 120;
+            --color-rgb-bright: 212, 169, 149;
+        }
+
+        body { font-family: 'Inter', sans-serif; background-color: var(--color-bg-warm); color: var(--color-text-dark); transition: background-color 0.4s ease, color 0.4s ease; }
+        .dark body { background-color: #0F0C0B; color: #F9F6F3; }
+        h1,h2,h3,h4,h5,h6 { font-family: 'Cormorant Garamond', serif; font-weight: 700; letter-spacing: -0.015em; }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #DCC9BC 0%, #B88A78 50%, #9E7565 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .dark .text-rose-gold { color: var(--color-primary-bright) !important; }
+        .dark .border-rose-gold { border-color: var(--color-primary-bright) !important; }
+        .dark .bg-rose-gold { background-color: var(--color-primary-bright) !important; }
+        body::-webkit-scrollbar { display: none; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0; top: 0; height: 100vh;
+            width: 280px;
+            background: #FFFFFF;
+            border-right: 1px solid rgba(var(--color-rgb-primary), 0.12);
+            transition: transform 0.3s ease;
+            z-index: 100;
+            overflow-y: auto;
+        }
+        .dark .sidebar { background: #0F0C0B; border-right-color: rgba(var(--color-rgb-bright), 0.15); }
+        @media (max-width: 768px) { .sidebar { transform: translateX(-100%); } .sidebar.open { transform: translateX(0); } }
+        .sidebar-overlay { position: fixed; top:0;left:0;right:0;bottom:0; background: rgba(0,0,0,0.5); z-index:99; display:none; }
+        .sidebar-overlay.open { display:block; }
+
+        .sidebar-item {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.85rem 1.5rem; margin: 0.25rem 0.75rem;
+            border-radius: 12px 4px 12px 4px; color: var(--color-text-dark);
+            transition: all 0.2s; cursor: pointer;
+        }
+        .dark .sidebar-item { color: #F9F6F3; }
+        .sidebar-item:hover { background: rgba(var(--color-rgb-primary), 0.08); color: var(--color-primary); }
+        .dark .sidebar-item:hover { background: rgba(var(--color-rgb-bright), 0.12); color: var(--color-primary-bright); }
+        .sidebar-item.active { background: var(--color-primary); color: #FFFFFF; border-radius: 12px 4px 12px 4px; }
+        .dark .sidebar-item.active { background: var(--color-primary-bright); color: #0F0C0B; }
+        .sidebar-item i { width: 24px; font-size: 1.1rem; }
+
+        .main-content { margin-left: 280px; padding: 1.5rem; min-height: 100vh; }
+        @media (max-width: 768px) { .main-content { margin-left: 0; padding-top: 70px; } }
+
+        .mobile-header {
+            display: none; position: fixed; top:0;left:0;right:0;
+            background: #FFFFFF; padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(var(--color-rgb-primary), 0.12);
+            z-index: 50; align-items: center; justify-content: space-between;
+        }
+        .dark .mobile-header { background: #0F0C0B; border-bottom-color: rgba(var(--color-rgb-bright), 0.15); }
+        @media (max-width: 768px) { .mobile-header { display: flex; } }
+
+                .toggle-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(184, 138, 120, 0.1);
+            color: #B88A78;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+
+        .dark .toggle-btn {
+            background: rgba(184, 138, 120, 0.15);
+            color: #B88A78;
+        }
+
+        .toggle-btn:hover {
+            transform: scale(1.1);
+            background: rgba(184, 138, 120, 0.2);
+            color: #B88A78;
+        }
+
+        .dark .toggle-btn:hover {
+            transform: scale(1.1);
+            background: rgba(184, 138, 120, 0.25);
+            color: #B88A78;
+        }
+
+        .card-design {
+            background: #FFFFFF; border-radius: 4px 32px 4px 32px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(var(--color-rgb-primary), 0.12);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+        }
+        .dark .card-design { background: #1C1817; border-color: rgba(var(--color-rgb-bright), 0.15); }
+        .card-design:hover { border-color: var(--color-primary); }
+
+        .btn-primary-design {
+            background: var(--color-primary); color: #FFFFFF;
+            font-weight: 600; border-radius: 4px 20px 4px 20px; transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(var(--color-rgb-primary), 0.3);
+            white-space: nowrap; border: none;
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; vertical-align: middle;
+        }
+        .btn-primary-design:hover { background: var(--color-primary-dark); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(var(--color-rgb-primary), 0.4); color: #FFFFFF; border-radius: 20px 4px 20px 4px; }
+        .dark .btn-primary-design { background: var(--color-primary-bright); color: #0F0C0B; }
+        .dark .btn-primary-design:hover { background: var(--color-primary); color: #FFFFFF; }
+
+        .btn-outline-design {
+            border: 1.5px solid var(--color-primary); color: var(--color-primary);
+            background: transparent; border-radius: 4px 20px 4px 20px; font-weight: 500;
+            transition: all 0.3s; white-space: nowrap;
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; vertical-align: middle;
+        }
+        .btn-outline-design:hover { background: var(--color-primary); color: #FFFFFF; transform: translateY(-2px); border-radius: 20px 4px 20px 4px; }
+        .dark .btn-outline-design { border-color: var(--color-primary-bright); color: var(--color-primary-bright); }
+        .dark .btn-outline-design:hover { background: var(--color-primary-bright); color: #0F0C0B; }
+
+        .stat-card {
+            background: #FFFFFF; border-radius: 4px 24px 4px 24px; padding: 1.2rem;
+            border: 1px solid rgba(var(--color-rgb-primary), 0.12);
+            transition: all 0.3s;
+        }
+        .dark .stat-card { background: #1C1817; border-color: rgba(var(--color-rgb-bright), 0.15); }
+        .stat-card:hover { transform: translateY(-3px); border-color: var(--color-primary); }
+
+        .status-badge {
+            display: inline-flex; align-items: center; padding: 0.25rem 0.75rem;
+            border-radius: 40px 8px 40px 8px; font-size: 0.7rem; font-weight: 700;
+        }
+        .status-confirmed { background: #F2E8E2; color: #6E4F42; }
+        .status-scheduled { background: #EDE4DC; color: #8B6F5C; }
+        .status-completed { background: #E8EDE6; color: #4A6741; }
+        .status-pending { background: #FAF0E6; color: #A67C52; }
+        .status-active { background: #E6EDF2; color: #3A5A6E; }
+        .status-cancelled { background: #F5E0E0; color: #A83F3F; }
+        .dark .status-confirmed { background: #3D3431; color: #DCC9BC; }
+        .dark .status-scheduled { background: #2C2826; color: #D4A995; }
+        .dark .status-completed { background: #2A332A; color: #A5C49A; }
+        .dark .status-pending { background: #3D3129; color: #E6B88A; }
+        .dark .status-active { background: #2A333D; color: #A5C0D4; }
+        .dark .status-cancelled { background: #3D2A2A; color: #E6A5A5; }
+
+        .form-input {
+            width: 100%; padding: 0.75rem 1rem;
+            border-radius: 4px 16px 4px 16px; border: 1.5px solid rgba(var(--color-rgb-primary), 0.2);
+            background: #FFFFFF; transition: all 0.3s;
+            color: var(--color-text-dark); font-family: 'Inter', sans-serif;
+        }
+        .dark .form-input { background: #0F0C0B; border-color: rgba(var(--color-rgb-bright), 0.2); color: #F9F6F3; }
+        .form-input:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 4px rgba(var(--color-rgb-primary), 0.15); }
+        .form-label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.4rem; color: var(--color-text-dark); }
+        .dark .form-label { color: #F9F6F3; }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            cursor: pointer; opacity: 0.85; transition: all 0.2s ease;
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator:hover { opacity: 1; }
+        .dark input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1) brightness(1.2); opacity: 0.9;
+        }
+        .dark input[type="date"]::-webkit-calendar-picker-indicator:hover { opacity: 1; }
+
+        .progress-bar { height: 8px; background: rgba(var(--color-rgb-primary), 0.12); border-radius: 10px; overflow: hidden; }
+        .dark .progress-bar { background: rgba(var(--color-rgb-bright), 0.15); }
+        .progress-fill { height: 100%; background: var(--color-primary); border-radius: 10px; transition: width 0.6s ease; }
+        .dark .progress-fill { background: var(--color-primary-bright); }
+
+        .page-content.hidden { display: none; }
+        .client-card { transition: all 0.3s; cursor: pointer; }
+        .client-card:hover { transform: translateY(-2px); border-color: var(--color-primary); }
+
+        /* RTL support */
+        [dir="rtl"] .sidebar { left: auto; right: 0; border-right: none; border-left: 1px solid rgba(var(--color-rgb-primary), 0.12); }
+        [dir="rtl"] .main-content { margin-left: 0; margin-right: 280px; }
+        [dir="rtl"] .sidebar-item i { margin-right: 0; margin-left: 0.75rem; }
+        @media (max-width: 768px) {
+            [dir="rtl"] .sidebar { transform: translateX(100%); }
+            [dir="rtl"] .sidebar.open { transform: translateX(0); }
+            [dir="rtl"] .main-content { margin-right: 0; }
+        }
+            .bg-rosegold { background-color: #B88A78 !important; }
+        .text-rosegold { color: #B88A78 !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <div class="flex items-center gap-3">
+            <button id="menuToggle" class="toggle-btn"><i class="fas fa-bars"></i></button>
+            <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center shadow-sm rotate-3 group-hover:rotate-0 transition duration-300" style="background-color: #B88A78 !important; min-width: 32px; min-height: 32px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-5 h-5" fill="none">
+                        <path d="M18 6 L28 14 L18 26 L8 14 Z" fill="white" opacity="0.95"/>
+                        <circle cx="18" cy="16" r="3.5" fill="white" opacity="0.7"/>
+                        <path d="M10 28 L18 22 L26 28" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+                    </svg>
+                </div>
+                <span class="flex flex-col items-start leading-tight">
+                    <span class="text-base font-display font-extrabold tracking-tight text-charcoal dark:text-white">LUMEA</span>
+                    <span class="text-rosegold text-[9px] font-semibold tracking-[0.2em] uppercase -mt-0.5" style="color: #B88A78 !important;">MED SPA &amp; AESTHETICS</span>
+                </span>
+            </a>
+        </div>
+        <div class="flex gap-2">
+            <button id="theme-toggle-mobile" class="w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition flex items-center justify-center" title="Dark / Light">
+            <i class="fas fa-moon dark:hidden text-sm"></i>
+            <i class="fas fa-sun hidden dark:inline text-sm"></i>
+          </button>
+            <button id="rtl-toggle-mobile" class="w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition flex items-center justify-center font-bold text-sm" title="RTL / LTR">
+            &#8644;
+          </button>
+        </div>
+    </div>
+
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="p-5 border-b border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md rotate-3 group-hover:rotate-0 transition duration-300" style="background-color: #B88A78 !important; min-width: 40px; min-height: 40px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-6 h-6" fill="none">
+                        <path d="M18 6 L28 14 L18 26 L8 14 Z" fill="white" opacity="0.95"/>
+                        <circle cx="18" cy="16" r="3.5" fill="white" opacity="0.7"/>
+                        <path d="M10 28 L18 22 L26 28" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="flex flex-col items-start leading-tight">
+                        <span class="text-xl font-display font-extrabold tracking-tight text-charcoal dark:text-white">LUMEA</span>
+                        <span class="text-rosegold text-[10px] font-semibold tracking-[0.2em] uppercase -mt-0.5" style="color: #B88A78 !important;">MED SPA &amp; AESTHETICS</span>
+                    </span>
+                    <p class="text-xs text-charcoal/60 dark:text-gray-400 mt-1">Admin Portal</p>
+                </div>
+            </a>
+        </div>
+        <nav class="py-4">
+            <div class="sidebar-item active" data-page="dashboard"><i class="fas fa-spa"></i><span>Dashboard</span></div>
+            <div class="sidebar-item" data-page="appointments"><i class="fas fa-calendar-check"></i><span>Appointments</span></div>
+            <div class="sidebar-item" data-page="clients"><i class="fas fa-users"></i><span>Clients</span></div>
+            <div class="sidebar-item" data-page="providers"><i class="fas fa-user-md"></i><span>Providers</span></div>
+            <div class="sidebar-item" data-page="treatments"><i class="fas fa-syringe"></i><span>Treatments</span></div>
+            <div class="sidebar-item" data-page="billing"><i class="fas fa-file-invoice"></i><span>Billing</span></div>
+            <div class="sidebar-item" data-page="mesages"><i class="fas fa-comments"></i><span>Mesages</span></div>
+        </nav>
+        <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+            <a href="login.html" class="flex items-center justify-center gap-2 w-full p-2.5 rounded-xl bg-[rgba(var(--color-rgb-primary),0.08)] hover:bg-rose-gold transition font-semibold text-sm text-charcoal dark:text-gray-200 hover:text-white">
+                <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="card-design p-4 md:p-6 flex justify-between items-center flex-wrap gap-3 mb-6">
+            <div>
+                <h1 class="text-2xl font-display font-bold" id="page-title">Dashboard</h1>
+                <p class="text-sm text-charcoal/60 dark:text-gray-400" id="page-subtitle">Welcome back, Dr. Voss</p>
+            </div>
+            <div class="hidden lg:flex items-center gap-4">
+                <button id="theme-toggle" class="w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition flex items-center justify-center" title="Dark / Light">
+          <i class="fas fa-moon dark:hidden text-sm"></i>
+          <i class="fas fa-sun hidden dark:inline text-sm"></i>
+        </button>
+                <button id="rtl-toggle" class="w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition flex items-center justify-center font-bold text-sm" title="RTL / LTR">
+          &#8644;
+        </button>
+                <div class="flex items-center gap-3 border-l border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)] pl-4">
+                    <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-rose-gold shadow-sm shrink-0 bg-rose-gold">
+                        <img src="assets/provider-1.jpg" alt="Dr. Elara Voss" class="w-full h-full object-cover object-top" style="object-position: center 15%;">
+                    </div>
+                    <div class="text-left hidden lg:block">
+                        <p class="text-sm font-bold text-charcoal dark:text-white leading-tight">Dr. Elara Voss</p>
+                        <p class="text-[10px] text-charcoal/60 dark:text-gray-400">Medical Director</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== DASHBOARD ========== -->
+        <div id="page-dashboard" class="page-content">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <div class="stat-card">
+                    <div class="flex justify-between">
+                        <div><p class="text-xs text-charcoal/60 dark:text-gray-400 mb-1">Today's Appointments</p><p class="text-2xl font-bold text-charcoal dark:text-white">14</p></div>
+                        <div class="w-10 h-10 bg-[rgba(var(--color-rgb-primary),0.08)] rounded-full flex items-center justify-center"><i class="fas fa-calendar-check text-rose-gold"></i></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="flex justify-between">
+                        <div><p class="text-xs text-charcoal/60 dark:text-gray-400 mb-1">Active Clients</p><p class="text-2xl font-bold text-charcoal dark:text-white">1,248</p></div>
+                        <div class="w-10 h-10 bg-[rgba(var(--color-rgb-primary),0.08)] rounded-full flex items-center justify-center"><i class="fas fa-users text-rose-gold"></i></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="flex justify-between">
+                        <div><p class="text-xs text-charcoal/60 dark:text-gray-400 mb-1">Memberships</p><p class="text-2xl font-bold text-charcoal dark:text-white">387</p></div>
+                        <div class="w-10 h-10 bg-[rgba(var(--color-rgb-primary),0.08)] rounded-full flex items-center justify-center"><i class="fas fa-crown text-rose-gold"></i></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="flex justify-between">
+                        <div><p class="text-xs text-charcoal/60 dark:text-gray-400 mb-1">Monthly Revenue</p><p class="text-2xl font-bold text-charcoal dark:text-white">$86,420</p></div>
+                        <div class="w-10 h-10 bg-[rgba(var(--color-rgb-primary),0.08)] rounded-full flex items-center justify-center"><i class="fas fa-dollar-<ign text-rose-gold"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="card-design p-6">
+                    <h3 class="font-display font-bold text-lg mb-4">Today's Schedule</h3>
+                    <div class="space-y-3">
+                        <div class="flex gap-3 pb-3 border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.1)]">
+                            <i class="fas fa-syringe text-rose-gold mt-1"></i>
+                            <div class="flex-1"><p class="text-sm font-medium">Botox &amp; Filler Â· Isabella Rosi</p><p class="text-xs text-charcoal/60 dark:text-gray-400">2:30 PM Â· Dr. Elara Voss Â· Suite 4</p></div>
+                            <span class="status-badge status-confirmed text-xs">Confirmed</span>
+                        </div>
+                        <div class="flex gap-3 pb-3 border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.1)]">
+                            <i class="fas fa-bolt text-rose-gold mt-1"></i>
+                            <div class="flex-1"><p class="text-sm font-medium">Laser Resurfacing Â· Olivia M.</p><p class="text-xs text-charcoal/60 dark:text-gray-400">3:15 PM Â· Dr. Marcus Hale Â· Laser Suite</p></div>
+                            <span class="status-badge status-confirmed text-xs">Confirmed</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-spa text-rose-gold mt-1"></i>
+                            <div class="flex-1"><p class="text-sm font-medium">Hydrafacial Â· Sophia K.</p><p class="text-xs text-charcoal/60 dark:text-gray-400">4:00 PM Â· Sofia Laurent Â· Facial Suite</p></div>
+                            <span class="status-badge status-scheduled text-xs">Scheduled</span>
+                        </div>
+                    </div>
+                    <button data-nav="appointments" class="btn-outline-design w-full mt-4 py-2 text-sm">View Full Schedule</button>
+                </div>
+                <div class="card-design p-6">
+                    <h3 class="font-display font-bold text-lg mb-4">Quick Actions</h3>
+                    <div class="space-y-3">
+                        <button data-nav="appointments" class="w-full text-left px-4 py-3 bg-[rgba(var(--color-rgb-primary),0.08)] dark:bg-[rgba(var(--color-rgb-bright),0.1)] text-charcoal dark:text-white rounded-xl hover:bg-[rgba(var(--color-rgb-primary),0.2)] transition flex items-center gap-3">
+                            <i class="fas fa-plus-circle text-rose-gold"></i><span>Book New Appointment</span>
+                        </button>
+                        <button data-nav="clients" class="w-full text-left px-4 py-3 bg-[rgba(var(--color-rgb-primary),0.08)] dark:bg-[rgba(var(--color-rgb-bright),0.1)] text-charcoal dark:text-white rounded-xl hover:bg-[rgba(var(--color-rgb-primary),0.2)] transition flex items-center gap-3">
+                            <i class="fas fa-user-plus text-rose-gold"></i><span>Add New Client</span>
+                        </button>
+                        <button data-nav="billing" class="w-full text-left px-4 py-3 bg-[rgba(var(--color-rgb-primary),0.08)] dark:bg-[rgba(var(--color-rgb-bright),0.1)] text-charcoal dark:text-white rounded-xl hover:bg-[rgba(var(--color-rgb-primary),0.2)] transition flex items-center gap-3">
+                            <i class="fas fa-file-invoice text-rose-gold"></i><span>Generate Invoices</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Provider availability card -->
+            <div class="card-design p-6 mt-6">
+                <h3 class="font-display font-bold text-lg mb-4">Provider Availability Today</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="flex items-center gap-3 p-3 rounded-xl bg-[rgba(var(--color-rgb-primary),0.05)]">
+                        <img src="assets/provider-1.jpg" class="w-10 h-10 rounded-full object-cover border-2 border-rose-gold/30" alt="Dr. Voss">
+                        <div><p class="text-sm font-semibold">Dr. Elara Voss</p><span class="status-badge status-active text-xs">Available</span></div>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 rounded-xl bg-[rgba(var(--color-rgb-primary),0.05)]">
+                        <img src="assets/provider-2.jpg" class="w-10 h-10 rounded-full object-cover border-2 border-rose-gold/30" alt="Nadia Chen">
+                        <div><p class="text-sm font-semibold">Nadia Chen</p><span class="status-badge status-active text-xs">Available</span></div>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 rounded-xl bg-[rgba(var(--color-rgb-primary),0.05)]">
+                        <img src="assets/provider-3.jpg" class="w-10 h-10 rounded-full object-cover border-2 border-rose-gold/30" alt="Dr. Hale">
+                        <div><p class="text-sm font-semibold">Dr. Marcus Hale</p><span class="status-badge status-confirmed text-xs">In Sesion</span></div>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 rounded-xl bg-[rgba(var(--color-rgb-primary),0.05)]">
+                        <img src="assets/provider-4.jpg" class="w-10 h-10 rounded-full object-cover border-2 border-rose-gold/30" alt="Sofia Laurent">
+                        <div><p class="text-sm font-semibold">Sofia Laurent</p><span class="status-badge status-active text-xs">Available</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== APPOINTMENTS ========== -->
+        <div id="page-appointments" class="page-content hidden">
+            <div class="card-design p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-display font-bold text-2xl">All Appointments</h3>
+                    <button class="btn-primary-design px-4 py-1.5 text-sm"><i class="fas fa-plus"></i> New Appointment</button>
+                </div>
+                <p class="text-sm text-charcoal/60 dark:text-gray-400 mb-6">Manage all client bookings across providers and treatment rooms.</p>
+                <div class="space-y-4">
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap justify-between items-start gap-3">
+                            <div>
+                                <p class="font-bold text-lg">Isabella Rosi Â· Botox &amp; Filler Touch-Up</p>
+                                <p class="text-sm text-charcoal/60 dark:text-gray-400">May 22, 2026 Â· 2:30 PM Â· Dr. Elara Voss Â· Suite 4</p>
+                                <div class="flex items-center gap-3 mt-2">
+                                    <span class="status-badge status-confirmed">Confirmed</span>
+                                    <span class="text-xs text-charcoal/60 dark:text-gray-400">Signature Member</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="btn-outline-design text-xs px-4 py-1.5"><i class="fas fa-edit mr-1"></i>Edit</button>
+                                <button class="btn-primary-design text-xs px-4 py-1.5"><i class="fas fa-check mr-1"></i>Check In</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap justify-between items-start gap-3">
+                            <div>
+                                <p class="font-bold text-lg">Olivia M. Â· Laser Resurfacing Sesion 3</p>
+                                <p class="text-sm text-charcoal/60 dark:text-gray-400">Jun 4, 2026 Â· 10:00 AM Â· Dr. Marcus Hale Â· Laser Suite</p>
+                                <div class="flex items-center gap-3 mt-2">
+                                    <span class="status-badge status-scheduled">Scheduled</span>
+                                    <span class="text-xs text-charcoal/60 dark:text-gray-400">5-Sesion Package</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="btn-outline-design text-xs px-4 py-1.5"><i class="fas fa-edit mr-1"></i>Edit</button>
+                                <button class="btn-primary-design text-xs px-4 py-1.5"><i class="fas fa-check mr-1"></i>Check In</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap justify-between items-start gap-3">
+                            <div>
+                                <p class="font-bold text-lg">Sophia K. Â· Hydrafacial (Benefit)</p>
+                                <p class="text-sm text-charcoal/60 dark:text-gray-400">Jun 18, 2026 Â· 4:15 PM Â· Sofia Laurent Â· Facial Suite</p>
+                                <div class="flex items-center gap-3 mt-2">
+                                    <span class="status-badge status-active">Benefit</span>
+                                    <span class="text-xs text-charcoal/60 dark:text-gray-400">Prestige Member</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="btn-outline-design text-xs px-4 py-1.5"><i class="fas fa-edit mr-1"></i>Edit</button>
+                                <button class="btn-primary-design text-xs px-4 py-1.5"><i class="fas fa-check mr-1"></i>Check In</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)] opacity-80">
+                        <div class="flex flex-wrap justify-between items-start gap-3">
+                            <div>
+                                <p class="font-bold text-lg">Emma L. Â· Microneedling with PRP</p>
+                                <p class="text-sm text-charcoal/60 dark:text-gray-400">Apr 30, 2026 Â· Completed Â· Dr. Elara Voss</p>
+                                <div class="flex items-center gap-3 mt-2">
+                                    <span class="status-badge status-completed">Completed</span>
+                                    <span class="text-xs text-charcoal/60 dark:text-gray-400">Follow-up recommended</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="btn-outline-design text-xs px-4 py-1.5"><i class="fas fa-notes-medical mr-1"></i>Notes</button>
+                                <button class="btn-primary-design text-xs px-4 py-1.5"><i class="fas fa-rotate-right mr-1"></i>Rebook</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== CLIENTS ========== -->
+        <div id="page-clients" class="page-content hidden">
+            <div class="card-design p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-display font-bold text-2xl">Clients</h3>
+                    <button class="btn-primary-design px-4 py-1.5 text-sm"><i class="fas fa-plus"></i> Add Client</button>
+                </div>
+                <p class="text-sm text-charcoal/60 dark:text-gray-400 mb-6">Manage all registered clients, their memberships, and treatment history.</p>
+                <div class="space-y-3">
+                    <div class="client-card card-design p-4 flex flex-wrap items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-rose-gold shrink-0 bg-rose-gold">
+                                <img src="assets/review-isabella.jpg" alt="Isabella Rosi" class="w-full h-full object-cover object-top" style="object-position: center 15%;">
+                            </div>
+                            <div>
+                                <p class="font-bold">Isabella Rosi</p>
+                                <p class="text-xs text-charcoal/60 dark:text-gray-400">Signature Member Â· 12 treatments</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 flex-nowrap">
+                            <span class="status-badge status-active">Active</span>
+                            <span class="text-sm text-charcoal/60">$4,820</span>
+                            <button class="text-sm font-semibold text-rose-gold hover:text-rose-gold-dark">View â†’</button>
+                        </div>
+                    </div>
+                    <div class="client-card card-design p-4 flex flex-wrap items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-rose-accent flex items-center justify-center text-white font-bold">OM</div>
+                            <div>
+                                <p class="font-bold">Olivia Martinez</p>
+                                <p class="text-xs text-charcoal/60 dark:text-gray-400">Essential Member Â· 6 treatments</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 flex-nowrap">
+                            <span class="status-badge status-pending">Pending</span>
+                            <span class="text-sm text-charcoal/60">$2,340</span>
+                            <button class="text-sm font-semibold text-rose-gold hover:text-rose-gold-dark">View â†’</button>
+                        </div>
+                    </div>
+                    <div class="client-card card-design p-4 flex flex-wrap items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-rose-gold-dark flex items-center justify-center text-white font-bold">SK</div>
+                            <div>
+                                <p class="font-bold">Sophia Kim</p>
+                                <p class="text-xs text-charcoal/60 dark:text-gray-400">Prestige Member Â· 24 treatments</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 flex-nowrap">
+                            <span class="status-badge status-active">Active</span>
+                            <span class="text-sm text-charcoal/60">$11,200</span>
+                            <button class="text-sm font-semibold text-rose-gold hover:text-rose-gold-dark">View â†’</button>
+                        </div>
+                    </div>
+                    <div class="client-card card-design p-4 flex flex-wrap items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-rose-gold-light flex items-center justify-center text-charcoal font-bold">EL</div>
+                            <div>
+                                <p class="font-bold">Emma Laurent</p>
+                                <p class="text-xs text-charcoal/60 dark:text-gray-400">No membership Â· 3 treatments</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 flex-nowrap">
+                            <span class="status-badge status-completed">New</span>
+                            <span class="text-sm text-charcoal/60">$890</span>
+                            <button class="text-sm font-semibold text-rose-gold hover:text-rose-gold-dark">View â†’</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== PROVIDERS ========== -->
+        <div id="page-providers" class="page-content hidden">
+            <div class="card-design p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-display font-bold text-2xl">Providers</h3>
+                    <button class="btn-primary-design px-4 py-1.5 text-sm"><i class="fas fa-plus"></i> Add Provider</button>
+                </div>
+                <p class="text-sm text-charcoal/60 dark:text-gray-400 mb-6">Manage provider schedules, specialties, and availability.</p>
+                <div class="space-y-4">
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap items-center justify-between gap-3">
+                            <div class="flex items-center gap-3">
+                                <img src="assets/provider-1.jpg" class="w-12 h-12 rounded-xl object-cover border-2 border-rose-gold/30" alt="Dr. Voss">
+                                <div>
+                                    <p class="font-bold text-lg">Dr. Elara Voss</p>
+                                    <p class="text-sm text-charcoal/60 dark:text-gray-400">Medical Director Â· MD, FAAD Â· Injectables &amp; Facial Balancing</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="status-badge status-active">Available</span>
+                                <button class="btn-outline-design text-xs px-4 py-1.5"><i class="fas fa-calendar-alt mr-1"></i>Schedule</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap items-center justify-between gap-3">
+                            <div class="flex items-center gap-3">
+                                <img src="assets/provider-2.jpg" class="w-12 h-12 rounded-xl object-cover border-2 border-rose-gold/30" alt="Nadia Chen">
+                                <div>
+                                    <p class="font-bold text-lg">Nadia Chen</p>
+                                    <p class="text-sm text-charcoal/60 dark:text-gray-400">Lead Injector Â· RN, BSN Â· Neuromodulators &amp; Fillers</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="status-badge status-active">Available</span>
+                                <button class="btn-outline-design text-xs px-4 py-1.5"><i class="fas fa-calendar-alt mr-1"></i>Schedule</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap items-center justify-between gap-3">
+                            <div class="flex items-center gap-3">
+                                <img src="assets/provider-3.jpg" class="w-12 h-12 rounded-xl object-cover border-2 border-rose-gold/30" alt="Dr. Hale">
+                                <div>
+                                    <p class="font-bold text-lg">Dr. Marcus Hale</p>
+                                    <p class="text-sm text-charcoal/60 dark:text-gray-400">Laser Specialist Â· MD Â· Energy Devices &amp; Resurfacing</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="status-badge status-confirmed">In Sesion</span>
+                                <button class="btn-outline-design text-xs px-4 py-1.5"><i class="fas fa-calendar-alt mr-1"></i>Schedule</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap items-center justify-between gap-3">
+                            <div class="flex items-center gap-3">
+                                <img src="assets/provider-4.jpg" class="w-12 h-12 rounded-xl object-cover border-2 border-rose-gold/30" alt="Sofia Laurent">
+                                <div>
+                                    <p class="font-bold text-lg">Sofia Laurent</p>
+                                    <p class="text-sm text-charcoal/60 dark:text-gray-400">Lead AESTHETICSian Â· LE, CLT Â· Facials &amp; Skin Health</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="status-badge status-active">Available</span>
+                                <button class="btn-outline-design text-xs px-4 py-1.5"><i class="fas fa-calendar-alt mr-1"></i>Schedule</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== TREATMENTS ========== -->
+        <div id="page-treatments" class="page-content hidden">
+            <div class="card-design p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-display font-bold text-2xl">Treatments</h3>
+                    <button class="btn-primary-design px-4 py-1.5 text-sm"><i class="fas fa-plus"></i> Add Treatment</button>
+                </div>
+                <p class="text-sm text-charcoal/60 dark:text-gray-400 mb-6">Manage the treatment menu, pricing, and availability.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <th class="text-left py-2 px-3 font-semibold">Treatment</th>
+                                <th class="text-left py-2 px-3 font-semibold">Category</th>
+                                <th class="text-left py-2 px-3 font-semibold">Starting Price</th>
+                                <th class="text-left py-2 px-3 font-semibold">Duration</th>
+                                <th class="text-left py-2 px-3 font-semibold">Status</th>
+                                <th class="text-left py-2 px-3 font-semibold">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">Botox &amp; Neuromodulators</td>
+                                <td class="py-2 px-3">Injectables</td>
+                                <td class="py-2 px-3 font-bold text-rose-gold">$12/unit</td>
+                                <td class="py-2 px-3">15â€“30 min</td>
+                                <td class="py-2 px-3"><span class="status-badge status-active">Active</span></td>
+                                <td class="py-2 px-3"><button class="text-rose-gold hover:text-rose-gold-dark"><i class="fas fa-edit"></i></button></td>
+                            </tr>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">Dermal Fillers</td>
+                                <td class="py-2 px-3">Injectables</td>
+                                <td class="py-2 px-3 font-bold text-rose-gold">$650/syringe</td>
+                                <td class="py-2 px-3">30â€“45 min</td>
+                                <td class="py-2 px-3"><span class="status-badge status-active">Active</span></td>
+                                <td class="py-2 px-3"><button class="text-rose-gold hover:text-rose-gold-dark"><i class="fas fa-edit"></i></button></td>
+                            </tr>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">Laser Resurfacing</td>
+                                <td class="py-2 px-3">Laser</td>
+                                <td class="py-2 px-3 font-bold text-rose-gold">$499/sesion</td>
+                                <td class="py-2 px-3">45â€“90 min</td>
+                                <td class="py-2 px-3"><span class="status-badge status-active">Active</span></td>
+                                <td class="py-2 px-3"><button class="text-rose-gold hover:text-rose-gold-dark"><i class="fas fa-edit"></i></button></td>
+                            </tr>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">Hydrafacial</td>
+                                <td class="py-2 px-3">Skin Health</td>
+                                <td class="py-2 px-3 font-bold text-rose-gold">$199/sesion</td>
+                                <td class="py-2 px-3">30â€“45 min</td>
+                                <td class="py-2 px-3"><span class="status-badge status-active">Active</span></td>
+                                <td class="py-2 px-3"><button class="text-rose-gold hover:text-rose-gold-dark"><i class="fas fa-edit"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-3 font-medium">Microneedling with PRP</td>
+                                <td class="py-2 px-3">Skin Health</td>
+                                <td class="py-2 px-3 font-bold text-rose-gold">$450/sesion</td>
+                                <td class="py-2 px-3">60 min</td>
+                                <td class="py-2 px-3"><span class="status-badge status-pending">Low Stock</span></td>
+                                <td class="py-2 px-3"><button class="text-rose-gold hover:text-rose-gold-dark"><i class="fas fa-edit"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== BILLING ========== -->
+        <div id="page-billing" class="page-content hidden">
+            <div class="card-design p-6">
+                <h3 class="font-display font-bold text-2xl mb-4">Billing Overview</h3>
+                <p class="text-sm text-charcoal/60 dark:text-gray-400 mb-6">View all transactions, generate invoices, and manage payments.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <th class="text-left py-2 px-3 font-semibold">Client</th>
+                                <th class="text-left py-2 px-3 font-semibold">Treatment</th>
+                                <th class="text-left py-2 px-3 font-semibold">Amount</th>
+                                <th class="text-left py-2 px-3 font-semibold">Date</th>
+                                <th class="text-left py-2 px-3 font-semibold">Status</th>
+                                <th class="text-left py-2 px-3 font-semibold">Invoice</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">Isabella Rosi</td>
+                                <td class="py-2 px-3">Botox &amp; Filler</td>
+                                <td class="py-2 px-3 font-bold text-rose-gold">$382.50</td>
+                                <td class="py-2 px-3">May 10, 2026</td>
+                                <td class="py-2 px-3"><span class="status-badge status-completed">Paid</span></td>
+                                <td class="py-2 px-3"><button class="text-rose-gold hover:text-rose-gold-dark"><i class="fas fa-download"></i></button></td>
+                            </tr>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">Olivia Martinez</td>
+                                <td class="py-2 px-3">Laser Resurfacing</td>
+                                <td class="py-2 px-3 font-bold text-rose-gold">$424.15</td>
+                                <td class="py-2 px-3">May 8, 2026</td>
+                                <td class="py-2 px-3"><span class="status-badge status-completed">Paid</span></td>
+                                <td class="py-2 px-3"><button class="text-rose-gold hover:text-rose-gold-dark"><i class="fas fa-download"></i></button></td>
+                            </tr>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">Sophia Kim</td>
+                                <td class="py-2 px-3">Membership Â· Prestige</td>
+                                <td class="py-2 px-3 font-bold text-rose-gold">$349.00</td>
+                                <td class="py-2 px-3">May 5, 2026</td>
+                                <td class="py-2 px-3"><span class="status-badge status-completed">Paid</span></td>
+                                <td class="py-2 px-3"><button class="text-rose-gold hover:text-rose-gold-dark"><i class="fas fa-download"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-3 font-medium">Emma Laurent</td>
+                                <td class="py-2 px-3">Hydrafacial</td>
+                                <td class="py-2 px-3 font-bold text-rose-gold">$199.00</td>
+                                <td class="py-2 px-3">May 3, 2026</td>
+                                <td class="py-2 px-3"><span class="status-badge status-pending">Pending</span></td>
+                                <td class="py-2 px-3"><button class="text-rose-gold hover:text-rose-gold-dark"><i class="fas fa-download"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-6 flex flex-wrap items-center gap-3">
+                    <button class="btn-primary-design px-5 py-2.5 text-sm inline-flex items-center gap-2"><i class="fas fa-file-invoice"></i> Generate Invoices</button>
+                    <button class="btn-outline-design px-5 py-2.5 text-sm inline-flex items-center gap-2"><i class="fas fa-download"></i> Export Reports</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== MESSAGES ========== -->
+        <div id="page-mesages" class="page-content hidden">
+            <div class="card-design p-6">
+                <h3 class="font-display font-bold text-2xl mb-4">Mesages</h3>
+                <p class="text-sm text-charcoal/60 dark:text-gray-400 mb-6">Communicate with clients about their appointments and treatment plans.</p>
+                <div class="space-y-4">
+                    <div class="p-4 bg-[rgba(var(--color-rgb-primary),0.05)] dark:bg-[rgba(var(--color-rgb-bright),0.08)] rounded-xl">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-bold">Isabella Rosi <span class="text-xs font-normal text-charcoal/60">Client</span></p>
+                                <p class="text-sm mt-1">Can I move my Botox appointment to next Friday instead?</p>
+                            </div>
+                            <span class="text-xs text-charcoal/60">Today, 11:00 AM</span>
+                        </div>
+                        <div class="mt-2 flex gap-2">
+                            <button class="btn-primary-design px-4 py-1 text-sm">Reply</button>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[#FFFFFF] dark:bg-[#0F0C0B] rounded-xl border border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-bold">Dr. Elara Voss <span class="text-xs font-normal text-charcoal/60">You</span></p>
+                                <p class="text-sm mt-1">Of course! I've moved you to Friday at 3:00 PM. See you then.</p>
+                            </div>
+                            <span class="text-xs text-charcoal/60">Yesterday, 6:30 PM</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[rgba(var(--color-rgb-primary),0.05)] dark:bg-[rgba(var(--color-rgb-bright),0.08)] rounded-xl">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-bold">Olivia Martinez <span class="text-xs font-normal text-charcoal/60">Client</span></p>
+                                <p class="text-sm mt-1">Is it okay to use retinol before my laser sesion next week?</p>
+                            </div>
+                            <span class="text-xs text-charcoal/60">Yesterday, 2:00 PM</span>
+                        </div>
+                        <div class="mt-2 flex gap-2">
+                            <button class="btn-primary-design px-4 py-1 text-sm">Reply</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <label class="form-label">Send a Mesage</label>
+                    <div class="flex gap-3">
+                        <input type="text" class="form-input flex-1" placeholder="Type your mesage..." />
+                        <button class="btn-primary-design px-6 py-2"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // RTL Toggle
+            const rtlToggle = document.getElementById('rtl-toggle');
+            const rtlToggleMobile = document.getElementById('rtl-toggle-mobile');
+            function setRTL(isRTL) {
+                document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+                localStorage.setItem('dir', isRTL ? 'rtl' : 'ltr');
+            }
+            const savedDir = localStorage.getItem('dir');
+            setRTL(savedDir === 'rtl');
+            if (rtlToggle) rtlToggle.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') !== 'rtl'));
+            if (rtlToggleMobile) rtlToggleMobile.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') !== 'rtl'));
+
+            // Theme Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+            function setTheme(isDark) {
+                if (isDark) document.documentElement.classList.add('dark');
+                else document.documentElement.classList.remove('dark');
+                [themeToggle, themeToggleMobile].forEach(btn => {
+                    if (btn) {
+                        let moon = btn.querySelector('.fa-moon'), sun = btn.querySelector('.fa-sun');
+                        if (isDark) { moon?.classList.add('hidden'); sun?.classList.remove('hidden'); }
+                        else { moon?.classList.remove('hidden'); sun?.classList.add('hidden'); }
+                    }
+                });
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            }
+            const savedTheme = localStorage.getItem('theme');
+            setTheme(savedTheme === 'dark');
+            if (themeToggle) themeToggle.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark')));
+            if (themeToggleMobile) themeToggleMobile.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark')));
+
+            // Mobile Sidebar
+            const menuToggle = document.getElementById('menuToggle');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            function closeSidebar() { sidebar.classList.remove('open'); overlay.classList.remove('open'); }
+            function openSidebar() { sidebar.classList.add('open'); overlay.classList.add('open'); }
+            if (menuToggle) menuToggle.addEventListener('click', (e) => { e.stopPropagation(); sidebar.classList.contains('open') ? closeSidebar() : openSidebar(); });
+            if (overlay) overlay.addEventListener('click', closeSidebar);
+            window.addEventListener('resize', () => { if (window.innerWidth > 768 && sidebar.classList.contains('open')) closeSidebar(); });
+
+            // Navigation
+            const sidebarItems = document.querySelectorAll('.sidebar-item');
+            const pages = document.querySelectorAll('.page-content');
+            const pageTitle = document.getElementById('page-title');
+            const pageSubtitle = document.getElementById('page-subtitle');
+            const titles = {
+                dashboard: { title: 'Dashboard', subtitle: 'Welcome back, Dr. Voss' },
+                appointments: { title: 'Appointments', subtitle: 'Manage all client bookings' },
+                clients: { title: 'Clients', subtitle: 'Manage registered clients' },
+                providers: { title: 'Providers', subtitle: 'Manage provider schedules & specialties' },
+                treatments: { title: 'Treatments', subtitle: 'Manage treatment menu & pricing' },
+                billing: { title: 'Billing', subtitle: 'View transactions and invoices' },
+                mesages: { title: 'Mesages', subtitle: 'Communicate with clients' }
+            };
+            function navigateTo(page) {
+                sidebarItems.forEach(i => i.classList.remove('active'));
+                document.querySelector(`.sidebar-item[data-page="${page}"]`)?.classList.add('active');
+                pages.forEach(p => p.classList.add('hidden'));
+                document.getElementById(`page-${page}`)?.classList.remove('hidden');
+                if (titles[page]) { pageTitle.textContent = titles[page].title; pageSubtitle.textContent = titles[page].subtitle; }
+                closeSidebar();
+            }
+            sidebarItems.forEach(item => { item.addEventListener('click', () => { navigateTo(item.getAttribute('data-page')); }); });
+            document.querySelectorAll('[data-nav]').forEach(btn => { btn.addEventListener('click', () => { navigateTo(btn.getAttribute('data-nav')); }); });
+        });
+    </script>
+</body>
+</html>

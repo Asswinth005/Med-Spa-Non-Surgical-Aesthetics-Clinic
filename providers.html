@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Medical Team · LUMEA Aesthetics</title>
+
+    <!-- Favicon suite for all browsers, file:// mode & web servers -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABWUlEQVR4nMXX53KCQBQF4PuwqZYkqCigmJ6Y5kuYqqb37ptdZ3fZhBAHtsmemfP7Ow7LDgKk5PsoxK/DFu3nQZP2Yz+gfd/zad86Hr7ukjbwZYe0js/bpC4+bbn4uFnDNONfRt02jrohmsJJHzaqtPfrlfQx08ZJ79acySPywklvVxMj8sZv2iu0sQH549fh8u8AG/jPAF2cRAW/ai3Rgi7Oo4JfNstsgC7OI4sPgzKCKZxHBh8GJTbAFM4jig/8EoJpnEcEH/hFNkDmVTOJ970igsp7bgrvewU2QOWSMYFfNAoIOjecLn5eX0TQvV518GiAubtdFj9zFxBkn7kIzpOFRwPEfnnyeWfhbEA6flqbR1A5cCRZOEkWHg2QO3Dx6OIn1TkE2QMnElGcDlA57abw48os+yqa9quWivMBeeM9JzbABt5zZv7+N7CK81jFeaziyRg/7RMyBtT2SSfuKxWUAAAAAElFTkSuQmCC" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABWUlEQVR4nMXX53KCQBQF4PuwqZYkqCigmJ6Y5kuYqqb37ptdZ3fZhBAHtsmemfP7Ow7LDgKk5PsoxK/DFu3nQZP2Yz+gfd/zad86Hr7ukjbwZYe0js/bpC4+bbn4uFnDNONfRt02jrohmsJJHzaqtPfrlfQx08ZJ79acySPywklvVxMj8sZv2iu0sQH549fh8u8AG/jPAF2cRAW/ai3Rgi7Oo4JfNstsgC7OI4sPgzKCKZxHBh8GJTbAFM4jig/8EoJpnEcEH/hFNkDmVTOJ970igsp7bgrvewU2QOWSMYFfNAoIOjecLn5eX0TQvV518GiAubtdFj9zFxBkn7kIzpOFRwPEfnnyeWfhbEA6flqbR1A5cCRZOEkWHg2QO3Dx6OIn1TkE2QMnElGcDlA57abw48os+yqa9quWivMBeeM9JzbABt5zZv7+N7CK81jFeaziyRg/7RMyBtT2SSfuKxWUAAAAAElFTkSuQmCC" />
+<!-- Tailwind CSS with Local & CDN Fallback -->
+  <script src="tailwind.js"></script>
+  <script>
+    if (typeof tailwind === 'undefined') {
+      document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+    }
+  </script>
+
+  <!-- Prevent theme flash on page load -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    window.tailwind = window.tailwind || {};
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            porcelain: '#F9F6F3',
+            champagne: '#EDE4DC',
+            nude: '#DCC9BC',
+            rosegold: '#B88A78',
+            deeptaupe: '#6E4F42',
+            charcoal: '#2C2826',
+            ivory: '#FFFCF9',
+            sage: '#B8C5B2',
+            blush: '#F2E8E2',
+            gold: '#C6A78C',
+            cream: '#FCF7F2',
+            creamlight: '#FCF7F2',
+          },
+          fontFamily: {
+            'display': ['"Cormorant Garamond"', 'serif'],
+            'body': ['"Inter"', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'float-slow': 'floatSlow 7s ease-in-out infinite',
+            'pulse-soft': 'pulseSoft 4s ease-in-out infinite',
+            'fade-up': 'fadeUp 0.8s ease-out',
+            'shimmer': 'shimmer 2.8s infinite',
+          },
+          keyframes: {
+            floatSlow: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } },
+            pulseSoft: { '0%, 100%': { opacity: '0.8' }, '50%': { opacity: '1' } },
+            fadeUp: { '0%': { transform: 'translateY(28px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+            shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+          },
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <style>
+    body {
+      background-color: #F9F6F3;
+      color: #2C2826;
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+    .dark body {
+      background-color: #1C1817;
+      color: #F9F6F3;
+    }
+
+    /* Elegant scrollbar */
+    body::-webkit-scrollbar { width: 5px; }
+    body::-webkit-scrollbar-track { background: #F9F6F3; }
+    body::-webkit-scrollbar-thumb { background: #B88A78; border-radius: 20px; }
+
+    /* ===== PROVIDERS PAGE UNIQUE STYLES ===== */
+
+    /* --- Providers Hero — asymmetric with large portrait --- */
+    .providers-hero {
+      background: #1C1817;
+      position: relative;
+      min-height: 75vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .providers-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 20%, rgba(184,138,120,0.14) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .providers-hero-portrait {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 90%;
+      width: auto;
+      max-width: 50%;
+      object-fit: contain;
+      object-position: bottom right;
+      filter: brightness(0.85) saturate(0.9);
+      pointer-events: none;
+      opacity: 0.9;
+    }
+    @media (max-width: 1024px) {
+      .providers-hero-portrait { max-width: 100%; opacity: 0.25; }
+    }
+    .providers-hero-content {
+      position: relative;
+      z-index: 3;
+      padding: 8rem 3rem 5rem 6rem;
+      max-width: 680px;
+    }
+    @media (max-width: 1024px) {
+      .providers-hero-content { padding: 7rem 1.5rem 4rem 1.5rem; max-width: 100%; }
+    }
+
+    /* --- Provider feature card --- */
+    .provider-feature {
+      background: #FFFFFF;
+      border-radius: 4px 40px 4px 40px;
+      border: 1px solid rgba(184, 138, 120, 0.14);
+      overflow: hidden;
+      transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+    .dark .provider-feature {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.22);
+    }
+    .provider-feature:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 56px -16px rgba(184, 138, 120, 0.3);
+      border-color: rgba(184, 138, 120, 0.4);
+    }
+
+    /* --- Credential badge --- */
+    .credential-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #F2E8E2;
+      color: #6E4F42;
+      border-radius: 30px 8px 30px 8px;
+      padding: 0.45rem 1.1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border: 1px solid rgba(184, 138, 120, 0.12);
+      transition: all 0.3s;
+    }
+    .dark .credential-badge {
+      background: #3D3431;
+      color: #DCC9BC;
+      border-color: rgba(184, 138, 120, 0.2);
+    }
+    .credential-badge:hover {
+      background: #B88A78;
+      color: #FFFCF9;
+    }
+
+    /* --- Team grid card (compact) --- */
+    .team-card {
+      background: #FFFFFF;
+      border-radius: 20px 4px 20px 4px;
+      border: 1px solid rgba(184, 138, 120, 0.12);
+      overflow: hidden;
+      transition: all 0.4s;
+    }
+    .dark .team-card {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.2);
+    }
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px -12px rgba(184, 138, 120, 0.25);
+      border-color: rgba(184, 138, 120, 0.35);
+    }
+    .team-card img {
+      transition: transform 0.7s ease;
+    }
+    .team-card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* --- Philosophy quote block --- */
+    .philosophy-quote {
+      background: #EDE4DC;
+      border-radius: 40px 4px 40px 4px;
+      padding: 3rem 2.5rem;
+      position: relative;
+      border-left: 5px solid #B88A78;
+    }
+    .dark .philosophy-quote { background: #25201E; }
+    .philosophy-quote::before {
+      content: '"';
+      position: absolute;
+      top: -0.5rem;
+      left: 1.5rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 8rem;
+      color: rgba(184, 138, 120, 0.12);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    /* --- FAQ accordion (same as home) --- */
+    .portal-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      border: 1px solid rgba(184, 138, 120, 0.2);
+      box-shadow: 0 8px 24px -6px rgba(184, 138, 120, 0.08);
+      transition: all 0.3s ease;
+    }
+    .dark .portal-card {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.25);
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
+    }
+    .portal-card:hover {
+      border-color: rgba(184, 138, 120, 0.4);
+    }
+
+    /* --- Buttons --- */
+    .btn-rose {
+      background: #B88A78;
+      color: #FFFCF9;
+      font-weight: 600;
+      border-radius: 4px 20px 4px 20px;
+      transition: all 0.35s;
+      box-shadow: 0 4px 14px rgba(184, 138, 120, 0.25);
+      letter-spacing: 0.3px;
+    }
+    .btn-rose:hover {
+      background: #A67A68;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(184, 138, 120, 0.4);
+      border-radius: 20px 4px 20px 4px;
+    }
+    .btn-ghost {
+      border: 1.5px solid rgba(184, 138, 120, 0.5);
+      color: #B88A78;
+      background: transparent;
+      border-radius: 4px 20px 4px 20px;
+      font-weight: 500;
+      transition: all 0.35s;
+    }
+    .btn-ghost:hover {
+      background: #B88A78;
+      color: #FFFCF9;
+      border-color: #B88A78;
+      border-radius: 20px 4px 20px 4px;
+    }
+    .dark .btn-ghost:hover { background: #B88A78; color: #FFFCF9; }
+
+    /* --- Nav (same) --- */
+    .nav-link {
+      position: relative;
+      font-weight: 500;
+      transition: color 0.25s;
+      text-decoration: none !important;
+    }
+    .nav-link.active {
+      color: #B88A78 !important;
+      font-weight: 600;
+    }
+
+    .dropdown-clinic-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      background: #FFFCF9;
+      border-radius: 8px 24px 8px 24px;
+      padding: 0.5rem 0;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.07);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.25s;
+      z-index: 1000;
+      border: 1px solid rgba(184, 138, 120, 0.15);
+    }
+    .dropdown-clinic-menu::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      right: 0;
+      height: 12px;
+    }
+    .dark .dropdown-clinic-menu { background: #2C2826; border-color: rgba(184, 138, 120, 0.25); }
+    .dropdown-clinic:hover .dropdown-clinic-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 0.6rem 1.4rem;
+      transition: all 0.2s;
+      color: #2C2826;
+      font-size: 0.95rem;
+      border-radius: 4px 16px 4px 16px;
+      margin: 0 0.3rem;
+    }
+    .dark .dropdown-item { color: #F9F6F3; }
+    .dropdown-item:hover { background: #F2E8E2; color: #2C2826; padding-left: 1.7rem; }
+    .dark .dropdown-item:hover { background: #3D3431; color: #F9F6F3; }
+    .dropdown-item i { margin-right: 0.75rem; width: 18px; color: #B88A78; }
+
+    /* Mobile menu */
+    .mobile-menu-clinic {
+      background: #FFFCF9;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .dark .mobile-menu-clinic { background: #2C2826; }
+    .mobile-menu-clinic.open { max-height: 80vh; overflow-y: auto; }
+
+    /* Social */
+    .social-icon-clinic {
+      width: 40px; height: 40px;
+      border-radius: 8px 16px 8px 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #F2E8E2;
+      color: #2C2826;
+      transition: all 0.3s;
+    }
+    .social-icon-clinic:hover {
+      background: #B88A78;
+      color: #FFFCF9;
+      transform: translateY(-3px) rotate(3deg);
+    }
+    .dark .social-icon-clinic { background: #3D3431; color: #F9F6F3; }
+    .dark .social-icon-clinic:hover { background: #B88A78; color: #FFFCF9; }
+
+    /* RTL adjustments */
+    [dir="rtl"] .ml-auto { margin-left: 0 !important; margin-right: auto !important; }
+    [dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+    [dir="rtl"] .dropdown-clinic-menu { left: auto; right: 0; }
+    [dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.75rem; }
+    [dir="rtl"] .providers-hero-portrait { right: auto; left: 0; }
+    [dir="rtl"] .providers-hero-content { padding: 8rem 6rem 5rem 3rem; }
+    @media (max-width: 1024px) {
+      [dir="rtl"] .providers-hero-content { padding: 7rem 1.5rem 4rem 1.5rem; }
+    }
+
+    .gold-accent { color: #C6A78C; }
+    .text-balance { text-wrap: balance; }
+  </style>
+</head>
+<body>
+
+<!-- ======== NAVIGATION (copied exactly) ======== -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-porcelain/90 dark:bg-[#1C1817]/90 backdrop-blur-lg border-b border-rosegold/10 dark:border-rosegold/15 shadow-sm">
+  <div class="container mx-auto px-6">
+    <div class="flex items-center justify-between h-20 md:h-24 relative">
+
+      <!-- Logo with geometric mark -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+        <div class="w-10 h-10 bg-rosegold rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition duration-300 rotate-3 group-hover:rotate-0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-6 h-6" fill="none">
+            <path d="M18 6 L28 14 L18 26 L8 14 Z" fill="white" opacity="0.95"/>
+            <circle cx="18" cy="16" r="3.5" fill="white" opacity="0.7"/>
+            <path d="M10 28 L18 22 L26 28" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+          </svg>
+        </div>
+        <span class="flex flex-col items-start leading-tight">
+          <span class="text-lg md:text-2xl font-display font-extrabold tracking-tight text-[#2C2826] dark:text-porcelain">LUMEA</span>
+          <span class="text-rosegold text-[9px] md:text-[11px] font-semibold tracking-[0.2em] uppercase -mt-0.5">MED SPA &amp; AESTHETICS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav — centered but airy -->
+      <div class="hidden xl:flex items-center gap-5 xl:gap-6 absolute left-1/2 -translate-x-1/2">
+        <div class="dropdown-clinic relative">
+          <a href="index.html" class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold font-medium flex items-center gap-1 py-2 whitespace-nowrap text-[15px]">
+            Home <i class="fas fa-chevron-down text-[10px] ms-1 opacity-60"></i>
+          </a>
+          <div class="dropdown-clinic-menu">
+            <a class="dropdown-item" href="index.html">Home 1</a>
+            <a class="dropdown-item" href="home2.html">Home 2</a>
+          </div>
+        </div>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="about.html">About</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="treatments.html">Treatments</a>
+        <a class="nav-link active font-medium text-[15px]" href="providers.html">Providers</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="membership.html">Membership</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="contact.html">Contact</a>
+
+        <!-- Dashboard Dropdown -->
+        <div class="dropdown-clinic relative">
+          <button class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold font-medium flex items-center gap-1 py-2 whitespace-nowrap text-[15px]">
+            Dashboard <i class="fas fa-chevron-down text-[10px] ms-1 opacity-60"></i>
+          </button>
+          <div class="dropdown-clinic-menu">
+            <a class="dropdown-item" href="client.html">Client</a>
+            <a class="dropdown-item" href="admin.html">Admin</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right actions -->
+      <div class="flex items-center gap-2 xl:gap-3 ms-auto">
+        <a href="login.html" class="hidden xl:inline-flex btn-rose py-2 px-5 text-sm items-center gap-2">
+          <i class="fas fa-user-circle"></i> Client Login
+        </a>
+        <button id="theme-toggle" class="hidden xl:flex w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition items-center justify-center">
+          <i class="fas fa-moon dark:hidden text-sm"></i>
+          <i class="fas fa-sun hidden dark:inline text-sm"></i>
+        </button>
+        <button id="rtl-toggle" class="hidden xl:flex w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition items-center justify-center font-bold text-sm">
+          ⇄
+        </button>
+        <button id="mobile-toggle" class="xl:hidden w-10 h-10 rounded-lg bg-rosegold text-ivory flex items-center justify-center shadow-md">
+          <i class="fas fa-bars text-sm"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-clinic xl:hidden rounded-b-3xl">
+      <div class="py-4 px-3 space-y-1">
+        <div class="py-1">
+          <button onclick="document.getElementById('home-mobile-drop').classList.toggle('hidden'); document.getElementById('home-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition cursor-pointer">
+            <span>Home</span>
+            <i id="home-mobile-icon" class="fas fa-chevron-down text-xs opacity-60 transition-transform duration-300 "></i>
+          </button>
+          <div id="home-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="index.html">Home 1</a>
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="home2.html">Home 2</a>
+          </div>
+        </div>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="about.html">About</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="treatments.html">Treatments</a>
+        <a class="block py-3 px-4 font-medium text-rosegold border-l-4 border-rosegold bg-rosegold/5 rounded-lg transition" href="providers.html">Providers</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="membership.html">Membership</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="contact.html">Contact</a>
+
+        <!-- Dashboard Dropdown (Mobile) -->
+        <div class="py-1">
+          <button onclick="document.getElementById('dashboard-mobile-drop').classList.toggle('hidden'); document.getElementById('dashboard-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition cursor-pointer">
+            <span>Dashboard</span>
+            <i id="dashboard-mobile-icon" class="fas fa-chevron-down text-xs opacity-60 transition-transform duration-300"></i>
+          </button>
+          <div id="dashboard-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="client.html">Client</a>
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="admin.html">Admin</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 pt-5 mt-3 border-t border-blush/60 dark:border-cream/10">
+          <a class="text-center btn-rose py-2.5 font-medium flex items-center justify-center gap-2" href="login.html">
+            <i class="fas fa-user-circle"></i> Client Login
+          </a>
+          <div class="flex gap-3">
+            <button id="mobile-theme-toggle" class="flex-1 py-2 rounded-lg bg-rosegold/10 text-rosegold text-sm font-medium flex items-center gap-2 justify-center">
+              <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i> Theme
+            </button>
+            <button id="mobile-rtl-toggle" class="flex-1 py-2 rounded-lg bg-rosegold/10 text-rosegold text-sm font-medium flex items-center gap-2 justify-center">
+              ⇄ RTL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ======== PROVIDERS HERO — ASYMMETRIC ======== -->
+<section class="providers-hero">
+  <div class="providers-hero-bg"></div>
+  <img src="assets/provider-1.jpg" alt="Lead Provider" class="providers-hero-portrait" />
+  <div class="container mx-auto px-6">
+    <div class="providers-hero-content animate-fade-up">
+      <span class="inline-flex items-center gap-2 bg-rosegold/15 text-rosegold px-4 py-1.5 rounded-lg text-xs font-bold tracking-widest uppercase mb-6 border border-rosegold/20">
+        <i class="fas fa-user-md"></i> our medical team
+      </span>
+      <h1 class="text-5xl md:text-7xl font-display font-extrabold leading-[1.05] mb-6 text-ivory">
+        Experts who<br/>
+        <span class="text-rosegold">truly listen</span>
+      </h1>
+      <p class="text-lg md:text-xl text-ivory/75 font-light mb-10 max-w-lg leading-relaxed">
+        Board-certified physicians, master injectors, and laser specialists united by one philosophy: natural results, delivered with care.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="contact.html" class="btn-rose px-8 py-3.5 text-base inline-flex items-center gap-2 shadow-xl">
+          <i class="fas fa-calendar-check"></i> Book with a Provider
+        </a>
+        <a href="#team" class="btn-ghost px-8 py-3.5 text-base inline-flex items-center gap-2 border-ivory/30 text-ivory/90 hover:bg-rosegold hover:text-ivory hover:border-rosegold">
+          <i class="fas fa-users"></i> Meet the Team
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== QUICK CREDENTIALS STRIP ======== -->
+<section class="py-10 bg-rosegold dark:bg-[#181413]">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto text-center">
+      <div>
+        <div class="text-2xl font-display font-bold text-ivory mb-1">12+</div>
+        <div class="text-xs uppercase tracking-widest text-ivory/80">Board-certified</div>
+      </div>
+      <div>
+        <div class="text-2xl font-display font-bold text-ivory mb-1">50k+</div>
+        <div class="text-xs uppercase tracking-widest text-ivory/80">Procedures performed</div>
+      </div>
+      <div>
+        <div class="text-2xl font-display font-bold text-ivory mb-1">4.9★</div>
+        <div class="text-xs uppercase tracking-widest text-ivory/80">Average rating</div>
+      </div>
+      <div>
+        <div class="text-2xl font-display font-bold text-ivory mb-1">15+</div>
+        <div class="text-xs uppercase tracking-widest text-ivory/80">Years combined</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FEATURED PROVIDER — LARGE SPOTLIGHT ======== -->
+<section class="py-24 bg-porcelain dark:bg-[#1C1817] relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-rosegold/5 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Medical Director
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        Meet <span class="text-rosegold">Dr. Elara Voss</span>
+      </h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Image -->
+      <div class="animate-fade-up">
+        <div class="provider-feature overflow-hidden">
+          <img src="assets/provider-1.jpg" alt="Dr. Elara Voss" class="w-full h-[520px] object-cover object-top" />
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div class="space-y-6 animate-fade-up" style="animation-delay: 0.15s;">
+        <div class="flex flex-wrap gap-2">
+          <span class="credential-badge"><i class="fas fa-certificate text-rosegold"></i> MD</span>
+          <span class="credential-badge"><i class="fas fa-certificate text-rosegold"></i> FAAD</span>
+          <span class="credential-badge"><i class="fas fa-award text-rosegold"></i> 15+ years</span>
+        </div>
+        <h3 class="font-display font-bold text-3xl text-[#2C2826] dark:text-porcelain">Board-Certified Dermatologist</h3>
+        <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-base leading-relaxed">
+          Dr. Voss founded Lumineau Aesthetics with a vision: to create a med spa where clinical excellence meets genuine warmth. A fellow of the American Academy of Dermatology, she has performed over 20,000 injectable procedures and is known for her meticulous, artistic approach to facial balancing.
+        </p>
+        <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-base leading-relaxed">
+          Her philosophy is simple — less is more. She believes in enhancing your natural features, never altering them beyond recognition. Patients frequently describe her as "the injector who actually listens."
+        </p>
+        <div class="pt-4 space-y-3">
+          <div class="flex gap-3 items-center">
+            <i class="fas fa-graduation-cap text-rosegold"></i>
+            <span class="text-[#2C2826]/85 dark:text-porcelain/85 text-sm">MD, University of Pennsylvania School of Medicine</span>
+          </div>
+          <div class="flex gap-3 items-center">
+            <i class="fas fa-hospital text-rosegold"></i>
+            <span class="text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Dermatology Residency, NYU Langone Health</span>
+          </div>
+          <div class="flex gap-3 items-center">
+            <i class="fas fa-microscope text-rosegold"></i>
+            <span class="text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Published researcher in aesthetic dermatology</span>
+          </div>
+        </div>
+        <div class="pt-4">
+          <a href="contact.html" class="btn-rose px-7 py-3 text-sm inline-flex items-center gap-2">
+            <i class="fas fa-calendar-check"></i> Book with Dr. Voss
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== TEAM GRID ======== -->
+<section id="team" class="py-24 bg-[#F4EDE7] dark:bg-[#1A1615] border-y border-rosegold/10">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+      <div class="animate-fade-up">
+        <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+          <span class="w-8 h-px bg-rosegold"></span> The Full Team
+        </span>
+        <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+          Specialists in every <span class="text-rosegold">discipline</span>
+        </h2>
+      </div>
+      <a href="contact.html" class="shrink-0 btn-rose px-6 py-2.5 text-sm inline-flex items-center gap-2">
+        <i class="fas fa-calendar-check"></i> Book a Consultation
+      </a>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Provider 1 -->
+      <div class="team-card animate-fade-up" style="animation-delay: 0.1s;">
+        <div class="h-64 overflow-hidden">
+          <img src="assets/provider-1.jpg" alt="Dr. Elara Voss" class="w-full h-full object-cover object-top" />
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Dr. Elara Voss</h3>
+          <p class="text-rosegold text-xs font-semibold tracking-wider uppercase mt-1">Medical Director</p>
+          <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-xs mt-2">MD, FAAD · 15+ years</p>
+          <div class="flex justify-center gap-2 mt-4">
+            <a href="#" class="w-8 h-8 rounded-lg bg-blush/60 dark:bg-cream/10 text-rosegold flex items-center justify-center hover:bg-rosegold hover:text-white transition text-xs">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-blush/60 dark:bg-cream/10 text-rosegold flex items-center justify-center hover:bg-rosegold hover:text-white transition text-xs">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Provider 2 -->
+      <div class="team-card animate-fade-up" style="animation-delay: 0.2s;">
+        <div class="h-64 overflow-hidden">
+          <img src="assets/provider-2.jpg" alt="Nadia Chen" class="w-full h-full object-cover object-top" />
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Nadia Chen</h3>
+          <p class="text-rosegold text-xs font-semibold tracking-wider uppercase mt-1">Lead Injector</p>
+          <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-xs mt-2">RN, BSN · 8+ years</p>
+          <div class="flex justify-center gap-2 mt-4">
+            <a href="#" class="w-8 h-8 rounded-lg bg-blush/60 dark:bg-cream/10 text-rosegold flex items-center justify-center hover:bg-rosegold hover:text-white transition text-xs">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-blush/60 dark:bg-cream/10 text-rosegold flex items-center justify-center hover:bg-rosegold hover:text-white transition text-xs">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Provider 3 -->
+      <div class="team-card animate-fade-up" style="animation-delay: 0.3s;">
+        <div class="h-64 overflow-hidden">
+          <img src="assets/provider-3.jpg" alt="Dr. Marcus Hale" class="w-full h-full object-cover object-top" />
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Dr. Marcus Hale</h3>
+          <p class="text-rosegold text-xs font-semibold tracking-wider uppercase mt-1">Laser Specialist</p>
+          <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-xs mt-2">MD · 12+ years</p>
+          <div class="flex justify-center gap-2 mt-4">
+            <a href="#" class="w-8 h-8 rounded-lg bg-blush/60 dark:bg-cream/10 text-rosegold flex items-center justify-center hover:bg-rosegold hover:text-white transition text-xs">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-blush/60 dark:bg-cream/10 text-rosegold flex items-center justify-center hover:bg-rosegold hover:text-white transition text-xs">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Provider 4 -->
+      <div class="team-card animate-fade-up" style="animation-delay: 0.4s;">
+        <div class="h-64 overflow-hidden">
+          <img src="assets/provider-4.jpg" alt="Sofia Laurent" class="w-full h-full object-cover object-top" />
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Sofia Laurent</h3>
+          <p class="text-rosegold text-xs font-semibold tracking-wider uppercase mt-1">Lead Aesthetician</p>
+          <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-xs mt-2">LE, CLT · 10+ years</p>
+          <div class="flex justify-center gap-2 mt-4">
+            <a href="#" class="w-8 h-8 rounded-lg bg-blush/60 dark:bg-cream/10 text-rosegold flex items-center justify-center hover:bg-rosegold hover:text-white transition text-xs">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-blush/60 dark:bg-cream/10 text-rosegold flex items-center justify-center hover:bg-rosegold hover:text-white transition text-xs">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== PHILOSOPHY QUOTE ======== -->
+<section class="py-24 bg-porcelain dark:bg-[#1C1817]">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <div class="philosophy-quote animate-fade-up">
+      <p class="font-display text-2xl md:text-3xl italic text-[#2C2826] dark:text-porcelain leading-relaxed relative z-10">
+        We don't chase trends. We study anatomy, respect natural beauty, and take the time to understand what each patient truly wants. That's what separates a good injector from a great one.
+      </p>
+      <div class="flex items-center gap-4 mt-8 relative z-10">
+        <img src="assets/provider-1.jpg" alt="Dr. Elara Voss" class="w-14 h-14 rounded-xl object-cover border-2 border-rosegold/30" />
+        <div>
+          <strong class="text-[#2C2826] dark:text-porcelain block">Dr. Elara Voss</strong>
+          <span class="text-rosegold text-sm">Founder & Medical Director</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== SPECIALTIES — 3-COLUMN GRID ======== -->
+<section class="py-24 bg-[#EDE4DC] dark:bg-[#181413]">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Areas of Expertise
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        What our team <span class="text-rosegold">excels at</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Specialty 1 -->
+      <div class="provider-feature p-8 group">
+        <div class="w-14 h-14 rounded-2xl bg-rosegold/10 text-rosegold flex items-center justify-center text-2xl mb-5 group-hover:bg-rosegold group-hover:text-white transition-all duration-300">
+          <i class="fas fa-syringe"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl text-[#2C2826] dark:text-porcelain mb-3">Injectable Artistry</h3>
+        <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-sm leading-relaxed mb-5">
+          Neuromodulators, hyaluronic acid fillers, biostimulators, and fat-dissolving injections — placed with anatomical precision.
+        </p>
+        <ul class="space-y-2">
+          <li class="text-xs text-[#2C2826]/70 dark:text-porcelain/70 flex items-center gap-2"><i class="fas fa-check text-rosegold text-[10px]"></i> Botox & Dysport</li>
+          <li class="text-xs text-[#2C2826]/70 dark:text-porcelain/70 flex items-center gap-2"><i class="fas fa-check text-rosegold text-[10px]"></i> Dermal Fillers</li>
+          <li class="text-xs text-[#2C2826]/70 dark:text-porcelain/70 flex items-center gap-2"><i class="fas fa-check text-rosegold text-[10px]"></i> Sculptra & Radiesse</li>
+        </ul>
+      </div>
+
+      <!-- Specialty 2 -->
+      <div class="provider-feature p-8 group">
+        <div class="w-14 h-14 rounded-2xl bg-rosegold/10 text-rosegold flex items-center justify-center text-2xl mb-5 group-hover:bg-rosegold group-hover:text-white transition-all duration-300">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl text-[#2C2826] dark:text-porcelain mb-3">Laser & Energy</h3>
+        <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-sm leading-relaxed mb-5">
+          Fractional resurfacing, IPL photofacials, RF microneedling, and laser hair removal using FDA-cleared platforms.
+        </p>
+        <ul class="space-y-2">
+          <li class="text-xs text-[#2C2826]/70 dark:text-porcelain/70 flex items-center gap-2"><i class="fas fa-check text-rosegold text-[10px]"></i> Fractional Laser</li>
+          <li class="text-xs text-[#2C2826]/70 dark:text-porcelain/70 flex items-center gap-2"><i class="fas fa-check text-rosegold text-[10px]"></i> IPL Photofacial</li>
+          <li class="text-xs text-[#2C2826]/70 dark:text-porcelain/70 flex items-center gap-2"><i class="fas fa-check text-rosegold text-[10px]"></i> RF Microneedling</li>
+        </ul>
+      </div>
+
+      <!-- Specialty 3 -->
+      <div class="provider-feature p-8 group">
+        <div class="w-14 h-14 rounded-2xl bg-rosegold/10 text-rosegold flex items-center justify-center text-2xl mb-5 group-hover:bg-rosegold group-hover:text-white transition-all duration-300">
+          <i class="fas fa-spa"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl text-[#2C2826] dark:text-porcelain mb-3">Skin Health</h3>
+        <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-sm leading-relaxed mb-5">
+          Medical-grade facials, chemical peels, microneedling with PRP, and customized skincare regimens.
+        </p>
+        <ul class="space-y-2">
+          <li class="text-xs text-[#2C2826]/70 dark:text-porcelain/70 flex items-center gap-2"><i class="fas fa-check text-rosegold text-[10px]"></i> Hydrafacial</li>
+          <li class="text-xs text-[#2C2826]/70 dark:text-porcelain/70 flex items-center gap-2"><i class="fas fa-check text-rosegold text-[10px]"></i> Chemical Peels</li>
+          <li class="text-xs text-[#2C2826]/70 dark:text-porcelain/70 flex items-center gap-2"><i class="fas fa-check text-rosegold text-[10px]"></i> PRP Therapy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FAQ (same structure, provider-focused) ======== -->
+<section class="py-24 bg-porcelain dark:bg-[#1C1817] relative overflow-hidden">
+  <div class="container mx-auto px-6 relative z-10 max-w-5xl">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold px-0 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Provider Questions
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        About our <span class="text-rosegold">team</span>
+      </h2>
+      <p class="text-[#2C2826]/85 dark:text-porcelain/85 mt-3 text-base max-w-xl mx-auto">
+        Answers to common questions about our providers, credentials, and approach.
+      </p>
+    </div>
+
+    <div class="space-y-4" id="clinic-faq-accordion">
+      <!-- Item 1 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Are all your providers board-certified?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Yes. All physicians on our team are board-certified dermatologists or plastic surgeons. Our nurse injectors are licensed RNs with advanced aesthetic training and thousands of documented procedures. We never delegate clinical injections to unsupervised assistants.
+          </p>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Can I choose which provider I see?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Absolutely. When booking, you can request a specific provider based on your needs and preferences. If you're not sure who's the best fit, our front desk team can help match you with the right specialist for your concerns.
+          </p>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>How much experience does your team have?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Our team brings over 50 years of combined experience in aesthetic medicine. Dr. Voss has performed 20,000+ injectable procedures, and each provider participates in ongoing education to stay current with the latest techniques and safety protocols.
+          </p>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Do you offer training or mentorship for new injectors?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Yes, we offer a selective mentorship program for experienced injectors looking to refine their skills in advanced facial balancing and micro-dosing techniques. Contact our clinic for more information on upcoming training opportunities.
+          </p>
+        </div>
+      </div>
+      <!-- Item 5 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>What should I expect during my first visit?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Your first visit includes a comprehensive consultation where we listen to your concerns, assess your skin and facial anatomy, and discuss your goals. There's no pressure to commit to any treatment — we want you to feel completely informed and confident before moving forward.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== CTA ======== -->
+<section class="py-24 bg-rosegold dark:bg-[#181413]">
+  <div class="container mx-auto px-6 text-center">
+    <div class="max-w-3xl mx-auto animate-fade-up">
+      <div class="inline-block mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="60" height="60" fill="none">
+          <path d="M32 12 Q22 4 20 16 Q18 28 30 30 Q32 32 34 30 Q46 28 44 16 Q42 4 32 12Z" fill="white" opacity="0.9"/>
+          <ellipse cx="32" cy="26" rx="14" ry="4" fill="white" opacity="0.45"/>
+          <circle cx="32" cy="20" r="3" fill="white" opacity="0.8"/>
+          <path d="M18 32 Q12 24 18 18" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M46 32 Q52 24 46 18" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M24 38 Q32 46 40 38" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+        </svg>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-display font-bold text-ivory mb-5">Meet Your <span class="text-ivory/90">Provider</span></h2>
+      <p class="text-ivory/80 text-lg mb-10 max-w-xl mx-auto">Book a private consultation with the specialist who's right for you.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contact.html" class="bg-ivory text-rosegold px-8 py-3.5 rounded-lg font-bold shadow-lg hover:scale-105 transition inline-flex items-center gap-2 text-sm">
+          <i class="fas fa-calendar-check"></i> Book Consultation
+        </a>
+        <a href="membership.html" class="border-2 border-ivory/60 text-ivory px-8 py-3.5 rounded-lg font-semibold hover:bg-ivory hover:text-rosegold transition inline-flex items-center gap-2 text-sm">
+          <i class="fas fa-crown"></i> Explore Membership
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FOOTER (copied exactly) ======== -->
+<footer class="bg-porcelain dark:bg-[#1C1817] text-[#2C2826] dark:text-porcelain pt-16 pb-8 border-t border-rosegold/10">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="text-center md:text-start">
+        <a href="index.html" class="inline-flex items-center justify-center md:justify-start gap-3 mb-6 group hover:opacity-90 transition">
+          <div class="w-10 h-10 bg-rosegold rounded-lg flex items-center justify-center shadow-lg overflow-hidden group-hover:scale-105 transition duration-300 rotate-3 group-hover:rotate-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-6 h-6" fill="none">
+              <path d="M18 6 L28 14 L18 26 L8 14 Z" fill="white" opacity="0.95"/>
+              <circle cx="18" cy="16" r="3.5" fill="white" opacity="0.7"/>
+              <path d="M10 28 L18 22 L26 28" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+            </svg>
+          </div>
+          <span class="flex flex-col items-start leading-tight">
+            <span class="text-lg md:text-2xl font-display font-extrabold tracking-tight text-[#2C2826] dark:text-porcelain">LUMEA</span>
+            <span class="text-rosegold text-[9px] md:text-[11px] font-semibold tracking-[0.2em] uppercase -mt-0.5">MED SPA &amp; AESTHETICS</span>
+          </span>
+        </a>
+        <p class="mb-5 text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Advanced non-surgical aesthetics. Clinical precision, natural radiance.</p>
+        <div class="flex justify-center md:justify-start gap-3">
+          <a href="#" class="social-icon-clinic" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon-clinic" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon-clinic" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Treatments</h4>
+        <ul class="space-y-2.5">
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Botox &amp; Fillers</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Laser Resurfacing</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Skin Rejuvenation</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Body Contouring</a></li>
+        </ul>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Clinic</h4>
+        <ul class="space-y-2.5">
+          <li><a href="about.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">About</a></li>
+          <li><a href="providers.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Providers</a></li>
+          <li><a href="membership.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Membership</a></li>
+          <li></li>
+          <li><a href="client.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Client Portal</a></li>
+          <li><a href="admin.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Admin Portal</a></li>
+        </ul>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Visit</h4>
+        <ul class="space-y-3">
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-map-marker-alt text-rosegold mt-0.5"></i><span>1200 Glow Blvd, Aesthetic District</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-phone text-rosegold"></i><span>(555) 727-4SPA</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-envelope text-rosegold"></i><span>hello@lumineau.com</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-clock text-rosegold"></i><span>Mon–Fri 9am – 7pm · Sat 10am – 4pm</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-rosegold/10 text-center text-xs text-[#2C2826]/80 dark:text-porcelain/85">
+      <p>&copy; 2026 MED SPA &amp; AESTHETICS. <i class="fas fa-heart text-rosegold mx-1"></i> Glow with confidence.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ======== SCRIPTS (copied from Home) ======== -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Theme toggle
+    const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
+    themeBtns.forEach(btn => {
+      btn?.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      });
+    });
+    if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+    // RTL
+    function setRTL(isRTL) {
+      const html = document.documentElement;
+      if (isRTL === 'rtl' || isRTL === true) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); } 
+      else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+    }
+    const savedDir = localStorage.getItem('dir');
+    if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+    else document.documentElement.setAttribute('dir', 'ltr');
+
+    const rtlBtn = document.getElementById('rtl-toggle');
+    if (rtlBtn) {
+      rtlBtn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir');
+        setRTL(currentDir === 'rtl' ? 'ltr' : 'rtl');
+      });
+    }
+    const mobileRtlBtn = document.getElementById('mobile-rtl-toggle');
+    if (mobileRtlBtn) {
+      mobileRtlBtn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir');
+        setRTL(currentDir === 'rtl' ? 'ltr' : 'rtl');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileToggle = document.getElementById('mobile-toggle');
+        if (mobileMenu && mobileMenu.classList.contains('open')) {
+          mobileMenu.classList.remove('open');
+          if (mobileToggle && mobileToggle.querySelector('i')) {
+            mobileToggle.querySelector('i').classList.remove('fa-times');
+            mobileToggle.querySelector('i').classList.add('fa-bars');
+          }
+        }
+      });
+    }
+
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+        const icon = mobileToggle.querySelector('i');
+        if (mobileMenu.classList.contains('open')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+      mobileMenu.querySelectorAll('a:not(#mobile-rtl-toggle)').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          if (mobileToggle.querySelector('i')) {
+            mobileToggle.querySelector('i').classList.remove('fa-times');
+            mobileToggle.querySelector('i').classList.add('fa-bars');
+          }
+        });
+      });
+    }
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const toggle = item.querySelector('.faq-toggle');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon i');
+      toggle?.addEventListener('click', () => {
+        const isOpen = !content.classList.contains('hidden');
+        faqItems.forEach(other => {
+          other.querySelector('.faq-content')?.classList.add('hidden');
+          const otherIcon = other.querySelector('.faq-icon i');
+          if (otherIcon) {
+            otherIcon.classList.remove('fa-minus');
+            otherIcon.classList.add('fa-plus');
+          }
+        });
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          if (icon) {
+            icon.classList.remove('fa-plus');
+            icon.classList.add('fa-minus');
+          }
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

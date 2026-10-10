@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memberships · LUMEA Med Spa</title>
+
+    <!-- Favicon suite for all browsers, file:// mode & web servers -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABWUlEQVR4nMXX53KCQBQF4PuwqZYkqCigmJ6Y5kuYqqb37ptdZ3fZhBAHtsmemfP7Ow7LDgKk5PsoxK/DFu3nQZP2Yz+gfd/zad86Hr7ukjbwZYe0js/bpC4+bbn4uFnDNONfRt02jrohmsJJHzaqtPfrlfQx08ZJ79acySPywklvVxMj8sZv2iu0sQH549fh8u8AG/jPAF2cRAW/ai3Rgi7Oo4JfNstsgC7OI4sPgzKCKZxHBh8GJTbAFM4jig/8EoJpnEcEH/hFNkDmVTOJ970igsp7bgrvewU2QOWSMYFfNAoIOjecLn5eX0TQvV518GiAubtdFj9zFxBkn7kIzpOFRwPEfnnyeWfhbEA6flqbR1A5cCRZOEkWHg2QO3Dx6OIn1TkE2QMnElGcDlA57abw48os+yqa9quWivMBeeM9JzbABt5zZv7+N7CK81jFeaziyRg/7RMyBtT2SSfuKxWUAAAAAElFTkSuQmCC" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABWUlEQVR4nMXX53KCQBQF4PuwqZYkqCigmJ6Y5kuYqqb37ptdZ3fZhBAHtsmemfP7Ow7LDgKk5PsoxK/DFu3nQZP2Yz+gfd/zad86Hr7ukjbwZYe0js/bpC4+bbn4uFnDNONfRt02jrohmsJJHzaqtPfrlfQx08ZJ79acySPywklvVxMj8sZv2iu0sQH549fh8u8AG/jPAF2cRAW/ai3Rgi7Oo4JfNstsgC7OI4sPgzKCKZxHBh8GJTbAFM4jig/8EoJpnEcEH/hFNkDmVTOJ970igsp7bgrvewU2QOWSMYFfNAoIOjecLn5eX0TQvV518GiAubtdFj9zFxBkn7kIzpOFRwPEfnnyeWfhbEA6flqbR1A5cCRZOEkWHg2QO3Dx6OIn1TkE2QMnElGcDlA57abw48os+yqa9quWivMBeeM9JzbABt5zZv7+N7CK81jFeaziyRg/7RMyBtT2SSfuKxWUAAAAAElFTkSuQmCC" />
+<!-- Tailwind CSS with Local & CDN Fallback -->
+  <script src="tailwind.js"></script>
+  <script>
+    if (typeof tailwind === 'undefined') {
+      document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+    }
+  </script>
+
+  <!-- Prevent theme flash on page load -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    window.tailwind = window.tailwind || {};
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            porcelain: '#F9F6F3',
+            champagne: '#EDE4DC',
+            nude: '#DCC9BC',
+            rosegold: '#B88A78',
+            deeptaupe: '#6E4F42',
+            charcoal: '#2C2826',
+            ivory: '#FFFCF9',
+            sage: '#B8C5B2',
+            blush: '#F2E8E2',
+            gold: '#C6A78C',
+            cream: '#FCF7F2',
+            creamlight: '#FCF7F2',
+          },
+          fontFamily: {
+            'display': ['"Cormorant Garamond"', 'serif'],
+            'body': ['"Inter"', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'float-slow': 'floatSlow 7s ease-in-out infinite',
+            'pulse-soft': 'pulseSoft 4s ease-in-out infinite',
+            'fade-up': 'fadeUp 0.8s ease-out',
+            'shimmer': 'shimmer 2.8s infinite',
+          },
+          keyframes: {
+            floatSlow: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } },
+            pulseSoft: { '0%, 100%': { opacity: '0.8' }, '50%': { opacity: '1' } },
+            fadeUp: { '0%': { transform: 'translateY(28px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+            shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+          },
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <style>
+    body {
+      background-color: #F9F6F3;
+      color: #2C2826;
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+    .dark body {
+      background-color: #1C1817;
+      color: #F9F6F3;
+    }
+
+    /* Elegant scrollbar */
+    body::-webkit-scrollbar { width: 5px; }
+    body::-webkit-scrollbar-track { background: #F9F6F3; }
+    body::-webkit-scrollbar-thumb { background: #B88A78; border-radius: 20px; }
+
+    /* ===== MEMBERSHIP PAGE UNIQUE STYLES ===== */
+
+    /* --- Membership Hero — centered with background image --- */
+    .membership-hero {
+      background: #1C1817;
+      position: relative;
+      padding: 10rem 0 6rem 0;
+      overflow: hidden;
+      text-align: center;
+    }
+    .membership-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.35) saturate(0.85);
+      z-index: 1;
+    }
+    .membership-hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80vw;
+      height: 80vw;
+      max-width: 900px;
+      max-height: 900px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(184,138,120,0.15) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 3;
+    }
+    .membership-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(28,24,23,0.88) 0%, rgba(28,24,23,0.72) 50%, rgba(28,24,23,0.95) 100%);
+      z-index: 2;
+    }
+
+    /* --- Membership tier card --- */
+    .tier-card {
+      background: #FFFFFF;
+      border-radius: 4px 40px 4px 40px;
+      border: 1px solid rgba(184, 138, 120, 0.14);
+      padding: 2.5rem 2rem;
+      transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .dark .tier-card {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.22);
+    }
+    .tier-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 56px -16px rgba(184, 138, 120, 0.28);
+      border-color: rgba(184, 138, 120, 0.4);
+    }
+    .tier-card.featured {
+      border-color: #B88A78;
+      box-shadow: 0 20px 44px -12px rgba(184, 138, 120, 0.3);
+      transform: scale(1.03);
+    }
+    .tier-card.featured:hover {
+      transform: scale(1.03) translateY(-8px);
+    }
+    .tier-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #B88A78, #DCC9BC, #B88A78);
+      background-size: 200% 100%;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .tier-card:hover::after { opacity: 1; animation: shimmer 2s infinite; }
+    .tier-card.featured::after { opacity: 1; }
+
+    /* --- Perk row --- */
+    .perk-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(184, 138, 120, 0.08);
+      transition: all 0.2s;
+    }
+    .dark .perk-row { border-color: rgba(184, 138, 120, 0.12); }
+    .perk-row:last-child { border-bottom: none; }
+    .perk-row:hover { padding-left: 0.4rem; }
+    .perk-row i {
+      color: #B88A78;
+      font-size: 0.8rem;
+      margin-top: 0.3rem;
+      flex-shrink: 0;
+    }
+    .perk-row span {
+      font-size: 0.875rem;
+      color: #2C2826;
+      line-height: 1.5;
+    }
+    .dark .perk-row span { color: #F9F6F3; }
+
+    /* --- Savings calculator highlight --- */
+    .savings-highlight {
+      background: #EDE4DC;
+      border-radius: 28px 4px 28px 4px;
+      padding: 2rem;
+      border-left: 4px solid #B88A78;
+    }
+    .dark .savings-highlight { background: #25201E; }
+
+    /* --- Benefit icon card --- */
+    .benefit-icon-card {
+      text-align: center;
+      padding: 1.75rem 1rem;
+      border-radius: 20px 4px 20px 4px;
+      background: #FFFFFF;
+      border: 1px solid rgba(184, 138, 120, 0.1);
+      transition: all 0.35s;
+    }
+    .dark .benefit-icon-card {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.18);
+    }
+    .benefit-icon-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px -10px rgba(184, 138, 120, 0.22);
+      border-color: rgba(184, 138, 120, 0.3);
+    }
+
+    /* --- Comparison table --- */
+    .member-compare-row {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 1px;
+      background: rgba(184, 138, 120, 0.2);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(184, 138, 120, 0.25);
+      box-shadow: 0 10px 30px -10px rgba(184, 138, 120, 0.15);
+    }
+    .dark .member-compare-row {
+      background: rgba(184, 138, 120, 0.2);
+      border-color: rgba(184, 138, 120, 0.25);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+    }
+    .member-compare-cell {
+      background: #FFFFFF;
+      padding: 1rem 1.25rem;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+    .dark .member-compare-cell { background: #25201E; }
+    .member-compare-cell:hover { background: #FCF7F2; }
+    .dark .member-compare-cell:hover { background: #2C2826; }
+    .member-compare-header {
+      background: #B88A78;
+      color: #FFFCF9;
+      font-weight: 600;
+      padding: 1.1rem 1.25rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+    }
+    .dark .member-compare-header { background: #B88A78; color: #FFFCF9; }
+    .member-compare-header.light { background: #B88A78; color: #FFFCF9; }
+    .dark .member-compare-header.light { background: #B88A78; color: #FFFCF9; }
+    .member-compare-header:not(:first-child),
+    .member-compare-cell:not(:nth-child(4n+1)) {
+      text-align: center;
+    }
+
+    /* --- FAQ accordion (same as home) --- */
+    .portal-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      border: 1px solid rgba(184, 138, 120, 0.2);
+      box-shadow: 0 8px 24px -6px rgba(184, 138, 120, 0.08);
+      transition: all 0.3s ease;
+    }
+    .dark .portal-card {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.25);
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
+    }
+    .portal-card:hover {
+      border-color: rgba(184, 138, 120, 0.4);
+    }
+
+    /* --- Buttons --- */
+    .btn-rose {
+      background: #B88A78;
+      color: #FFFCF9;
+      font-weight: 600;
+      border-radius: 4px 20px 4px 20px;
+      transition: all 0.35s;
+      box-shadow: 0 4px 14px rgba(184, 138, 120, 0.25);
+      letter-spacing: 0.3px;
+    }
+    .btn-rose:hover {
+      background: #A67A68;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(184, 138, 120, 0.4);
+      border-radius: 20px 4px 20px 4px;
+    }
+    .btn-ghost {
+      border: 1.5px solid rgba(184, 138, 120, 0.5);
+      color: #B88A78;
+      background: transparent;
+      border-radius: 4px 20px 4px 20px;
+      font-weight: 500;
+      transition: all 0.35s;
+    }
+    .btn-ghost:hover {
+      background: #B88A78;
+      color: #FFFCF9;
+      border-color: #B88A78;
+      border-radius: 20px 4px 20px 4px;
+    }
+    .dark .btn-ghost:hover { background: #B88A78; color: #FFFCF9; }
+
+    /* --- Nav (same) --- */
+    .nav-link {
+      position: relative;
+      font-weight: 500;
+      transition: color 0.25s;
+      text-decoration: none !important;
+    }
+    .nav-link.active {
+      color: #B88A78 !important;
+      font-weight: 600;
+    }
+
+    .dropdown-clinic-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      background: #FFFCF9;
+      border-radius: 8px 24px 8px 24px;
+      padding: 0.5rem 0;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.07);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.25s;
+      z-index: 1000;
+      border: 1px solid rgba(184, 138, 120, 0.15);
+    }
+    .dropdown-clinic-menu::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      right: 0;
+      height: 12px;
+    }
+    .dark .dropdown-clinic-menu { background: #2C2826; border-color: rgba(184, 138, 120, 0.25); }
+    .dropdown-clinic:hover .dropdown-clinic-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 0.6rem 1.4rem;
+      transition: all 0.2s;
+      color: #2C2826;
+      font-size: 0.95rem;
+      border-radius: 4px 16px 4px 16px;
+      margin: 0 0.3rem;
+    }
+    .dark .dropdown-item { color: #F9F6F3; }
+    .dropdown-item:hover { background: #F2E8E2; color: #2C2826; padding-left: 1.7rem; }
+    .dark .dropdown-item:hover { background: #3D3431; color: #F9F6F3; }
+    .dropdown-item i { margin-right: 0.75rem; width: 18px; color: #B88A78; }
+
+    /* Mobile menu */
+    .mobile-menu-clinic {
+      background: #FFFCF9;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .dark .mobile-menu-clinic { background: #2C2826; }
+    .mobile-menu-clinic.open { max-height: 80vh; overflow-y: auto; }
+
+    /* Social */
+    .social-icon-clinic {
+      width: 40px; height: 40px;
+      border-radius: 8px 16px 8px 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #F2E8E2;
+      color: #2C2826;
+      transition: all 0.3s;
+    }
+    .social-icon-clinic:hover {
+      background: #B88A78;
+      color: #FFFCF9;
+      transform: translateY(-3px) rotate(3deg);
+    }
+    .dark .social-icon-clinic { background: #3D3431; color: #F9F6F3; }
+    .dark .social-icon-clinic:hover { background: #B88A78; color: #FFFCF9; }
+
+    /* RTL adjustments */
+    [dir="rtl"] .ml-auto { margin-left: 0 !important; margin-right: auto !important; }
+    [dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+    [dir="rtl"] .dropdown-clinic-menu { left: auto; right: 0; }
+    [dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.75rem; }
+    [dir="rtl"] .perk-row:hover { padding-left: 0; padding-right: 0.4rem; }
+    [dir="rtl"] .savings-highlight { border-left: none; border-right: 4px solid #B88A78; }
+
+    .gold-accent { color: #C6A78C; }
+    .text-balance { text-wrap: balance; }
+  </style>
+</head>
+<body>
+
+<!-- ======== NAVIGATION (copied exactly) ======== -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-porcelain/90 dark:bg-[#1C1817]/90 backdrop-blur-lg border-b border-rosegold/10 dark:border-rosegold/15 shadow-sm">
+  <div class="container mx-auto px-6">
+    <div class="flex items-center justify-between h-20 md:h-24 relative">
+
+      <!-- Logo with geometric mark -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+        <div class="w-10 h-10 bg-rosegold rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition duration-300 rotate-3 group-hover:rotate-0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-6 h-6" fill="none">
+            <path d="M18 6 L28 14 L18 26 L8 14 Z" fill="white" opacity="0.95"/>
+            <circle cx="18" cy="16" r="3.5" fill="white" opacity="0.7"/>
+            <path d="M10 28 L18 22 L26 28" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+          </svg>
+        </div>
+        <span class="flex flex-col items-start leading-tight">
+          <span class="text-lg md:text-2xl font-display font-extrabold tracking-tight text-[#2C2826] dark:text-porcelain">LUMEA</span>
+          <span class="text-rosegold text-[9px] md:text-[11px] font-semibold tracking-[0.2em] uppercase -mt-0.5">MED SPA &amp; AESTHETICS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav — centered but airy -->
+      <div class="hidden xl:flex items-center gap-5 xl:gap-6 absolute left-1/2 -translate-x-1/2">
+        <div class="dropdown-clinic relative">
+          <a href="index.html" class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold font-medium flex items-center gap-1 py-2 whitespace-nowrap text-[15px]">
+            Home <i class="fas fa-chevron-down text-[10px] ms-1 opacity-60"></i>
+          </a>
+          <div class="dropdown-clinic-menu">
+            <a class="dropdown-item" href="index.html">Home 1</a>
+            <a class="dropdown-item" href="home2.html">Home 2</a>
+          </div>
+        </div>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="about.html">About</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="treatments.html">Treatments</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="providers.html">Providers</a>
+        <a class="nav-link active font-medium text-[15px]" href="membership.html">Membership</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="contact.html">Contact</a>
+
+        <!-- Dashboard Dropdown -->
+        <div class="dropdown-clinic relative">
+          <button class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold font-medium flex items-center gap-1 py-2 whitespace-nowrap text-[15px]">
+            Dashboard <i class="fas fa-chevron-down text-[10px] ms-1 opacity-60"></i>
+          </button>
+          <div class="dropdown-clinic-menu">
+            <a class="dropdown-item" href="client.html">Client</a>
+            <a class="dropdown-item" href="admin.html">Admin</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right actions -->
+      <div class="flex items-center gap-2 xl:gap-3 ms-auto">
+        <a href="login.html" class="hidden xl:inline-flex btn-rose py-2 px-5 text-sm items-center gap-2">
+          <i class="fas fa-user-circle"></i> Client Login
+        </a>
+        <button id="theme-toggle" class="hidden xl:flex w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition items-center justify-center">
+          <i class="fas fa-moon dark:hidden text-sm"></i>
+          <i class="fas fa-sun hidden dark:inline text-sm"></i>
+        </button>
+        <button id="rtl-toggle" class="hidden xl:flex w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition items-center justify-center font-bold text-sm">
+          ⇄
+        </button>
+        <button id="mobile-toggle" class="xl:hidden w-10 h-10 rounded-lg bg-rosegold text-ivory flex items-center justify-center shadow-md">
+          <i class="fas fa-bars text-sm"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-clinic xl:hidden rounded-b-3xl">
+      <div class="py-4 px-3 space-y-1">
+        <div class="py-1">
+          <button onclick="document.getElementById('home-mobile-drop').classList.toggle('hidden'); document.getElementById('home-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition cursor-pointer">
+            <span>Home</span>
+            <i id="home-mobile-icon" class="fas fa-chevron-down text-xs opacity-60 transition-transform duration-300 "></i>
+          </button>
+          <div id="home-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="index.html">Home 1</a>
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="home2.html">Home 2</a>
+          </div>
+        </div>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="about.html">About</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="treatments.html">Treatments</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="providers.html">Providers</a>
+        <a class="block py-3 px-4 font-medium text-rosegold border-l-4 border-rosegold bg-rosegold/5 rounded-lg transition" href="membership.html">Membership</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="contact.html">Contact</a>
+
+        <!-- Dashboard Dropdown (Mobile) -->
+        <div class="py-1">
+          <button onclick="document.getElementById('dashboard-mobile-drop').classList.toggle('hidden'); document.getElementById('dashboard-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition cursor-pointer">
+            <span>Dashboard</span>
+            <i id="dashboard-mobile-icon" class="fas fa-chevron-down text-xs opacity-60 transition-transform duration-300"></i>
+          </button>
+          <div id="dashboard-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="client.html">Client</a>
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="admin.html">Admin</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 pt-5 mt-3 border-t border-blush/60 dark:border-cream/10">
+          <a class="text-center btn-rose py-2.5 font-medium flex items-center justify-center gap-2" href="login.html">
+            <i class="fas fa-user-circle"></i> Client Login
+          </a>
+          <div class="flex gap-3">
+            <button id="mobile-theme-toggle" class="flex-1 py-2 rounded-lg bg-rosegold/10 text-rosegold text-sm font-medium flex items-center gap-2 justify-center">
+              <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i> Theme
+            </button>
+            <button id="mobile-rtl-toggle" class="flex-1 py-2 rounded-lg bg-rosegold/10 text-rosegold text-sm font-medium flex items-center gap-2 justify-center">
+              ⇄ RTL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ======== MEMBERSHIP HERO — CENTERED WITH BG IMAGE ======== -->
+<section class="membership-hero">
+  <img src="assets/treatment-skin.jpg" alt="Lumineau Glow Membership" class="membership-hero-img" />
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-3xl mx-auto animate-fade-up">
+      <span class="inline-flex items-center gap-2 bg-rosegold/15 text-rosegold px-4 py-1.5 rounded-lg text-xs font-bold tracking-widest uppercase mb-6 border border-rosegold/20">
+        <i class="fas fa-crown"></i> glow membership
+      </span>
+      <h1 class="text-5xl md:text-7xl font-display font-extrabold leading-[1.05] mb-6 text-ivory">
+        Beauty that<br/>
+        <span class="text-rosegold">pays you back</span>
+      </h1>
+      <p class="text-lg md:text-xl text-ivory/75 font-light mb-10 max-w-xl mx-auto leading-relaxed">
+        Join our membership program and unlock exclusive savings, priority booking, and complimentary treatments every year.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#tiers" class="btn-rose px-8 py-3.5 text-base inline-flex items-center gap-2 shadow-xl">
+          <i class="fas fa-gem"></i> View Membership Tiers
+        </a>
+        <a href="contact.html" class="btn-ghost px-8 py-3.5 text-base inline-flex items-center gap-2 border-ivory/30 text-ivory/90 hover:bg-rosegold hover:text-ivory hover:border-rosegold">
+          <i class="fas fa-calendar-check"></i> Book Consultation
+        </a>
+      </div>
+
+      <!-- Quick trust indicators -->
+      <div class="flex flex-wrap items-center justify-center gap-6 mt-12 pt-8 border-t border-ivory/10">
+        <div class="flex items-center gap-2">
+          <i class="fas fa-percent text-rosegold text-sm"></i>
+          <span class="text-ivory/80 text-sm">Save up to 30%</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-calendar-check text-rosegold text-sm"></i>
+          <span class="text-ivory/80 text-sm">Priority booking</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-gift text-rosegold text-sm"></i>
+          <span class="text-ivory/80 text-sm">Exclusive perks</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== WHY MEMBERSHIP — 4 ICON CARDS ======== -->
+<section class="py-20 bg-rosegold dark:bg-[#181413]">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div class="text-center">
+        <div class="w-14 h-14 rounded-2xl bg-ivory/15 text-ivory flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-piggy-bank text-2xl"></i>
+        </div>
+        <div class="text-ivory font-display font-bold text-lg mb-1">Save More</div>
+        <p class="text-ivory/70 text-xs">Up to 30% off every treatment</p>
+      </div>
+      <div class="text-center">
+        <div class="w-14 h-14 rounded-2xl bg-ivory/15 text-ivory flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-calendar-check text-2xl"></i>
+        </div>
+        <div class="text-ivory font-display font-bold text-lg mb-1">Priority Access</div>
+        <p class="text-ivory/70 text-xs">Book first, skip the waitlist</p>
+      </div>
+      <div class="text-center">
+        <div class="w-14 h-14 rounded-2xl bg-ivory/15 text-ivory flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-gift text-2xl"></i>
+        </div>
+        <div class="text-ivory font-display font-bold text-lg mb-1">Free Treatments</div>
+        <p class="text-ivory/70 text-xs">Complimentary services included</p>
+      </div>
+      <div class="text-center">
+        <div class="w-14 h-14 rounded-2xl bg-ivory/15 text-ivory flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-star text-2xl"></i>
+        </div>
+        <div class="text-ivory font-display font-bold text-lg mb-1">VIP Events</div>
+        <p class="text-ivory/70 text-xs">Exclusive invites &amp; previews</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== MEMBERSHIP TIERS ======== -->
+<section id="tiers" class="py-24 bg-porcelain dark:bg-[#1C1817] relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-rosegold/5 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Choose Your Tier
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        Membership <span class="text-rosegold">plans</span>
+      </h2>
+      <p class="text-[#2C2826]/85 dark:text-porcelain/85 mt-3 text-base max-w-xl mx-auto">
+        Select the tier that fits your lifestyle. Cancel or upgrade anytime.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+      <!-- Tier 1: Essential -->
+      <div class="tier-card animate-fade-up" style="animation-delay: 0.1s;">
+        <div class="mb-6">
+          <span class="text-rosegold text-xs font-bold uppercase tracking-widest">Essential</span>
+          <div class="flex items-end gap-1 mt-3">
+            <span class="font-display font-extrabold text-5xl text-[#2C2826] dark:text-porcelain">$99</span>
+            <span class="text-[#2C2826]/60 dark:text-porcelain/60 text-sm mb-2">/month</span>
+          </div>
+          <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm mt-3">Perfect for maintaining your glow with regular treatments.</p>
+        </div>
+        <div class="flex-1">
+          <div class="perk-row"><i class="fas fa-check"></i><span>10% off all treatments</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>1 complimentary Hydrafacial per year</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>Priority booking (48hr advance)</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>Birthday treatment credit ($50)</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>Member-only promotions</span></div>
+        </div>
+        <div class="mt-8">
+          <a href="contact.html" class="btn-ghost w-full py-3 text-sm font-semibold inline-flex items-center justify-center gap-2">
+            Get Started <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tier 2: Signature (Featured) -->
+      <div class="tier-card featured animate-fade-up" style="animation-delay: 0.2s;">
+        <div class="absolute top-4 right-4 bg-rosegold text-ivory text-[10px] font-bold px-3 py-1 rounded-md tracking-wider uppercase">
+          Most Popular
+        </div>
+        <div class="mb-6">
+          <span class="text-rosegold text-xs font-bold uppercase tracking-widest">Signature</span>
+          <div class="flex items-end gap-1 mt-3">
+            <span class="font-display font-extrabold text-5xl text-[#2C2826] dark:text-porcelain">$199</span>
+            <span class="text-[#2C2826]/60 dark:text-porcelain/60 text-sm mb-2">/month</span>
+          </div>
+          <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm mt-3">Our most popular plan — ideal for regular injectable and skin treatments.</p>
+        </div>
+        <div class="flex-1">
+          <div class="perk-row"><i class="fas fa-check"></i><span>15% off all treatments</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>2 complimentary Hydrafacials per year</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>Priority booking (24hr advance)</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>Birthday treatment credit ($100)</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>1 free Botox area per year</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>Member-only promotions</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>Free skincare consultation</span></div>
+        </div>
+        <div class="mt-8">
+          <a href="contact.html" class="btn-rose w-full py-3 text-sm font-semibold inline-flex items-center justify-center gap-2">
+            Get Started <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tier 3: Prestige -->
+      <div class="tier-card animate-fade-up" style="animation-delay: 0.3s;">
+        <div class="mb-6">
+          <span class="text-rosegold text-xs font-bold uppercase tracking-widest">Prestige</span>
+          <div class="flex items-end gap-1 mt-3">
+            <span class="font-display font-extrabold text-5xl text-[#2C2826] dark:text-porcelain">$349</span>
+            <span class="text-[#2C2826]/60 dark:text-porcelain/60 text-sm mb-2">/month</span>
+          </div>
+          <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm mt-3">The ultimate experience for those who want it all, with no compromises.</p>
+        </div>
+        <div class="flex-1">
+          <div class="perk-row"><i class="fas fa-check"></i><span>25% off all treatments</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>4 complimentary Hydrafacials per year</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>Same-day priority booking</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>Birthday treatment credit ($250)</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>2 free Botox areas per year</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>Free laser session per year</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>Member-only promotions</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>Free skincare consultation</span></div>
+          <div class="perk-row"><i class="fas fa-check"></i><span>VIP event invitations</span></div>
+        </div>
+        <div class="mt-8">
+          <a href="contact.html" class="btn-ghost w-full py-3 text-sm font-semibold inline-flex items-center justify-center gap-2">
+            Get Started <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== SAVINGS CALCULATOR / VALUE BREAKDOWN ======== -->
+<section class="py-24 bg-[#F4EDE7] dark:bg-[#1A1615] border-y border-rosegold/10">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Real Value
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        See how much you <span class="text-rosegold">save</span>
+      </h2>
+      <p class="text-[#2C2826]/85 dark:text-porcelain/85 mt-3 text-base max-w-xl mx-auto">
+        A typical Signature member using 4 treatments per year saves over $800 annually.
+      </p>
+    </div>
+
+    <div class="savings-highlight animate-fade-up">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-rosegold font-display font-bold text-3xl mb-1">$2,400</div>
+          <div class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm">Annual membership cost</div>
+        </div>
+        <div>
+          <div class="text-rosegold font-display font-bold text-3xl mb-1">$3,250</div>
+          <div class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm">Value of included treatments &amp; discounts</div>
+        </div>
+        <div>
+          <div class="text-rosegold font-display font-bold text-3xl mb-1">$850</div>
+          <div class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm font-semibold">Your annual savings</div>
+        </div>
+      </div>
+      <div class="mt-6 pt-6 border-t border-rosegold/15">
+        <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-sm">
+          <i class="fas fa-info-circle text-rosegold mr-2"></i>
+          Based on a member receiving quarterly Botox, bi-annual Hydrafacials, and one laser session per year. Actual savings vary based on treatment plan.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== BENEFITS GRID ======== -->
+<section class="py-24 bg-porcelain dark:bg-[#1C1817]">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Member Benefits
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        Everything you <span class="text-rosegold">unlock</span>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Benefit 1 -->
+      <div class="benefit-icon-card animate-fade-up" style="animation-delay: 0.1s;">
+        <div class="w-12 h-12 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mx-auto mb-4">
+          <i class="fas fa-percent"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain mb-2">Exclusive Discounts</h3>
+        <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-xs leading-relaxed">Save 10–25% on every treatment, every time.</p>
+      </div>
+      <!-- Benefit 2 -->
+      <div class="benefit-icon-card animate-fade-up" style="animation-delay: 0.2s;">
+        <div class="w-12 h-12 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mx-auto mb-4">
+          <i class="fas fa-calendar-check"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain mb-2">Priority Booking</h3>
+        <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-xs leading-relaxed">Skip the waitlist and book first at your preferred times.</p>
+      </div>
+      <!-- Benefit 3 -->
+      <div class="benefit-icon-card animate-fade-up" style="animation-delay: 0.3s;">
+        <div class="w-12 h-12 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mx-auto mb-4">
+          <i class="fas fa-gift"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain mb-2">Complimentary Treatments</h3>
+        <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-xs leading-relaxed">Free services included with your membership every year.</p>
+      </div>
+      <!-- Benefit 4 -->
+      <div class="benefit-icon-card animate-fade-up" style="animation-delay: 0.4s;">
+        <div class="w-12 h-12 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mx-auto mb-4">
+          <i class="fas fa-star"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain mb-2">VIP Events</h3>
+        <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-xs leading-relaxed">Exclusive invitations to product launches and member evenings.</p>
+      </div>
+      <!-- Benefit 5 -->
+      <div class="benefit-icon-card animate-fade-up" style="animation-delay: 0.1s;">
+        <div class="w-12 h-12 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mx-auto mb-4">
+          <i class="fas fa-birthday-cake"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain mb-2">Birthday Credit</h3>
+        <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-xs leading-relaxed">Celebrate with a treatment credit on your special day.</p>
+      </div>
+      <!-- Benefit 6 -->
+      <div class="benefit-icon-card animate-fade-up" style="animation-delay: 0.2s;">
+        <div class="w-12 h-12 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mx-auto mb-4">
+          <i class="fas fa-user-md"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain mb-2">Free Consultations</h3>
+        <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-xs leading-relaxed">Complimentary skin and treatment consultations anytime.</p>
+      </div>
+      <!-- Benefit 7 -->
+      <div class="benefit-icon-card animate-fade-up" style="animation-delay: 0.3s;">
+        <div class="w-12 h-12 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mx-auto mb-4">
+          <i class="fas fa-tag"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain mb-2">Member Pricing</h3>
+        <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-xs leading-relaxed">Special pricing on retail skincare and post-care products.</p>
+      </div>
+      <!-- Benefit 8 -->
+      <div class="benefit-icon-card animate-fade-up" style="animation-delay: 0.4s;">
+        <div class="w-12 h-12 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center text-xl mx-auto mb-4">
+          <i class="fas fa-clock"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain mb-2">Flexible Terms</h3>
+        <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-xs leading-relaxed">Pause, upgrade, or cancel anytime — no long-term contracts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== COMPARISON TABLE ======== -->
+<section class="py-24 bg-[#EDE4DC] dark:bg-[#181413]">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <div class="text-center mb-12 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Side by Side
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        Compare <span class="text-rosegold">tiers</span>
+      </h2>
+    </div>
+
+    <div class="overflow-x-auto pb-4">
+      <div class="member-compare-row min-w-[640px] animate-fade-up">
+        <!-- Header -->
+        <div class="member-compare-header">Benefit</div>
+        <div class="member-compare-header">Essential</div>
+        <div class="member-compare-header">Signature</div>
+        <div class="member-compare-header">Prestige</div>
+
+      <!-- Row 1 -->
+      <div class="member-compare-cell font-semibold">Monthly cost</div>
+      <div class="member-compare-cell">$99</div>
+      <div class="member-compare-cell">$199</div>
+      <div class="member-compare-cell">$349</div>
+
+      <!-- Row 2 -->
+      <div class="member-compare-cell font-semibold">Treatment discount</div>
+      <div class="member-compare-cell">10%</div>
+      <div class="member-compare-cell">15%</div>
+      <div class="member-compare-cell">25%</div>
+
+      <!-- Row 3 -->
+      <div class="member-compare-cell font-semibold">Free Hydrafacials/year</div>
+      <div class="member-compare-cell">1</div>
+      <div class="member-compare-cell">2</div>
+      <div class="member-compare-cell">4</div>
+
+      <!-- Row 4 -->
+      <div class="member-compare-cell font-semibold">Priority booking</div>
+      <div class="member-compare-cell">48hr</div>
+      <div class="member-compare-cell">24hr</div>
+      <div class="member-compare-cell">Same-day</div>
+
+      <!-- Row 5 -->
+      <div class="member-compare-cell font-semibold">Birthday credit</div>
+      <div class="member-compare-cell">$50</div>
+      <div class="member-compare-cell">$100</div>
+      <div class="member-compare-cell">$250</div>
+
+      <!-- Row 6 -->
+      <div class="member-compare-cell font-semibold">Free Botox areas/year</div>
+      <div class="member-compare-cell">—</div>
+      <div class="member-compare-cell">1</div>
+      <div class="member-compare-cell">2</div>
+
+      <!-- Row 7 -->
+      <div class="member-compare-cell font-semibold">Free laser session/year</div>
+      <div class="member-compare-cell">—</div>
+      <div class="member-compare-cell">—</div>
+      <div class="member-compare-cell">1</div>
+
+      <!-- Row 8 -->
+      <div class="member-compare-cell font-semibold">VIP events</div>
+      <div class="member-compare-cell">—</div>
+      <div class="member-compare-cell">—</div>
+      <div class="member-compare-cell"><i class="fas fa-check text-rosegold"></i></div>
+    </div>
+  </div>
+
+    <div class="text-center mt-10">
+      <p class="text-[#2C2826]/70 dark:text-porcelain/70 text-sm mb-5">Still not sure which tier is right for you?</p>
+      <a href="contact.html" class="btn-rose px-8 py-3 text-sm inline-flex items-center gap-2">
+        <i class="fas fa-comments"></i> Talk to Our Team
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======== TESTIMONIAL / MEMBER STORY ======== -->
+<section class="py-24 bg-porcelain dark:bg-[#1C1817]">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <div class="text-center animate-fade-up">
+      <p class="font-display text-2xl md:text-3xl italic text-[#2C2826] dark:text-porcelain leading-relaxed relative z-10 max-w-3xl mx-auto">
+        &ldquo;The Signature membership has completely changed how I approach my skincare. I used to book treatments sporadically — now I have a consistent routine, and the savings are real. I've saved over $900 this year alone.&rdquo;
+      </p>
+      <div class="flex items-center justify-center gap-4 mt-8 relative z-10">
+        <img src="assets/review-sophia.jpg" alt="Sophia K." class="w-14 h-14 rounded-xl object-cover border-2 border-rosegold/30 shadow-sm" />
+        <div class="text-left">
+          <strong class="text-[#2C2826] dark:text-porcelain block">Sophia K.</strong>
+          <span class="text-rosegold text-sm">Signature Member since 2023</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FAQ (same structure, membership-focused) ======== -->
+<section class="py-24 bg-porcelain dark:bg-[#1C1817] relative overflow-hidden">
+  <div class="container mx-auto px-6 relative z-10 max-w-5xl">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold px-0 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Membership Questions
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        Membership <span class="text-rosegold">FAQs</span>
+      </h2>
+      <p class="text-[#2C2826]/85 dark:text-porcelain/85 mt-3 text-base max-w-xl mx-auto">
+        Everything you need to know about joining, using, and managing your membership.
+      </p>
+    </div>
+
+    <div class="space-y-4" id="clinic-faq-accordion">
+      <!-- Item 1 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>How does the membership discount work?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Your membership discount is automatically applied to every treatment you receive. The percentage depends on your tier — 10% for Essential, 15% for Signature, and 25% for Prestige. Discounts apply to all injectables, lasers, facials, and body treatments. There's no cap on how much you can save.
+          </p>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Can I pause or cancel my membership?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Yes. You can pause your membership for up to 3 months per year, or cancel anytime with 30 days' notice. There are no long-term contracts or cancellation fees. If you cancel, you'll retain access to any unused complimentary treatments for 60 days.
+          </p>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>How do the complimentary treatments work?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Complimentary treatments are credited to your account annually on your membership anniversary. You can book them anytime during the year, subject to availability. Free Botox areas and laser sessions are subject to a brief consultation to ensure they're appropriate for your goals. Unused complimentary treatments expire 12 months after being credited.
+          </p>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Can I upgrade or downgrade my tier?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Absolutely. You can upgrade at any time — your new benefits take effect immediately, and we'll prorate the difference. Downgrades take effect at the start of your next billing cycle. Many members start with Essential and upgrade to Signature after experiencing the value.
+          </p>
+        </div>
+      </div>
+      <!-- Item 5 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Do membership discounts stack with other promotions?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Membership discounts typically cannot be combined with other promotional offers, as they already represent our best pricing. However, members do receive exclusive access to member-only promotions throughout the year, which are designed to stack with your regular membership discount.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== CTA ======== -->
+<section class="py-24 bg-rosegold dark:bg-[#181413]">
+  <div class="container mx-auto px-6 text-center">
+    <div class="max-w-3xl mx-auto animate-fade-up">
+      <div class="inline-block mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="60" height="60" fill="none">
+          <path d="M32 12 Q22 4 20 16 Q18 28 30 30 Q32 32 34 30 Q46 28 44 16 Q42 4 32 12Z" fill="white" opacity="0.9"/>
+          <ellipse cx="32" cy="26" rx="14" ry="4" fill="white" opacity="0.45"/>
+          <circle cx="32" cy="20" r="3" fill="white" opacity="0.8"/>
+          <path d="M18 32 Q12 24 18 18" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M46 32 Q52 24 46 18" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M24 38 Q32 46 40 38" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+        </svg>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-display font-bold text-ivory mb-5">Join the <span class="text-ivory/90">Glow Membership</span></h2>
+      <p class="text-ivory/80 text-lg mb-10 max-w-xl mx-auto">Start saving today. No long-term contracts. Cancel anytime.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contact.html" class="bg-ivory text-rosegold px-8 py-3.5 rounded-lg font-bold shadow-lg hover:scale-105 transition inline-flex items-center gap-2 text-sm">
+          <i class="fas fa-crown"></i> Become a Member
+        </a>
+        <a href="treatments.html" class="border-2 border-ivory/60 text-ivory px-8 py-3.5 rounded-lg font-semibold hover:bg-ivory hover:text-rosegold transition inline-flex items-center gap-2 text-sm">
+          <i class="fas fa-syringe"></i> Explore Treatments
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FOOTER (copied exactly) ======== -->
+<footer class="bg-porcelain dark:bg-[#1C1817] text-[#2C2826] dark:text-porcelain pt-16 pb-8 border-t border-rosegold/10">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="text-center md:text-start">
+        <a href="index.html" class="inline-flex items-center justify-center md:justify-start gap-3 mb-6 group hover:opacity-90 transition">
+          <div class="w-10 h-10 bg-rosegold rounded-lg flex items-center justify-center shadow-lg overflow-hidden group-hover:scale-105 transition duration-300 rotate-3 group-hover:rotate-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-6 h-6" fill="none">
+              <path d="M18 6 L28 14 L18 26 L8 14 Z" fill="white" opacity="0.95"/>
+              <circle cx="18" cy="16" r="3.5" fill="white" opacity="0.7"/>
+              <path d="M10 28 L18 22 L26 28" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+            </svg>
+          </div>
+          <span class="flex flex-col items-start leading-tight">
+            <span class="text-lg md:text-2xl font-display font-extrabold tracking-tight text-[#2C2826] dark:text-porcelain">LUMEA</span>
+            <span class="text-rosegold text-[9px] md:text-[11px] font-semibold tracking-[0.2em] uppercase -mt-0.5">MED SPA &amp; AESTHETICS</span>
+          </span>
+        </a>
+        <p class="mb-5 text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Advanced non-surgical aesthetics. Clinical precision, natural radiance.</p>
+        <div class="flex justify-center md:justify-start gap-3">
+          <a href="#" class="social-icon-clinic" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon-clinic" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon-clinic" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Treatments</h4>
+        <ul class="space-y-2.5">
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Botox &amp; Fillers</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Laser Resurfacing</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Skin Rejuvenation</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Body Contouring</a></li>
+        </ul>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Clinic</h4>
+        <ul class="space-y-2.5">
+          <li><a href="about.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">About</a></li>
+          <li><a href="providers.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Providers</a></li>
+          <li><a href="membership.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Membership</a></li>
+          <li></li>
+          <li><a href="client.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Client Portal</a></li>
+          <li><a href="admin.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Admin Portal</a></li>
+        </ul>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Visit</h4>
+        <ul class="space-y-3">
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-map-marker-alt text-rosegold mt-0.5"></i><span>1200 Glow Blvd, Aesthetic District</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-phone text-rosegold"></i><span>(555) 727-4SPA</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-envelope text-rosegold"></i><span>hello@lumineau.com</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-clock text-rosegold"></i><span>Mon–Fri 9am – 7pm · Sat 10am – 4pm</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-rosegold/10 text-center text-xs text-[#2C2826]/80 dark:text-porcelain/85">
+      <p>&copy; 2026 MED SPA &amp; AESTHETICS. <i class="fas fa-heart text-rosegold mx-1"></i> Glow with confidence.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ======== SCRIPTS (copied from Home) ======== -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Theme toggle
+    const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
+    themeBtns.forEach(btn => {
+      btn?.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      });
+    });
+    if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+    // RTL
+    function setRTL(isRTL) {
+      const html = document.documentElement;
+      if (isRTL === 'rtl' || isRTL === true) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); } 
+      else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+    }
+    const savedDir = localStorage.getItem('dir');
+    if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+    else document.documentElement.setAttribute('dir', 'ltr');
+
+    const rtlBtn = document.getElementById('rtl-toggle');
+    if (rtlBtn) {
+      rtlBtn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir');
+        setRTL(currentDir === 'rtl' ? 'ltr' : 'rtl');
+      });
+    }
+    const mobileRtlBtn = document.getElementById('mobile-rtl-toggle');
+    if (mobileRtlBtn) {
+      mobileRtlBtn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir');
+        setRTL(currentDir === 'rtl' ? 'ltr' : 'rtl');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileToggle = document.getElementById('mobile-toggle');
+        if (mobileMenu && mobileMenu.classList.contains('open')) {
+          mobileMenu.classList.remove('open');
+          if (mobileToggle && mobileToggle.querySelector('i')) {
+            mobileToggle.querySelector('i').classList.remove('fa-times');
+            mobileToggle.querySelector('i').classList.add('fa-bars');
+          }
+        }
+      });
+    }
+
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+        const icon = mobileToggle.querySelector('i');
+        if (mobileMenu.classList.contains('open')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+      mobileMenu.querySelectorAll('a:not(#mobile-rtl-toggle)').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          if (mobileToggle.querySelector('i')) {
+            mobileToggle.querySelector('i').classList.remove('fa-times');
+            mobileToggle.querySelector('i').classList.add('fa-bars');
+          }
+        });
+      });
+    }
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const toggle = item.querySelector('.faq-toggle');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon i');
+      toggle?.addEventListener('click', () => {
+        const isOpen = !content.classList.contains('hidden');
+        faqItems.forEach(other => {
+          other.querySelector('.faq-content')?.classList.add('hidden');
+          const otherIcon = other.querySelector('.faq-icon i');
+          if (otherIcon) {
+            otherIcon.classList.remove('fa-minus');
+            otherIcon.classList.add('fa-plus');
+          }
+        });
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          if (icon) {
+            icon.classList.remove('fa-plus');
+            icon.classList.add('fa-minus');
+          }
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

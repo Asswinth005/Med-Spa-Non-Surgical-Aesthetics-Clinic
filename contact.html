@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact LUMEA · Med Spa & Aesthetics</title>
+
+    <!-- Favicon suite for all browsers, file:// mode & web servers -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABWUlEQVR4nMXX53KCQBQF4PuwqZYkqCigmJ6Y5kuYqqb37ptdZ3fZhBAHtsmemfP7Ow7LDgKk5PsoxK/DFu3nQZP2Yz+gfd/zad86Hr7ukjbwZYe0js/bpC4+bbn4uFnDNONfRt02jrohmsJJHzaqtPfrlfQx08ZJ79acySPywklvVxMj8sZv2iu0sQH549fh8u8AG/jPAF2cRAW/ai3Rgi7Oo4JfNstsgC7OI4sPgzKCKZxHBh8GJTbAFM4jig/8EoJpnEcEH/hFNkDmVTOJ970igsp7bgrvewU2QOWSMYFfNAoIOjecLn5eX0TQvV518GiAubtdFj9zFxBkn7kIzpOFRwPEfnnyeWfhbEA6flqbR1A5cCRZOEkWHg2QO3Dx6OIn1TkE2QMnElGcDlA57abw48os+yqa9quWivMBeeM9JzbABt5zZv7+N7CK81jFeaziyRg/7RMyBtT2SSfuKxWUAAAAAElFTkSuQmCC" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABWUlEQVR4nMXX53KCQBQF4PuwqZYkqCigmJ6Y5kuYqqb37ptdZ3fZhBAHtsmemfP7Ow7LDgKk5PsoxK/DFu3nQZP2Yz+gfd/zad86Hr7ukjbwZYe0js/bpC4+bbn4uFnDNONfRt02jrohmsJJHzaqtPfrlfQx08ZJ79acySPywklvVxMj8sZv2iu0sQH549fh8u8AG/jPAF2cRAW/ai3Rgi7Oo4JfNstsgC7OI4sPgzKCKZxHBh8GJTbAFM4jig/8EoJpnEcEH/hFNkDmVTOJ970igsp7bgrvewU2QOWSMYFfNAoIOjecLn5eX0TQvV518GiAubtdFj9zFxBkn7kIzpOFRwPEfnnyeWfhbEA6flqbR1A5cCRZOEkWHg2QO3Dx6OIn1TkE2QMnElGcDlA57abw48os+yqa9quWivMBeeM9JzbABt5zZv7+N7CK81jFeaziyRg/7RMyBtT2SSfuKxWUAAAAAElFTkSuQmCC" />
+<!-- Tailwind CSS with Local & CDN Fallback -->
+  <script src="tailwind.js"></script>
+  <script>
+    if (typeof tailwind === 'undefined') {
+      document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+    }
+  </script>
+
+  <!-- Prevent theme flash on page load -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    window.tailwind = window.tailwind || {};
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            porcelain: '#F9F6F3',
+            champagne: '#EDE4DC',
+            nude: '#DCC9BC',
+            rosegold: '#B88A78',
+            deeptaupe: '#6E4F42',
+            charcoal: '#2C2826',
+            ivory: '#FFFCF9',
+            sage: '#B8C5B2',
+            blush: '#F2E8E2',
+            gold: '#C6A78C',
+            cream: '#FCF7F2',
+            creamlight: '#FCF7F2',
+          },
+          fontFamily: {
+            'display': ['"Cormorant Garamond"', 'serif'],
+            'body': ['"Inter"', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'float-slow': 'floatSlow 7s ease-in-out infinite',
+            'pulse-soft': 'pulseSoft 4s ease-in-out infinite',
+            'fade-up': 'fadeUp 0.8s ease-out',
+            'shimmer': 'shimmer 2.8s infinite',
+          },
+          keyframes: {
+            floatSlow: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } },
+            pulseSoft: { '0%, 100%': { opacity: '0.8' }, '50%': { opacity: '1' } },
+            fadeUp: { '0%': { transform: 'translateY(28px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+            shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+          },
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <style>
+    body {
+      background-color: #F9F6F3;
+      color: #2C2826;
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+    .dark body {
+      background-color: #1C1817;
+      color: #F9F6F3;
+    }
+
+    /* Elegant scrollbar */
+    body::-webkit-scrollbar { width: 5px; }
+    body::-webkit-scrollbar-track { background: #F9F6F3; }
+    body::-webkit-scrollbar-thumb { background: #B88A78; border-radius: 20px; }
+
+    /* ===== CONTACT PAGE UNIQUE STYLES ===== */
+
+    /* --- Contact Hero — split with map background --- */
+    .contact-hero {
+      background: #1C1817;
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .contact-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.35) saturate(0.85);
+      z-index: 1;
+    }
+    .contact-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(28,24,23,0.85) 0%, rgba(28,24,23,0.68) 50%, rgba(28,24,23,0.92) 100%);
+      z-index: 2;
+    }
+    .contact-hero-content {
+      position: relative;
+      z-index: 3;
+      padding: 8rem 0 5rem 0;
+    }
+
+    /* --- Contact info card --- */
+    .contact-info-card {
+      background: #FFFFFF;
+      border-radius: 4px 32px 4px 32px;
+      border: 1px solid rgba(184, 138, 120, 0.14);
+      padding: 2rem;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .dark .contact-info-card {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.22);
+    }
+    .contact-info-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px -12px rgba(184, 138, 120, 0.25);
+      border-color: rgba(184, 138, 120, 0.4);
+    }
+    .contact-info-card .icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px 4px 12px 4px;
+      background: #F2E8E2;
+      color: #B88A78;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      transition: all 0.3s;
+    }
+    .dark .contact-info-card .icon-wrap { background: #3D3431; }
+    .contact-info-card:hover .icon-wrap {
+      background: #B88A78;
+      color: #FFFCF9;
+      transform: scale(1.05);
+    }
+
+    /* --- Form styling --- */
+    .form-card {
+      background: #FFFFFF;
+      border-radius: 4px 40px 4px 40px;
+      border: 1px solid rgba(184, 138, 120, 0.14);
+      padding: 2.5rem 2rem;
+      box-shadow: 0 8px 32px -8px rgba(184, 138, 120, 0.12);
+    }
+    .dark .form-card {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.22);
+      box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.4);
+    }
+    .form-input {
+      width: 100%;
+      padding: 0.85rem 1.1rem;
+      border-radius: 4px 16px 4px 16px;
+      border: 1px solid rgba(184, 138, 120, 0.25);
+      background: #F9F6F3;
+      color: #2C2826;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    .dark .form-input {
+      background: #1C1817;
+      border-color: rgba(184, 138, 120, 0.3);
+      color: #F9F6F3;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: #B88A78;
+      box-shadow: 0 0 0 3px rgba(184, 138, 120, 0.12);
+      background: #FFFFFF;
+    }
+    .dark .form-input:focus {
+      background: #2C2826;
+      box-shadow: 0 0 0 3px rgba(184, 138, 120, 0.2);
+    }
+    .form-input::placeholder {
+      color: #2C2826;
+      opacity: 0.4;
+    }
+    .dark .form-input::placeholder {
+      color: #F9F6F3;
+      opacity: 0.4;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #6E4F42;
+      margin-bottom: 0.5rem;
+    }
+    .dark .form-label { color: #DCC9BC; }
+
+    /* --- Hours table --- */
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(184, 138, 120, 0.1);
+    }
+    .dark .hours-row { border-color: rgba(184, 138, 120, 0.15); }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day {
+      font-weight: 500;
+      color: #2C2826;
+      font-size: 0.9rem;
+    }
+    .dark .hours-day { color: #F9F6F3; }
+    .hours-time {
+      color: #B88A78;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .hours-time.closed { color: #2C2826; opacity: 0.4; }
+    .dark .hours-time.closed { color: #F9F6F3; }
+
+    /* --- Map placeholder --- */
+    .map-placeholder {
+      border-radius: 4px 40px 4px 40px;
+      overflow: hidden;
+      position: relative;
+      height: 360px;
+      background: #EDE4DC;
+      border: 1px solid rgba(184, 138, 120, 0.14);
+    }
+    .dark .map-placeholder {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.22);
+    }
+    .map-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(0.3) brightness(1.05);
+      transition: transform 0.7s ease;
+    }
+    .map-placeholder:hover img { transform: scale(1.03); }
+    .map-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(28,24,23,0.7) 0%, transparent 50%);
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+    }
+
+    /* --- FAQ accordion (same as home) --- */
+    .portal-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      border: 1px solid rgba(184, 138, 120, 0.2);
+      box-shadow: 0 8px 24px -6px rgba(184, 138, 120, 0.08);
+      transition: all 0.3s ease;
+    }
+    .dark .portal-card {
+      background: #25201E;
+      border-color: rgba(184, 138, 120, 0.25);
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
+    }
+    .portal-card:hover {
+      border-color: rgba(184, 138, 120, 0.4);
+    }
+
+    /* --- Buttons --- */
+    .btn-rose {
+      background: #B88A78;
+      color: #FFFCF9;
+      font-weight: 600;
+      border-radius: 4px 20px 4px 20px;
+      transition: all 0.35s;
+      box-shadow: 0 4px 14px rgba(184, 138, 120, 0.25);
+      letter-spacing: 0.3px;
+    }
+    .btn-rose:hover {
+      background: #A67A68;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(184, 138, 120, 0.4);
+      border-radius: 20px 4px 20px 4px;
+    }
+    .btn-ghost {
+      border: 1.5px solid rgba(184, 138, 120, 0.5);
+      color: #B88A78;
+      background: transparent;
+      border-radius: 4px 20px 4px 20px;
+      font-weight: 500;
+      transition: all 0.35s;
+    }
+    .btn-ghost:hover {
+      background: #B88A78;
+      color: #FFFCF9;
+      border-color: #B88A78;
+      border-radius: 20px 4px 20px 4px;
+    }
+    .dark .btn-ghost:hover { background: #B88A78; color: #FFFCF9; }
+
+    /* --- Nav (same) --- */
+    .nav-link {
+      position: relative;
+      font-weight: 500;
+      transition: color 0.25s;
+      text-decoration: none !important;
+    }
+    .nav-link.active {
+      color: #B88A78 !important;
+      font-weight: 600;
+    }
+
+    .dropdown-clinic-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      background: #FFFCF9;
+      border-radius: 8px 24px 8px 24px;
+      padding: 0.5rem 0;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.07);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.25s;
+      z-index: 1000;
+      border: 1px solid rgba(184, 138, 120, 0.15);
+    }
+    .dropdown-clinic-menu::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      right: 0;
+      height: 12px;
+    }
+    .dark .dropdown-clinic-menu { background: #2C2826; border-color: rgba(184, 138, 120, 0.25); }
+    .dropdown-clinic:hover .dropdown-clinic-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 0.6rem 1.4rem;
+      transition: all 0.2s;
+      color: #2C2826;
+      font-size: 0.95rem;
+      border-radius: 4px 16px 4px 16px;
+      margin: 0 0.3rem;
+    }
+    .dark .dropdown-item { color: #F9F6F3; }
+    .dropdown-item:hover { background: #F2E8E2; color: #2C2826; padding-left: 1.7rem; }
+    .dark .dropdown-item:hover { background: #3D3431; color: #F9F6F3; }
+    .dropdown-item i { margin-right: 0.75rem; width: 18px; color: #B88A78; }
+
+    /* Mobile menu */
+    .mobile-menu-clinic {
+      background: #FFFCF9;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .dark .mobile-menu-clinic { background: #2C2826; }
+    .mobile-menu-clinic.open { max-height: 80vh; overflow-y: auto; }
+
+    /* Social */
+    .social-icon-clinic {
+      width: 40px; height: 40px;
+      border-radius: 8px 16px 8px 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #F2E8E2;
+      color: #2C2826;
+      transition: all 0.3s;
+    }
+    .social-icon-clinic:hover {
+      background: #B88A78;
+      color: #FFFCF9;
+      transform: translateY(-3px) rotate(3deg);
+    }
+    .dark .social-icon-clinic { background: #3D3431; color: #F9F6F3; }
+    .dark .social-icon-clinic:hover { background: #B88A78; color: #FFFCF9; }
+
+    /* RTL adjustments */
+    [dir="rtl"] .ml-auto { margin-left: 0 !important; margin-right: auto !important; }
+    [dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+    [dir="rtl"] .dropdown-clinic-menu { left: auto; right: 0; }
+    [dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.75rem; }
+    [dir="rtl"] .contact-info-card { flex-direction: row-reverse; }
+
+    .gold-accent { color: #C6A78C; }
+    .text-balance { text-wrap: balance; }
+  </style>
+</head>
+<body>
+
+<!-- ======== NAVIGATION (copied exactly) ======== -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-porcelain/90 dark:bg-[#1C1817]/90 backdrop-blur-lg border-b border-rosegold/10 dark:border-rosegold/15 shadow-sm">
+  <div class="container mx-auto px-6">
+    <div class="flex items-center justify-between h-20 md:h-24 relative">
+
+      <!-- Logo with geometric mark -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+        <div class="w-10 h-10 bg-rosegold rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition duration-300 rotate-3 group-hover:rotate-0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-6 h-6" fill="none">
+            <path d="M18 6 L28 14 L18 26 L8 14 Z" fill="white" opacity="0.95"/>
+            <circle cx="18" cy="16" r="3.5" fill="white" opacity="0.7"/>
+            <path d="M10 28 L18 22 L26 28" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+          </svg>
+        </div>
+        <span class="flex flex-col items-start leading-tight">
+          <span class="text-lg md:text-2xl font-display font-extrabold tracking-tight text-[#2C2826] dark:text-porcelain">LUMEA</span>
+          <span class="text-rosegold text-[9px] md:text-[11px] font-semibold tracking-[0.2em] uppercase -mt-0.5">MED SPA &amp; AESTHETICS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav — centered but airy -->
+      <div class="hidden xl:flex items-center gap-5 xl:gap-6 absolute left-1/2 -translate-x-1/2">
+        <div class="dropdown-clinic relative">
+          <a href="index.html" class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold font-medium flex items-center gap-1 py-2 whitespace-nowrap text-[15px]">
+            Home <i class="fas fa-chevron-down text-[10px] ms-1 opacity-60"></i>
+          </a>
+          <div class="dropdown-clinic-menu">
+            <a class="dropdown-item" href="index.html">Home 1</a>
+            <a class="dropdown-item" href="home2.html">Home 2</a>
+          </div>
+        </div>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="about.html">About</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="treatments.html">Treatments</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="providers.html">Providers</a>
+        <a class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold text-[15px]" href="membership.html">Membership</a>
+        <a class="nav-link active font-medium text-[15px]" href="contact.html">Contact</a>
+
+        <!-- Dashboard Dropdown -->
+        <div class="dropdown-clinic relative">
+          <button class="nav-link text-[#2C2826] dark:text-porcelain hover:text-rosegold font-medium flex items-center gap-1 py-2 whitespace-nowrap text-[15px]">
+            Dashboard <i class="fas fa-chevron-down text-[10px] ms-1 opacity-60"></i>
+          </button>
+          <div class="dropdown-clinic-menu">
+            <a class="dropdown-item" href="client.html">Client</a>
+            <a class="dropdown-item" href="admin.html">Admin</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right actions -->
+      <div class="flex items-center gap-2 xl:gap-3 ms-auto">
+        <a href="login.html" class="hidden xl:inline-flex btn-rose py-2 px-5 text-sm items-center gap-2">
+          <i class="fas fa-user-circle"></i> Client Login
+        </a>
+        <button id="theme-toggle" class="hidden xl:flex w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition items-center justify-center">
+          <i class="fas fa-moon dark:hidden text-sm"></i>
+          <i class="fas fa-sun hidden dark:inline text-sm"></i>
+        </button>
+        <button id="rtl-toggle" class="hidden xl:flex w-10 h-10 rounded-lg bg-rosegold/10 text-rosegold hover:scale-110 transition items-center justify-center font-bold text-sm">
+          ⇄
+        </button>
+        <button id="mobile-toggle" class="xl:hidden w-10 h-10 rounded-lg bg-rosegold text-ivory flex items-center justify-center shadow-md">
+          <i class="fas fa-bars text-sm"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-clinic xl:hidden rounded-b-3xl">
+      <div class="py-4 px-3 space-y-1">
+        <div class="py-1">
+          <button onclick="document.getElementById('home-mobile-drop').classList.toggle('hidden'); document.getElementById('home-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition cursor-pointer">
+            <span>Home</span>
+            <i id="home-mobile-icon" class="fas fa-chevron-down text-xs opacity-60 transition-transform duration-300 "></i>
+          </button>
+          <div id="home-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="index.html">Home 1</a>
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="home2.html">Home 2</a>
+          </div>
+        </div>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="about.html">About</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="treatments.html">Treatments</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="providers.html">Providers</a>
+        <a class="block py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="membership.html">Membership</a>
+        <a class="block py-3 px-4 font-medium text-rosegold border-l-4 border-rosegold bg-rosegold/5 rounded-lg transition" href="contact.html">Contact</a>
+
+        <!-- Dashboard Dropdown (Mobile) -->
+        <div class="py-1">
+          <button onclick="document.getElementById('dashboard-mobile-drop').classList.toggle('hidden'); document.getElementById('dashboard-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition cursor-pointer">
+            <span>Dashboard</span>
+            <i id="dashboard-mobile-icon" class="fas fa-chevron-down text-xs opacity-60 transition-transform duration-300"></i>
+          </button>
+          <div id="dashboard-mobile-drop" class="hidden pl-2 space-y-1 mt-1 mb-2">
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="client.html">Client</a>
+            <a class="block py-2.5 px-4 font-medium text-[#2C2826] dark:text-porcelain hover:bg-blush/60 dark:hover:bg-cream/10 rounded-lg transition" href="admin.html">Admin</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 pt-5 mt-3 border-t border-blush/60 dark:border-cream/10">
+          <a class="text-center btn-rose py-2.5 font-medium flex items-center justify-center gap-2" href="login.html">
+            <i class="fas fa-user-circle"></i> Client Login
+          </a>
+          <div class="flex gap-3">
+            <button id="mobile-theme-toggle" class="flex-1 py-2 rounded-lg bg-rosegold/10 text-rosegold text-sm font-medium flex items-center gap-2 justify-center">
+              <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i> Theme
+            </button>
+            <button id="mobile-rtl-toggle" class="flex-1 py-2 rounded-lg bg-rosegold/10 text-rosegold text-sm font-medium flex items-center gap-2 justify-center">
+              ⇄ RTL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ======== CONTACT HERO ======== -->
+<section class="contact-hero">
+  <img src="assets/t2.jpg" alt="Lumineau Aesthetics Contact & Consultation" class="contact-hero-img" />
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="contact-hero-content max-w-3xl mx-auto text-center animate-fade-up">
+      <span class="inline-flex items-center gap-2 bg-rosegold/15 text-rosegold px-4 py-1.5 rounded-lg text-xs font-bold tracking-widest uppercase mb-6 border border-rosegold/20">
+        <i class="fas fa-paper-plane"></i> get in touch
+      </span>
+      <h1 class="text-5xl md:text-7xl font-display font-extrabold leading-[1.05] mb-6 text-ivory">
+        Let's start your<br/>
+        <span class="text-rosegold">glow journey</span>
+      </h1>
+      <p class="text-lg md:text-xl text-ivory/75 font-light mb-10 max-w-xl mx-auto leading-relaxed">
+        Book a consultation, ask a question, or simply say hello. Our team responds within 24 hours on business days.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#booking-form" class="btn-rose px-8 py-3.5 text-base inline-flex items-center gap-2 shadow-xl">
+          <i class="fas fa-calendar-check"></i> Book Consultation
+        </a>
+        <a href="tel:+15557274772" class="btn-ghost px-8 py-3.5 text-base inline-flex items-center gap-2 border-ivory/30 text-ivory/90 hover:bg-rosegold hover:text-ivory hover:border-rosegold">
+          <i class="fas fa-phone"></i> (555) 727-4SPA
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== QUICK CONTACT INFO STRIP ======== -->
+<section class="py-14 bg-rosegold dark:bg-[#181413]">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div class="text-center">
+        <i class="fas fa-map-marker-alt text-ivory/70 text-xl mb-3"></i>
+        <div class="text-ivory font-medium text-sm">1200 Glow Blvd</div>
+        <div class="text-ivory/60 text-xs">Aesthetic District</div>
+      </div>
+      <div class="text-center">
+        <i class="fas fa-phone text-ivory/70 text-xl mb-3"></i>
+        <div class="text-ivory font-medium text-sm">(555) 727-4SPA</div>
+        <div class="text-ivory/60 text-xs">Mon–Fri 9am–7pm</div>
+      </div>
+      <div class="text-center">
+        <i class="fas fa-envelope text-ivory/70 text-xl mb-3"></i>
+        <div class="text-ivory font-medium text-sm">hello@lumineau.com</div>
+        <div class="text-ivory/60 text-xs">Response within 24h</div>
+      </div>
+      <div class="text-center">
+        <i class="fas fa-comments text-ivory/70 text-xl mb-3"></i>
+        <div class="text-ivory font-medium text-sm">Live Chat</div>
+        <div class="text-ivory/60 text-xs">Available on site</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== BOOKING FORM + CONTACT INFO ======== -->
+<section id="booking-form" class="py-24 bg-porcelain dark:bg-[#1C1817] relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-rosegold/5 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="grid lg:grid-cols-5 gap-12">
+
+      <!-- Left: Contact info column (2/5) -->
+      <div class="lg:col-span-2 space-y-6 animate-fade-up">
+        <div>
+          <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+            <span class="w-8 h-px bg-rosegold"></span> Reach Us
+          </span>
+          <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight mb-4">
+            We'd love to <span class="text-rosegold">hear from you</span>
+          </h2>
+          <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-sm leading-relaxed">
+            Whether you're ready to book or just have a question, our team is here to help. Reach out by phone, email, or the form and we'll get back to you promptly.
+          </p>
+        </div>
+
+        <!-- Contact cards -->
+        <div class="space-y-4 pt-4">
+          <div class="contact-info-card">
+            <div class="icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Visit the Clinic</h4>
+              <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm mt-1">1200 Glow Blvd, Aesthetic District<br/>Suite 400</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="icon-wrap"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Call Us</h4>
+              <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm mt-1">(555) 727-4SPA<br/>Mon–Fri 9am–7pm · Sat 10am–4pm</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="icon-wrap"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Email Us</h4>
+              <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm mt-1">hello@lumineau.com<br/>Response within 24 hours</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="form-card !p-6">
+          <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain mb-4 flex items-center gap-2">
+            <i class="fas fa-clock text-rosegold"></i> Clinic Hours
+          </h4>
+          <div class="hours-row">
+            <span class="hours-day">Monday – Friday</span>
+            <span class="hours-time">9:00am – 7:00pm</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Saturday</span>
+            <span class="hours-time">10:00am – 4:00pm</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Sunday</span>
+            <span class="hours-time closed">Closed</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Holidays</span>
+            <span class="hours-time closed">By appointment only</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Booking form (3/5) -->
+      <div class="lg:col-span-3 animate-fade-up" style="animation-delay: 0.15s;">
+        <div class="form-card">
+          <div class="mb-8">
+            <h3 class="font-display font-bold text-2xl text-[#2C2826] dark:text-porcelain mb-2">Request a Consultation</h3>
+            <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm">Fill in your details and we'll contact you within 24 hours to confirm your appointment.</p>
+          </div>
+
+          <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly to confirm your consultation.');">
+            <!-- Name row -->
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="form-label">First Name *</label>
+                <input type="text" class="form-input" placeholder="Jane" required />
+              </div>
+              <div>
+                <label class="form-label">Last Name *</label>
+                <input type="text" class="form-input" placeholder="Doe" required />
+              </div>
+            </div>
+
+            <!-- Contact row -->
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="form-label">Email *</label>
+                <input type="email" class="form-input" placeholder="jane@example.com" required />
+              </div>
+              <div>
+                <label class="form-label">Phone *</label>
+                <input type="tel" class="form-input" placeholder="(555) 123-4567" required />
+              </div>
+            </div>
+
+            <!-- Interest + Date row -->
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="form-label">Treatment of Interest</label>
+                <select class="form-input">
+                  <option value="">Select a treatment...</option>
+                  <option>Botox &amp; Neuromodulators</option>
+                  <option>Dermal Fillers</option>
+                  <option>Laser Resurfacing</option>
+                  <option>Skin Rejuvenation</option>
+                  <option>Body Contouring</option>
+                  <option>Membership Inquiry</option>
+                  <option>General Question</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Preferred Date</label>
+                <input type="date" class="form-input" />
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label class="form-label">Message / Questions</label>
+              <textarea class="form-input" rows="4" placeholder="Tell us about your goals or ask us anything..."></textarea>
+            </div>
+
+            <!-- Consent -->
+            <div class="flex items-start gap-3">
+              <input type="checkbox" id="consent" class="mt-1 w-4 h-4 rounded border-rosegold/40 text-rosegold focus:ring-rosegold/30" required />
+              <label for="consent" class="text-[#2C2826]/75 dark:text-porcelain/75 text-xs leading-relaxed">
+                I consent to Lumineau Aesthetics contacting me about my inquiry. I understand my information will be handled in accordance with the privacy policy.
+              </label>
+            </div>
+
+            <!-- Submit -->
+            <div class="pt-2">
+              <button type="submit" class="btn-rose w-full py-3.5 text-sm font-semibold inline-flex items-center justify-center gap-2">
+                <i class="fas fa-paper-plane"></i> Send Request
+              </button>
+            </div>
+          </form>
+
+          <!-- Alternative contact -->
+          <div class="mt-8 pt-6 border-t border-rosegold/10 text-center">
+            <p class="text-[#2C2826]/60 dark:text-porcelain/60 text-xs mb-3">Prefer to speak with someone directly?</p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="tel:+15557274772" class="text-rosegold text-sm font-medium hover:underline flex items-center gap-2">
+                <i class="fas fa-phone text-xs"></i> Call us
+              </a>
+              <span class="text-rosegold/30">|</span>
+              <a href="mailto:hello@lumineau.com" class="text-rosegold text-sm font-medium hover:underline flex items-center gap-2">
+                <i class="fas fa-envelope text-xs"></i> Email us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== MAP / LOCATION SECTION ======== -->
+<section class="py-24 bg-[#F4EDE7] dark:bg-[#1A1615] border-y border-rosegold/10">
+  <div class="container mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Map -->
+      <div class="map-placeholder animate-fade-up">
+        <img src="assets/medspa-hero.jpg" alt="Map location" />
+        <div class="map-overlay">
+          <div class="bg-ivory/90 backdrop-blur-sm rounded-xl p-4 max-w-xs">
+            <div class="flex items-center gap-2 mb-2">
+              <i class="fas fa-map-marker-alt text-rosegold"></i>
+              <span class="font-display font-bold text-[#2C2826] text-xs uppercase tracking-[0.2em]">MED SPA &amp; AESTHETICS</span>
+            </div>
+            <p class="text-[#2C2826]/70 text-xs">1200 Glow Blvd, Aesthetic District, Suite 400</p>
+            <a href="#interactive-map" class="text-rosegold text-xs font-semibold mt-2 inline-flex items-center gap-1 hover:underline">
+              View Interactive Map <i class="fas fa-arrow-down text-[9px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location details -->
+      <div class="animate-fade-up" style="animation-delay: 0.15s;">
+        <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+          <span class="w-8 h-px bg-rosegold"></span> Find Us
+        </span>
+        <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight mb-6">
+          In the heart of the <span class="text-rosegold">Aesthetic District</span>
+        </h2>
+        <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-sm leading-relaxed mb-8">
+          Our purpose-built clinic is designed around calm and comfort, with private treatment suites, a serene waiting lounge, and complimentary parking for all guests.
+        </p>
+
+        <div class="space-y-5">
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0">
+              <i class="fas fa-car text-sm"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Parking</h4>
+              <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm">Complimentary valet and self-parking available on-site.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0">
+              <i class="fas fa-train text-sm"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Public Transit</h4>
+              <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm">5-minute walk from Glow Street Station (Lines A, C, E).</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-xl bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0">
+              <i class="fas fa-wheelchair text-sm"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Accessibility</h4>
+              <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm">Fully wheelchair-accessible entrance, elevator, and restrooms.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6">
+          <a href="#interactive-map" class="btn-ghost px-7 py-3 text-sm inline-flex items-center gap-2">
+            <i class="fas fa-map-marked-alt"></i> View on Interactive Map
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======== INTERACTIVE IFRAME MAP SECTION ======== -->
+<section id="interactive-map" class="py-20 bg-porcelain dark:bg-[#161211] border-b border-rosegold/15 relative overflow-hidden">
+  <!-- Subtle luxury ambient lighting -->
+  <div class="absolute -top-32 -left-32 w-96 h-96 bg-rosegold/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-champagne/20 dark:bg-rosegold/5 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="container mx-auto px-6 max-w-6xl relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-12 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Location &amp; Directions
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        Interactive <span class="text-rosegold">Clinic Map</span>
+      </h2>
+      <p class="text-[#2C2826]/80 dark:text-porcelain/80 mt-3 text-base max-w-xl mx-auto">
+        Visit our luxury practice in the heart of the Aesthetic District. Navigate the interactive map below or launch step-by-step navigation.
+      </p>
+    </div>
+
+    <!-- Map Container Card -->
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-rosegold/20 bg-white dark:bg-[#201B1A] animate-fade-up">
+      <!-- Google Maps Iframe -->
+      <div class="w-full h-[450px] md:h-[520px] relative bg-[#EDE4DC] dark:bg-[#1A1615]">
+        <iframe 
+          title="LUMEA Aesthetics Clinic Location Map"
+          src="https://maps.google.com/maps?q=1200%20Wilshire%20Blvd%2C%20Beverly%20Hills%2C%20CA&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+          class="w-full h-full border-0" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Action & Details Bar -->
+      <div class="p-6 md:p-8 bg-white/95 dark:bg-[#25201E]/95 backdrop-blur-md border-t border-rosegold/15 flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div class="flex items-start md:items-center gap-4 text-left w-full lg:w-auto">
+          <div class="w-12 h-12 rounded-2xl bg-rosegold/15 text-rosegold flex items-center justify-center shrink-0 mt-0.5 md:mt-0">
+            <i class="fas fa-map-marker-alt text-xl"></i>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">LUMEA Med Spa &amp; Aesthetics</h4>
+            <p class="text-sm text-[#2C2826]/75 dark:text-porcelain/75">1200 Glow Blvd, Suite 400 · Aesthetic District · Beverly Hills, CA 90210</p>
+          </div>
+        </div>
+        
+        <div class="flex flex-wrap items-center gap-3 w-full lg:w-auto justify-start lg:justify-end">
+          <a href="https://maps.google.com/maps?q=1200%20Wilshire%20Blvd%2C%20Beverly%20Hills%2C%20CA" target="_blank" rel="noopener noreferrer" class="btn-rose px-6 py-2.5 text-sm inline-flex items-center gap-2 shadow-md">
+            <i class="fas fa-directions"></i> Get GPS Directions
+          </a>
+          <a href="tel:+15557274772" class="btn-ghost px-6 py-2.5 text-sm inline-flex items-center gap-2">
+            <i class="fas fa-phone-alt"></i> Call Reception
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== DEPARTMENT CONTACTS ======== -->
+<section class="py-24 bg-porcelain dark:bg-[#1C1817]">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Direct Lines
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        Contact a <span class="text-rosegold">department</span>
+      </h2>
+      <p class="text-[#2C2826]/85 dark:text-porcelain/85 mt-3 text-base max-w-xl mx-auto">
+        Reach the right team directly for faster assistance.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <!-- Dept 1 -->
+      <div class="contact-info-card flex-col sm:flex-row animate-fade-up" style="animation-delay: 0.1s;">
+        <div class="icon-wrap"><i class="fas fa-calendar-check"></i></div>
+        <div>
+          <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Appointments</h4>
+          <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm mt-1 mb-3">Book, reschedule, or ask about availability.</p>
+          <a href="tel:+15557274772" class="text-rosegold text-xs font-semibold hover:underline">(555) 727-4SPA ext. 1</a>
+        </div>
+      </div>
+      <!-- Dept 2 -->
+      <div class="contact-info-card flex-col sm:flex-row animate-fade-up" style="animation-delay: 0.2s;">
+        <div class="icon-wrap"><i class="fas fa-crown"></i></div>
+        <div>
+          <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Membership</h4>
+          <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm mt-1 mb-3">Questions about tiers, billing, or benefits.</p>
+          <a href="mailto:membership@lumineau.com" class="text-rosegold text-xs font-semibold hover:underline">membership@lumineau.com</a>
+        </div>
+      </div>
+      <!-- Dept 3 -->
+      <div class="contact-info-card flex-col sm:flex-row animate-fade-up" style="animation-delay: 0.3s;">
+        <div class="icon-wrap"><i class="fas fa-user-md"></i></div>
+        <div>
+          <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Clinical Team</h4>
+          <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm mt-1 mb-3">Pre/post-treatment questions and follow-ups.</p>
+          <a href="mailto:clinical@lumineau.com" class="text-rosegold text-xs font-semibold hover:underline">clinical@lumineau.com</a>
+        </div>
+      </div>
+      <!-- Dept 4 -->
+      <div class="contact-info-card flex-col sm:flex-row animate-fade-up" style="animation-delay: 0.1s;">
+        <div class="icon-wrap"><i class="fas fa-briefcase"></i></div>
+        <div>
+          <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Careers</h4>
+          <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm mt-1 mb-3">Join our team of aesthetic professionals.</p>
+          <a href="mailto:careers@lumineau.com" class="text-rosegold text-xs font-semibold hover:underline">careers@lumineau.com</a>
+        </div>
+      </div>
+      <!-- Dept 5 -->
+      <div class="contact-info-card flex-col sm:flex-row animate-fade-up" style="animation-delay: 0.2s;">
+        <div class="icon-wrap"><i class="fas fa-newspaper"></i></div>
+        <div>
+          <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Press &amp; Media</h4>
+          <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm mt-1 mb-3">Interviews, features, and collaborations.</p>
+          <a href="mailto:press@lumineau.com" class="text-rosegold text-xs font-semibold hover:underline">press@lumineau.com</a>
+        </div>
+      </div>
+      <!-- Dept 6 -->
+      <div class="contact-info-card flex-col sm:flex-row animate-fade-up" style="animation-delay: 0.3s;">
+        <div class="icon-wrap"><i class="fas fa-hand-holding-heart"></i></div>
+        <div>
+          <h4 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Feedback</h4>
+          <p class="text-[#2C2826]/75 dark:text-porcelain/75 text-sm mt-1 mb-3">Share your experience with our patient care team.</p>
+          <a href="mailto:feedback@lumineau.com" class="text-rosegold text-xs font-semibold hover:underline">feedback@lumineau.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FAQ (same structure, contact-focused) ======== -->
+<section class="py-24 bg-[#EDE4DC] dark:bg-[#181413]">
+  <div class="container mx-auto px-6 relative z-10 max-w-5xl">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="inline-flex items-center gap-2 text-rosegold px-0 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-4">
+        <span class="w-8 h-px bg-rosegold"></span> Before You Visit
+      </span>
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
+        Contact <span class="text-rosegold">FAQs</span>
+      </h2>
+      <p class="text-[#2C2826]/85 dark:text-porcelain/85 mt-3 text-base max-w-xl mx-auto">
+        Quick answers to help you prepare for your visit or inquiry.
+      </p>
+    </div>
+
+    <div class="space-y-4" id="clinic-faq-accordion">
+      <!-- Item 1 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>How quickly will I hear back after submitting the form?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Our team responds to all form submissions within 24 hours on business days. If you submit on a weekend or holiday, you'll hear from us on the next business day. For urgent matters, please call us directly at (555) 727-4SPA.
+          </p>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Do I need to arrive early for my appointment?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Yes — we recommend arriving 15 minutes before your scheduled appointment time. This allows you to complete any necessary paperwork, settle in, and have a brief consultation with your provider without feeling rushed. First-time patients should arrive 20 minutes early.
+          </p>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Can I book a same-day appointment?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Same-day appointments are sometimes available depending on our schedule and the treatment requested. We recommend calling us directly at (555) 727-4SPA to check availability. Prestige members have same-day priority booking as part of their membership benefits.
+          </p>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>What is your cancellation policy?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            We kindly ask for at least 24 hours' notice if you need to cancel or reschedule your appointment. Cancellations made less than 24 hours in advance may be subject to a fee equal to 50% of the scheduled service. We understand emergencies happen — please just communicate with us.
+          </p>
+        </div>
+      </div>
+      <!-- Item 5 -->
+      <div class="portal-card overflow-hidden transition-all duration-300 border border-rosegold/15 faq-item">
+        <button class="w-full text-left p-6 md:p-7 flex items-center justify-between gap-4 font-display font-bold text-lg md:text-xl text-[#2C2826] dark:text-porcelain faq-toggle focus:outline-none">
+          <span>Do you offer virtual consultations?</span>
+          <div class="w-8 h-8 rounded-full bg-rosegold/10 text-rosegold flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon">
+            <i class="fas fa-plus text-xs"></i>
+          </div>
+        </button>
+        <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
+          <p class="pt-4">
+            Yes, for select services and follow-up appointments. Virtual consultations are ideal for skincare regimen reviews, membership questions, and post-treatment check-ins. For first-time injectable and laser treatments, we recommend an in-person consultation so we can assess your skin directly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== CTA ======== -->
+<section class="py-24 bg-rosegold dark:bg-[#181413]">
+  <div class="container mx-auto px-6 text-center">
+    <div class="max-w-3xl mx-auto animate-fade-up">
+      <div class="inline-block mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="60" height="60" fill="none">
+          <path d="M32 12 Q22 4 20 16 Q18 28 30 30 Q32 32 34 30 Q46 28 44 16 Q42 4 32 12Z" fill="white" opacity="0.9"/>
+          <ellipse cx="32" cy="26" rx="14" ry="4" fill="white" opacity="0.45"/>
+          <circle cx="32" cy="20" r="3" fill="white" opacity="0.8"/>
+          <path d="M18 32 Q12 24 18 18" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M46 32 Q52 24 46 18" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M24 38 Q32 46 40 38" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+        </svg>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-display font-bold text-ivory mb-5">We Can't Wait to <span class="text-ivory/90">Meet You</span></h2>
+      <p class="text-ivory/80 text-lg mb-10 max-w-xl mx-auto">Book your consultation today and take the first step toward your glow.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#booking-form" class="bg-ivory text-rosegold px-8 py-3.5 rounded-lg font-bold shadow-lg hover:scale-105 transition inline-flex items-center gap-2 text-sm">
+          <i class="fas fa-calendar-check"></i> Book Consultation
+        </a>
+        <a href="tel:+15557274772" class="border-2 border-ivory/60 text-ivory px-8 py-3.5 rounded-lg font-semibold hover:bg-ivory hover:text-rosegold transition inline-flex items-center gap-2 text-sm">
+          <i class="fas fa-phone"></i> Call Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FOOTER (copied exactly) ======== -->
+<footer class="bg-porcelain dark:bg-[#1C1817] text-[#2C2826] dark:text-porcelain pt-16 pb-8 border-t border-rosegold/10">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="text-center md:text-start">
+        <a href="index.html" class="inline-flex items-center justify-center md:justify-start gap-3 mb-6 group hover:opacity-90 transition">
+          <div class="w-10 h-10 bg-rosegold rounded-lg flex items-center justify-center shadow-lg overflow-hidden group-hover:scale-105 transition duration-300 rotate-3 group-hover:rotate-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-6 h-6" fill="none">
+              <path d="M18 6 L28 14 L18 26 L8 14 Z" fill="white" opacity="0.95"/>
+              <circle cx="18" cy="16" r="3.5" fill="white" opacity="0.7"/>
+              <path d="M10 28 L18 22 L26 28" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6"/>
+            </svg>
+          </div>
+          <span class="flex flex-col items-start leading-tight">
+            <span class="text-lg md:text-2xl font-display font-extrabold tracking-tight text-[#2C2826] dark:text-porcelain">LUMEA</span>
+            <span class="text-rosegold text-[9px] md:text-[11px] font-semibold tracking-[0.2em] uppercase -mt-0.5">MED SPA &amp; AESTHETICS</span>
+          </span>
+        </a>
+        <p class="mb-5 text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Advanced non-surgical aesthetics. Clinical precision, natural radiance.</p>
+        <div class="flex justify-center md:justify-start gap-3">
+          <a href="#" class="social-icon-clinic" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon-clinic" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon-clinic" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Treatments</h4>
+        <ul class="space-y-2.5">
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Botox &amp; Fillers</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Laser Resurfacing</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Skin Rejuvenation</a></li>
+          <li><a href="treatments.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Body Contouring</a></li>
+        </ul>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Clinic</h4>
+        <ul class="space-y-2.5">
+          <li><a href="about.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">About</a></li>
+          <li><a href="providers.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Providers</a></li>
+          <li><a href="membership.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Membership</a></li>
+          <li></li>
+          <li><a href="client.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Client Portal</a></li>
+          <li><a href="admin.html" class="hover:text-rosegold transition block text-[#2C2826]/85 dark:text-porcelain/85 text-sm">Admin Portal</a></li>
+        </ul>
+      </div>
+      <div class="text-center md:text-start">
+        <h4 class="text-[#2C2826] dark:text-rosegold font-bold text-sm mb-5 uppercase tracking-widest">Visit</h4>
+        <ul class="space-y-3">
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-map-marker-alt text-rosegold mt-0.5"></i><span>1200 Glow Blvd, Aesthetic District</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-phone text-rosegold"></i><span>(555) 727-4SPA</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-envelope text-rosegold"></i><span>hello@lumineau.com</span></li>
+          <li class="flex justify-center md:justify-start gap-3 text-[#2C2826]/85 dark:text-porcelain/85 text-sm"><i class="fas fa-clock text-rosegold"></i><span>Mon–Fri 9am – 7pm · Sat 10am – 4pm</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-rosegold/10 text-center text-xs text-[#2C2826]/80 dark:text-porcelain/85">
+      <p>&copy; 2026 MED SPA &amp; AESTHETICS. <i class="fas fa-heart text-rosegold mx-1"></i> Glow with confidence.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ======== SCRIPTS (copied from Home) ======== -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Theme toggle
+    const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
+    themeBtns.forEach(btn => {
+      btn?.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      });
+    });
+    if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+    // RTL
+    function setRTL(isRTL) {
+      const html = document.documentElement;
+      if (isRTL === 'rtl' || isRTL === true) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); } 
+      else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+    }
+    const savedDir = localStorage.getItem('dir');
+    if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+    else document.documentElement.setAttribute('dir', 'ltr');
+
+    const rtlBtn = document.getElementById('rtl-toggle');
+    if (rtlBtn) {
+      rtlBtn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir');
+        setRTL(currentDir === 'rtl' ? 'ltr' : 'rtl');
+      });
+    }
+    const mobileRtlBtn = document.getElementById('mobile-rtl-toggle');
+    if (mobileRtlBtn) {
+      mobileRtlBtn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir');
+        setRTL(currentDir === 'rtl' ? 'ltr' : 'rtl');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileToggle = document.getElementById('mobile-toggle');
+        if (mobileMenu && mobileMenu.classList.contains('open')) {
+          mobileMenu.classList.remove('open');
+          if (mobileToggle && mobileToggle.querySelector('i')) {
+            mobileToggle.querySelector('i').classList.remove('fa-times');
+            mobileToggle.querySelector('i').classList.add('fa-bars');
+          }
+        }
+      });
+    }
+
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+        const icon = mobileToggle.querySelector('i');
+        if (mobileMenu.classList.contains('open')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+      mobileMenu.querySelectorAll('a:not(#mobile-rtl-toggle)').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          if (mobileToggle.querySelector('i')) {
+            mobileToggle.querySelector('i').classList.remove('fa-times');
+            mobileToggle.querySelector('i').classList.add('fa-bars');
+          }
+        });
+      });
+    }
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const toggle = item.querySelector('.faq-toggle');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon i');
+      toggle?.addEventListener('click', () => {
+        const isOpen = !content.classList.contains('hidden');
+        faqItems.forEach(other => {
+          other.querySelector('.faq-content')?.classList.add('hidden');
+          const otherIcon = other.querySelector('.faq-icon i');
+          if (otherIcon) {
+            otherIcon.classList.remove('fa-minus');
+            otherIcon.classList.add('fa-plus');
+          }
+        });
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          if (icon) {
+            icon.classList.remove('fa-plus');
+            icon.classList.add('fa-minus');
+          }
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
