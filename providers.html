@@ -120,14 +120,16 @@
       right: 0;
       bottom: 0;
       height: 100%;
-      width: auto;
-      max-width: 50%;
+      width: 55%;
+      max-width: 55%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 25%;
       filter: brightness(0.85) saturate(0.9);
       pointer-events: none;
-      opacity: 0.9;
+      opacity: 0.95;
       z-index: 1;
+      mask-image: linear-gradient(to right, transparent, black 15%);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 15%);
     }
     .providers-hero::after {
       content: '';
@@ -219,6 +221,9 @@
     .credential-badge:hover {
       background: #B88A78;
       color: #FFFCF9;
+    }
+    .credential-badge:hover i {
+      color: #FFFCF9 !important;
     }
 
     /* --- Team grid card (compact) --- */
@@ -403,7 +408,7 @@
     [dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
     [dir="rtl"] .dropdown-clinic-menu { left: auto; right: 0; }
     [dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.75rem; }
-    [dir="rtl"] .providers-hero-portrait { right: auto; left: 0; }
+    [dir="rtl"] .providers-hero-portrait { right: auto; left: 0; mask-image: linear-gradient(to left, transparent, black 15%); -webkit-mask-image: linear-gradient(to left, transparent, black 15%); }
     [dir="rtl"] .providers-hero-content { padding: 8rem 6rem 5rem 3rem; }
     @media (max-width: 1024px) {
       [dir="rtl"] .providers-hero-content { padding: 7rem 1.5rem 4rem 1.5rem; }
@@ -533,7 +538,7 @@
 <!-- ======== PROVIDERS HERO — ASYMMETRIC ======== -->
 <section class="providers-hero">
   <div class="providers-hero-bg"></div>
-  <img src="assets/provider-1.jpg" alt="Lead Provider" class="providers-hero-portrait" />
+  <img src="assets/providers-hero.jpg" alt="Lumineau Medical Team" class="providers-hero-portrait" />
   <div class="container mx-auto px-6">
     <div class="providers-hero-content animate-fade-up">
       <span class="inline-flex items-center gap-2 bg-rosegold/15 text-rosegold px-4 py-1.5 rounded-lg text-xs font-bold tracking-widest uppercase mb-6 border border-rosegold/20">
@@ -591,7 +596,7 @@
         <span class="w-8 h-px bg-rosegold"></span> Medical Director <span class="w-8 h-px bg-rosegold"></span>
       </span>
       <h2 class="text-4xl md:text-5xl font-display font-extrabold text-[#2C2826] dark:text-porcelain leading-tight">
-        Meet <span class="text-rosegold">Dr. Elara Voss</span>
+        Meet <span class="text-rosegold">Dr. Sophia Vance</span>
       </h2>
     </div>
 
@@ -599,20 +604,20 @@
       <!-- Image -->
       <div class="animate-fade-up">
         <div class="provider-feature overflow-hidden">
-          <img src="assets/provider-1.jpg" alt="Dr. Elara Voss" class="w-full h-[520px] object-cover object-top" />
+          <img src="assets/provider-1.jpg" alt="Dr. Sophia Vance" class="w-full h-[520px] object-cover object-top" />
         </div>
       </div>
 
       <!-- Bio -->
       <div class="space-y-6 animate-fade-up" style="animation-delay: 0.15s;">
         <div class="flex flex-wrap gap-2">
-          <span class="credential-badge"><i class="fas fa-certificate text-rosegold"></i> MD</span>
-          <span class="credential-badge"><i class="fas fa-certificate text-rosegold"></i> FAAD</span>
-          <span class="credential-badge"><i class="fas fa-award text-rosegold"></i> 15+ years</span>
+          <span class="credential-badge group"><i class="fas fa-certificate text-rosegold group-hover:text-[#FFFCF9] transition-colors"></i> MD</span>
+          <span class="credential-badge group"><i class="fas fa-certificate text-rosegold group-hover:text-[#FFFCF9] transition-colors"></i> FAAD</span>
+          <span class="credential-badge group"><i class="fas fa-award text-rosegold group-hover:text-[#FFFCF9] transition-colors"></i> 15+ years</span>
         </div>
         <h3 class="font-display font-bold text-3xl text-[#2C2826] dark:text-porcelain">Board-Certified Dermatologist</h3>
         <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-base leading-relaxed">
-          Dr. Voss founded Lumineau Aesthetics with a vision: to create a med spa where clinical excellence meets genuine warmth. A fellow of the American Academy of Dermatology, she has performed over 20,000 injectable procedures and is known for her meticulous, artistic approach to facial balancing.
+          Dr. Vance founded Lumineau Aesthetics with a vision: to create a med spa where clinical excellence meets genuine warmth. A fellow of the American Academy of Dermatology, she has performed over 20,000 injectable procedures and is known for her meticulous, artistic approach to facial balancing.
         </p>
         <p class="text-[#2C2826]/85 dark:text-porcelain/85 text-base leading-relaxed">
           Her philosophy is simple — less is more. She believes in enhancing your natural features, never altering them beyond recognition. Patients frequently describe her as "the injector who actually listens."
@@ -633,7 +638,7 @@
         </div>
         <div class="pt-4">
           <a href="contact.html" class="btn-rose px-7 py-3 text-sm inline-flex items-center gap-2">
-            <i class="fas fa-calendar-check"></i> Book with Dr. Voss
+            <i class="fas fa-calendar-check"></i> Book with Dr. Sophia
           </a>
         </div>
       </div>
@@ -662,10 +667,10 @@
       <!-- Provider 1 -->
       <div class="team-card animate-fade-up" style="animation-delay: 0.1s;">
         <div class="h-64 overflow-hidden">
-          <img src="assets/provider-1.jpg" alt="Dr. Elara Voss" class="w-full h-full object-cover object-top" />
+          <img src="assets/provider-vance-portrait.jpg" alt="Dr. Sophia Vance" class="w-full h-full object-cover object-top" />
         </div>
         <div class="p-6 text-center">
-          <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Dr. Elara Voss</h3>
+          <h3 class="font-display font-bold text-lg text-[#2C2826] dark:text-porcelain">Dr. Sophia Vance</h3>
           <p class="text-rosegold text-xs font-semibold tracking-wider uppercase mt-1">Medical Director</p>
           <p class="text-[#2C2826]/80 dark:text-porcelain/80 text-xs mt-2">MD, FAAD · 15+ years</p>
           <div class="flex justify-center gap-2 mt-4">
@@ -750,9 +755,9 @@
         We don't chase trends. We study anatomy, respect natural beauty, and take the time to understand what each patient truly wants. That's what separates a good injector from a great one.
       </p>
       <div class="flex items-center gap-4 mt-8 relative z-10">
-        <img src="assets/provider-1.jpg" alt="Dr. Elara Voss" class="w-14 h-14 rounded-xl object-cover border-2 border-rosegold/30" />
+        <img src="assets/provider-vance-portrait.jpg" alt="Dr. Sophia Vance" class="w-14 h-14 rounded-xl object-cover border-2 border-rosegold/30" />
         <div>
-          <strong class="text-[#2C2826] dark:text-porcelain block">Dr. Elara Voss</strong>
+          <strong class="text-[#2C2826] dark:text-porcelain block">Dr. Sophia Vance</strong>
           <span class="text-rosegold text-sm">Founder & Medical Director</span>
         </div>
       </div>
@@ -878,7 +883,7 @@
         </button>
         <div class="hidden px-6 md:px-7 pb-6 pt-0 text-sm leading-relaxed text-[#2C2826]/85 dark:text-porcelain/85 border-t border-rosegold/10 faq-content">
           <p class="pt-4">
-            Our team brings over 50 years of combined experience in aesthetic medicine. Dr. Voss has performed 20,000+ injectable procedures, and each provider participates in ongoing education to stay current with the latest techniques and safety protocols.
+            Our team brings over 50 years of combined experience in aesthetic medicine. Dr. Vance has performed 20,000+ injectable procedures, and each provider participates in ongoing education to stay current with the latest techniques and safety protocols.
           </p>
         </div>
       </div>
