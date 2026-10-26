@@ -36,8 +36,9 @@
       theme: {
         extend: {
           colors: {
-            porcelain: '#F9F6F3',
-            champagne: '#EDE4DC',
+            porcelain: '#FFFFFF',
+            champagne: '#FAF7F5',
+            surface: '#FAF7F5',
             nude: '#DCC9BC',
             rosegold: '#B88A78',
             deeptaupe: '#6E4F42',
@@ -77,7 +78,7 @@
 
   <style>
     body {
-      background-color: #F9F6F3;
+      background-color: #FFFFFF;
       color: #2C2826;
       font-family: 'Inter', system-ui, sans-serif;
       overflow-x: hidden;
@@ -89,7 +90,7 @@
 
     /* Elegant scrollbar */
     body::-webkit-scrollbar { width: 5px; }
-    body::-webkit-scrollbar-track { background: #F9F6F3; }
+    body::-webkit-scrollbar-track { background: #FFFFFF; }
     body::-webkit-scrollbar-thumb { background: #B88A78; border-radius: 20px; }
 
     /* ===== ABOUT PAGE UNIQUE STYLES ===== */
@@ -198,7 +199,8 @@
 
     /* --- Stat ribbon --- */
     .stat-ribbon {
-      background: #EDE4DC;
+      background: #FAF7F5;
+      border: 1px solid rgba(184, 138, 120, 0.2);
       border-radius: 0 40px 0 40px;
       padding: 2.5rem 2rem;
       transition: all 0.3s;
@@ -516,7 +518,7 @@
 </section>
 
 <!-- ======== STAT RIBBON ======== -->
-<section class="py-14 bg-porcelain dark:bg-[#1C1817]">
+<section class="py-14 bg-[#FAF7F5] dark:bg-[#181413] border-b border-rosegold/10">
   <div class="container mx-auto px-6">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
       <div class="stat-ribbon text-center">
@@ -540,7 +542,7 @@
 </section>
 
 <!-- ======== MISSION — SPLIT WITH TIMELINE ======== -->
-<section class="py-24 bg-[#F4EDE7] dark:bg-[#1A1615] border-y border-rosegold/10">
+<section class="py-24 bg-white dark:bg-[#1A1615] border-y border-rosegold/10">
   <div class="container mx-auto px-6">
     <div class="grid lg:grid-cols-2 gap-16 items-start">
       <!-- Left: Mission text -->
@@ -599,7 +601,7 @@
 </section>
 
 <!-- ======== VALUES — 4 CARD GRID ======== -->
-<section class="py-24 bg-porcelain dark:bg-[#1C1817] relative overflow-hidden">
+<section class="py-24 bg-[#FAF7F5] dark:bg-[#1C1817] border-y border-rosegold/10 relative overflow-hidden">
   <div class="absolute top-0 right-0 w-96 h-96 bg-rosegold/5 rounded-full blur-3xl pointer-events-none"></div>
   <div class="container mx-auto px-6 relative z-10">
     <div class="text-center mb-16 animate-fade-up">
@@ -649,7 +651,7 @@
 </section>
 
 <!-- ======== TEAM SPOTLIGHT ======== -->
-<section class="py-24 bg-[#EDE4DC] dark:bg-[#181413]">
+<section class="py-24 bg-white dark:bg-[#181413]">
   <div class="container mx-auto px-6">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
       <div class="animate-fade-up">
@@ -707,7 +709,7 @@
 </section>
 
 <!-- ======== FAQ (same structure, different questions focused on About) ======== -->
-<section class="py-24 bg-porcelain dark:bg-[#1C1817] relative overflow-hidden">
+<section class="py-24 bg-[#FAF7F5] dark:bg-[#1C1817] border-y border-rosegold/10 relative overflow-hidden">
   <div class="container mx-auto px-6 relative z-10 max-w-5xl">
     <div class="text-center mb-16 animate-fade-up">
       <span class="inline-flex items-center gap-2 text-rosegold px-0 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-4">
@@ -825,7 +827,7 @@
 </section>
 
 <!-- ======== FOOTER (copied exactly from Home) ======== -->
-<footer class="bg-porcelain dark:bg-[#1C1817] text-[#2C2826] dark:text-porcelain pt-16 pb-8 border-t border-rosegold/10">
+<footer class="bg-white dark:bg-[#1C1817] text-[#2C2826] dark:text-porcelain pt-16 pb-8 border-t border-rosegold/10">
   <div class="container mx-auto px-6">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
       <div class="text-center md:text-start">
