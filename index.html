@@ -97,90 +97,57 @@
     body::-webkit-scrollbar-track { background: #FFFFFF; }
     body::-webkit-scrollbar-thumb { background: #B88A78; border-radius: 20px; }
 
-    /* ===== UNIQUE HERO LAYOUT — SPLIT ASYMMETRIC / FULL MOBILE BG ===== */
-    .hero-split {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      min-height: 100vh;
+        /* ===== HERO SECTION — FULL BACKGROUND WITH CENTERED CONTENT ===== */
+    .hero-centered {
       position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: #1C1817;
       overflow: hidden;
+      padding: 9rem 1.5rem 5rem 1.5rem;
     }
-    .hero-mobile-bg {
-      display: none;
-    }
-    @media (max-width: 1024px) {
-      .hero-split {
-        grid-template-columns: 1fr;
-        min-height: 85vh;
-      }
-      .hero-mobile-bg {
-        display: block;
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center 25%;
-        filter: brightness(0.32) saturate(0.85);
-        z-index: 1;
-      }
-    }
-
-    .hero-panel-left {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 8rem 4rem 4rem 6rem;
-      z-index: 2;
-      background: linear-gradient(145deg, #1C1817 0%, #2C2826 100%);
-    }
-    .hero-panel-left::after {
-      content: '';
+    .hero-bg-img {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(28,24,23,0.85) 0%, rgba(28,24,23,0.68) 50%, rgba(28,24,23,0.95) 100%);
-      z-index: -1;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    @media (max-width: 1024px) {
-      .hero-panel-left {
-        background: transparent;
-        padding: 7.5rem 1.5rem 4rem 1.5rem;
-        text-align: center;
-        align-items: center;
-      }
-      .hero-panel-left::after {
-        opacity: 1;
-      }
-      .hero-panel-left .flex-wrap {
-        justify-content: center;
-      }
-    }
-    @media (max-width: 640px) {
-      .hero-panel-left { padding: 6.5rem 1.25rem 3rem 1.25rem; }
-    }
-
-    .hero-panel-right {
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-panel-right img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(0.75) saturate(0.9);
+      object-position: center 30%;
+      filter: brightness(0.38) saturate(0.9);
+      z-index: 1;
     }
-    .hero-panel-right::after {
+    .hero-centered::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, #1C1817 0%, transparent 40%);
+      background: radial-gradient(ellipse at 50% 45%, rgba(184,138,120,0.12) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 2;
     }
-    @media (max-width: 1024px) {
-      .hero-panel-right { display: none; }
+    .hero-centered::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(28,24,23,0.82) 0%, rgba(28,24,23,0.52) 45%, rgba(28,24,23,0.92) 100%);
+      z-index: 2;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 54rem;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: 640px) {
+      .hero-centered {
+        min-height: 90vh;
+        padding: 7.5rem 1.25rem 4rem 1.25rem;
+      }
     }
 
     /* ===== UNIQUE CARD STYLES ===== */
@@ -431,11 +398,7 @@
     [dir="rtl"] .ml-auto { margin-left: 0 !important; margin-right: auto !important; }
     [dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
     [dir="rtl"] .dropdown-clinic-menu { left: auto; right: 0; }
-    [dir="rtl"] .hero-panel-left { padding: 8rem 6rem 4rem 4rem; }
-    [dir="rtl"] .hero-panel-right::after { background: linear-gradient(to left, #1C1817 0%, transparent 40%); }
-    @media (max-width: 1024px) {
-      [dir="rtl"] .hero-panel-left { padding: 7.5rem 1.5rem 4rem 1.5rem; }
-    }
+    
     [dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.75rem; }
     [dir="rtl"] .testimonial-card::after { right: auto; left: 1.5rem; }
 
@@ -560,56 +523,48 @@
   </div>
 </nav>
 
-<!-- ======== HERO — SPLIT ASYMMETRIC ======== -->
-<section class="hero-split">
-  <!-- Mobile background image (only visible on mobile/tablet) -->
-  <img src="assets/medspa-hero.jpg" alt="Luxurious Med Spa Interior" class="hero-mobile-bg" />
+<!-- ======== HERO — CENTERED WITH BACKGROUND IMAGE ======== -->
+<section class="hero-centered">
+  <!-- Background Image -->
+  <img src="assets/medspa-hero.jpg" alt="Luxurious Med Spa Interior" class="hero-bg-img" />
 
-  <!-- LEFT: Content -->
-  <div class="hero-panel-left">
-    <div class="max-w-xl mx-auto lg:mx-0 animate-fade-up">
-      <span class="inline-flex items-center gap-2 bg-rosegold/15 text-rosegold px-4 py-1.5 rounded-lg text-xs font-bold tracking-widest uppercase mb-6 border border-rosegold/20">
-        <i class="fas fa-wand-magic-sparkles text-rosegold"></i> medical-grade aesthetics
-      </span>
-      <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold leading-[1.1] mb-6 text-ivory break-words">
-        Radiance,<br/>
-        <span class="text-rosegold">redefined</span><br/>
-        <span class="text-2xl sm:text-4xl md:text-5xl font-bold text-ivory/80 block mt-1">non-surgical artistry</span>
-      </h1>
-      <p class="text-base sm:text-lg md:text-xl text-ivory/90 font-light mb-8 max-w-lg leading-relaxed">
-        Botox, dermal fillers, laser resurfacing &amp; advanced skin rejuvenation. 
-        Delivered with clinical precision and a gentle touch.
-      </p>
-      <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-        <a href="treatments.html" class="btn-rose px-6 sm:px-8 py-3.5 text-sm sm:text-base inline-flex items-center justify-center gap-2 shadow-xl w-full sm:w-auto">
-          <i class="fas fa-syringe"></i> Explore Treatments
-        </a>
-        <a href="contact.html" class="btn-ghost px-6 sm:px-8 py-3.5 text-sm sm:text-base inline-flex items-center justify-center gap-2 border-ivory/30 text-ivory/90 hover:bg-rosegold hover:text-ivory hover:border-rosegold w-full sm:w-auto">
-          <i class="fas fa-calendar-check"></i> Book Consultation
-        </a>
+  <!-- CENTER: Content -->
+  <div class="hero-content animate-fade-up">
+    <span class="inline-flex items-center gap-2 bg-rosegold/15 text-rosegold px-4 py-1.5 rounded-lg text-xs font-bold tracking-widest uppercase mb-6 border border-rosegold/25 backdrop-blur-sm">
+      <i class="fas fa-wand-magic-sparkles text-rosegold"></i> medical-grade aesthetics
+    </span>
+    <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold leading-[1.12] mb-6 text-ivory break-words text-center">
+      Radiance, <span class="text-rosegold">redefined</span><br/>
+      <span class="text-2xl sm:text-4xl md:text-5xl font-bold text-ivory/80 block mt-2">non-surgical artistry</span>
+    </h1>
+    <p class="text-base sm:text-lg md:text-xl text-ivory/90 font-light mb-8 max-w-2xl mx-auto leading-relaxed text-center">
+      Botox, dermal fillers, laser resurfacing &amp; advanced skin rejuvenation. 
+      Delivered with clinical precision and a gentle touch.
+    </p>
+    <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
+      <a href="treatments.html" class="btn-rose px-6 sm:px-8 py-3.5 text-sm sm:text-base inline-flex items-center justify-center gap-2 shadow-xl w-full sm:w-auto">
+        <i class="fas fa-syringe"></i> Explore Treatments
+      </a>
+      <a href="contact.html" class="btn-ghost px-6 sm:px-8 py-3.5 text-sm sm:text-base inline-flex items-center justify-center gap-2 border-ivory/30 text-ivory/90 hover:bg-rosegold hover:text-ivory hover:border-rosegold w-full sm:w-auto">
+        <i class="fas fa-calendar-check"></i> Book Consultation
+      </a>
+    </div>
+
+    <!-- Quick trust indicators -->
+    <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-ivory/15 w-full max-w-xl mx-auto text-center">
+      <div class="flex items-center gap-2">
+        <i class="fas fa-star text-rosegold text-xs sm:text-sm"></i>
+        <span class="text-ivory/80 text-xs sm:text-sm">4.9 · 2k+ reviews</span>
       </div>
-
-      <!-- Quick trust indicators -->
-      <div class="flex flex-wrap items-center gap-3 sm:gap-6 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-ivory/10">
-        <div class="flex items-center gap-2">
-          <i class="fas fa-star text-rosegold text-xs sm:text-sm"></i>
-          <span class="text-ivory/80 text-xs sm:text-sm">4.9 · 2k+ reviews</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <i class="fas fa-shield-halved text-rosegold text-xs sm:text-sm"></i>
-          <span class="text-ivory/80 text-xs sm:text-sm">FDA-approved</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <i class="fas fa-user-md text-rosegold text-xs sm:text-sm"></i>
-          <span class="text-ivory/80 text-xs sm:text-sm">Board-certified</span>
-        </div>
+      <div class="flex items-center gap-2">
+        <i class="fas fa-shield-halved text-rosegold text-xs sm:text-sm"></i>
+        <span class="text-ivory/80 text-xs sm:text-sm">FDA-approved</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fas fa-user-md text-rosegold text-xs sm:text-sm"></i>
+        <span class="text-ivory/80 text-xs sm:text-sm">Board-certified</span>
       </div>
     </div>
-  </div>
-
-  <!-- RIGHT: Image -->
-  <div class="hero-panel-right">
-    <img src="assets/medspa-hero.jpg" alt="Luxurious Med Spa Interior" />
   </div>
 </section>
 
